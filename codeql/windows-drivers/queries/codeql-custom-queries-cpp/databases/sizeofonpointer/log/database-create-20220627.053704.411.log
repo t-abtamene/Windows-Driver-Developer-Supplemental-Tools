@@ -1,0 +1,764 @@
+[2022-06-27 05:37:04] This is codeql database create -l=cpp -s=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3 -c msbuild /p:Platform=x64 /t:rebuild C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer
+[2022-06-27 05:37:04] Log file was started late.
+[2022-06-27 05:37:04] [PROGRESS] database create> Initializing database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer.
+[2022-06-27 05:37:04] Running plumbing command: codeql database init --language=cpp --source-root=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3 --allow-missing-source-root=false --allow-already-existing -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer
+[2022-06-27 05:37:04] [PROGRESS] database init> Counting lines of code in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3
+[2022-06-27 05:37:04] [PROGRESS] database init> Resolving extractor cpp.
+[2022-06-27 05:37:04] Calling plumbing command: codeql resolve languages --format=json
+[2022-06-27 05:37:04] [DETAILS] resolve languages> Scanning for codeql-extractor.yml from C:\CQL\codeql_home\codeql\.codeqlmanifest.json
+[2022-06-27 05:37:04] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\cpp\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\csharp\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\csv\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\go\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\html\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\java\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\javascript\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\properties\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\python\codeql-extractor.yml.
+[2022-06-27 05:37:05] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\xml\codeql-extractor.yml.
+[2022-06-27 05:37:05] Plumbing command codeql resolve languages completed:
+                      {
+                        "cpp" : [
+                          "C:\\CQL\\codeql_home\\codeql\\cpp"
+                        ],
+                        "csharp" : [
+                          "C:\\CQL\\codeql_home\\codeql\\csharp"
+                        ],
+                        "csv" : [
+                          "C:\\CQL\\codeql_home\\codeql\\csv"
+                        ],
+                        "go" : [
+                          "C:\\CQL\\codeql_home\\codeql\\go"
+                        ],
+                        "html" : [
+                          "C:\\CQL\\codeql_home\\codeql\\html"
+                        ],
+                        "java" : [
+                          "C:\\CQL\\codeql_home\\codeql\\java"
+                        ],
+                        "javascript" : [
+                          "C:\\CQL\\codeql_home\\codeql\\javascript"
+                        ],
+                        "properties" : [
+                          "C:\\CQL\\codeql_home\\codeql\\properties"
+                        ],
+                        "python" : [
+                          "C:\\CQL\\codeql_home\\codeql\\python"
+                        ],
+                        "xml" : [
+                          "C:\\CQL\\codeql_home\\codeql\\xml"
+                        ]
+                      }
+[2022-06-27 05:37:05] [DETAILS] database init> Found candidate extractor root for cpp: C:\CQL\codeql_home\codeql\cpp.
+[2022-06-27 05:37:05] [PROGRESS] database init> Successfully loaded extractor C/C++ (cpp) from C:\CQL\codeql_home\codeql\cpp.
+[2022-06-27 05:37:05] [PROGRESS] database init> Created skeleton CodeQL database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer. This in-progress database is ready to be populated by an extractor.
+[2022-06-27 05:37:05] Plumbing command codeql database init completed.
+[2022-06-27 05:37:05] [PROGRESS] database create> Running build command: [msbuild, /p:Platform=x64, /t:rebuild]
+[2022-06-27 05:37:05] Running plumbing command: codeql database trace-command --working-dir=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3 --index-traceless-dbs --no-db-cluster -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer msbuild /p:Platform=x64 /t:rebuild
+[2022-06-27 05:37:05] Setting up tracing from specification at C:\CQL\codeql_home\codeql\cpp\tools\win64\compiler-tracing.spec.
+[2022-06-27 05:37:05] [PROGRESS] database trace-command> Running command in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3: [msbuild, /p:Platform=x64, /t:rebuild]
+[2022-06-27 05:37:06] [build-stdout] Microsoft (R) Build Engine version 17.2.1+52cd2da31 for .NET Framework
+[2022-06-27 05:37:06] [build-stdout] Copyright (C) Microsoft Corporation. All rights reserved.
+[2022-06-27 05:37:06] [build-stdout] Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+[2022-06-27 05:37:06] [build-stdout] Build started 6/27/2022 5:37:06 AM.
+[2022-06-27 05:37:06] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.sln" on node 1 (rebuild target(s)).
+[2022-06-27 05:37:06] [build-stdout] ValidateSolutionConfiguration:
+[2022-06-27 05:37:06] [build-stdout]   Building solution configuration "Debug|x64".
+[2022-06-27 05:37:06] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.sln" (1) is building "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (2) on node 1 (Rebuild target(s)).
+[2022-06-27 05:37:06] [build-stdout] _PrepareForClean:
+[2022-06-27 05:37:06] [build-stdout]   Deleting file "x64\Debug\USBDriver3.tlog\USBDriver3.lastbuildstate".
+[2022-06-27 05:37:06] [build-stdout] CoreClean:
+[2022-06-27 05:37:06] [build-stdout]   Deleting file "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys".
+[2022-06-27 05:37:06] [build-stdout] CleanOutput:
+[2022-06-27 05:37:06] [build-stdout]   Deleting file "x64\Debug\USBDriver3.sys.recipe".
+[2022-06-27 05:37:06] [build-stdout]   Deleting file "x64\Debug\USBDriver3.vcxproj.FileListAbsolute.txt".
+[2022-06-27 05:37:06] [build-stdout]   Deleting file "x64\Debug\USBDriver3\USBDriver3.inf".
+[2022-06-27 05:37:06] [build-stdout]   Deleting file "x64\Debug\USBDriver3\USBDriver3.sys".
+[2022-06-27 05:37:06] [build-stdout]   Removing directory "x64\Debug\USBDriver3\".
+[2022-06-27 05:37:06] [build-stdout] DriverBuildNotifications:
+[2022-06-27 05:37:06] [build-stdout]   Building 'USBDriver3' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+[2022-06-27 05:37:06] [build-stdout]   Using KMDF 1.15.
+[2022-06-27 05:37:06] [build-stdout] InitializeBuildStatus:
+[2022-06-27 05:37:06] [build-stdout]   Creating "x64\Debug\USBDriver3.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[2022-06-27 05:37:06] [build-stdout] StampInf:
+[2022-06-27 05:37:06] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\stampinf.exe -d "*" -a "amd64" -v "*" -k "1.15"  -x -f x64\Debug\USBDriver3.inf 
+[2022-06-27 05:37:06] [build-stdout]   Copying "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.inf" to "x64\Debug\USBDriver3.inf" for stamping
+[2022-06-27 05:37:06] [build-stdout]   Stamping x64\Debug\USBDriver3.inf
+[2022-06-27 05:37:06] [build-stdout]   Stamping [Version] section with DriverVer=06/27/2022,5.37.6.907
+[2022-06-27 05:37:07] [build-stdout] RunWpp:
+[2022-06-27 05:37:07] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\tracewpp.exe -cfgdir:"C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\wppconfig\rev1" -scan:"trace.h" -odir:"x64\Debug\\" -km Device.cpp Driver.c Queue.cpp 
+[2022-06-27 05:37:07] [build-stdout] ClCompile:
+[2022-06-27 05:37:07] [build-stdout]   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\HostX64\x64\CL.exe /c /Ix64\Debug\ /Zi /nologo /W4 /WX /diagnostics:column /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0A00 /D WINVER=0x0A00 /D WINNT=1 /D NTDDI_VERSION=0xA00000C /D DBG=1 /D KMDF_VERSION_MAJOR=1 /D KMDF_VERSION_MINOR=15 /D ENABLE_WPP_RECORDER=1 /GF /Gm- /Zp8 /GS /guard:cf /Gy /fp:precise /Qspectre /Zc:wchar_t- /Zc:forScope /Zc:inline /GR- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W4 /Gz /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 /FI"C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" /FC /errorReport:queue /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ Device.cpp Driver.c Queue.cpp
+[2022-06-27 05:37:07] [build-stdout]   Device.cpp
+[2022-06-27 05:37:08] [build-stdout]   Generating Code...
+[2022-06-27 05:37:08] [build-stdout]   Compiling...
+[2022-06-27 05:37:08] [build-stdout]   Driver.c
+[2022-06-27 05:37:08] [build-stdout]   Generating Code...
+[2022-06-27 05:37:08] [build-stdout]   Compiling...
+[2022-06-27 05:37:08] [build-stdout]   Queue.cpp
+[2022-06-27 05:37:08] [build-stdout]   Generating Code...
+[2022-06-27 05:37:20] [build-stdout] Link:
+[2022-06-27 05:37:20] [build-stdout]   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys" /VERSION:"10.0" /INCREMENTAL:NO /NOLOGO /WX /SECTION:"INIT,d" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\BufferOverflowFastFailK.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\ntoskrnl.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\hal.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wmilib.lib" "C:\Program Files (x86)\Windows Kits\10\lib\wdf\kmdf\x64\1.15\WdfLdr.lib" "C:\Program Files (x86)\Windows Kits\10\lib\wdf\kmdf\x64\1.15\WdfDriverEntry.lib" usbdex.lib ntstrsafe.lib "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wpprecorder.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.pdb" /SUBSYSTEM:NATIVE,"10.00" /Driver /OPT:REF /OPT:ICF /ENTRY:"FxDriverEntry" /RELEASE /IMPLIB:"C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.lib" /MERGE:"_TEXT=.text;_PAGE=PAGE" /MACHINE:X64 /PROFILE /guard:cf /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:10.0 /pdbcompress /debugtype:pdata x64\Debug\Device.obj
+[2022-06-27 05:37:20] [build-stdout]   x64\Debug\Driver.obj
+[2022-06-27 05:37:21] [build-stdout]   x64\Debug\Queue.obj
+[2022-06-27 05:37:21] [build-stdout]   USBDriver3.vcxproj -> C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys
+[2022-06-27 05:37:21] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (2) is building "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (2:2) on node 1 (TestSign target(s)).
+[2022-06-27 05:37:21] [build-stdout] TestSign:
+[2022-06-27 05:37:21] [build-stdout]   The driver will be test-signed. Driver signing options can be changed from the project properties.
+[2022-06-27 05:37:21] [build-stdout]   Sign Inputs: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys
+[2022-06-27 05:37:21] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe sign /ph /fd "sha256" /sha1 "3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3" 
+[2022-06-27 05:37:21] [build-stdout]   Done Adding Additional Store
+[2022-06-27 05:37:21] [build-stdout]   Successfully signed: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys
+[2022-06-27 05:37:21] [build-stdout]   
+[2022-06-27 05:37:21] [build-stdout]   Certificate used for signing: issued to = WDKTestCert t-abtamene,133003148183399534 and thumbprint = 3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3
+[2022-06-27 05:37:21] [build-stdout]   Exported Certificate: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.cer
+[2022-06-27 05:37:21] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (TestSign target(s)).
+[2022-06-27 05:37:21] [build-stdout] ApiValidator:
+[2022-06-27 05:37:21] [build-stdout]   Validating 'Universal' driver using ApiValidator.exe
+[2022-06-27 05:37:22] [build-stdout]   cmd.exe /D /C "C:\Users\t-abtamene\AppData\Local\Temp\tmpf1e7d9f9fedc46af8d6b6dc6083ed193.cmd"
+[2022-06-27 05:37:22] [build-stdout]   "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\ApiValidator.exe" -DriverPackagePath:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys -SupportedApiXmlFiles:"C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\universalDDIs\x64\UniversalDDIs.xml" -ModuleWhiteListXmlFiles:"C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\universalDDIs\x64\ModuleWhiteList.xml" -ApiExtractorExePath:"C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64" 
+[2022-06-27 05:37:23] [build-stdout]   Driver is 'Universal'.
+[2022-06-27 05:37:23] [build-stdout] DriverPackageTarget:
+[2022-06-27 05:37:23] [build-stdout]   Packaging up the following projects for the following configurations:
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]    Configuration='' Platform=''
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   The following files will be packaged:
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   File to package:      C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys.
+[2022-06-27 05:37:23] [build-stdout]   Location in Package:  \USBDriver3.sys.
+[2022-06-27 05:37:23] [build-stdout]   Requested by project: 
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   File to package:      x64\Debug\USBDriver3.inf.
+[2022-06-27 05:37:23] [build-stdout]   Location in Package:  \USBDriver3.inf.
+[2022-06-27 05:37:23] [build-stdout]   Requested by project: 
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   
+[2022-06-27 05:37:23] [build-stdout]   Creating directory "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3".
+[2022-06-27 05:37:23] [build-stdout]   Copying file from "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.sys" to "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3\USBDriver3.sys".
+[2022-06-27 05:37:23] [build-stdout]   Copying file from "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.inf" to "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3\USBDriver3.inf".
+[2022-06-27 05:37:23] [build-stdout] Inf2Cat:
+[2022-06-27 05:37:23] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\inf2cat.exe /os:10_x64 /driver:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3\ 
+[2022-06-27 05:37:24] [build-stdout]   ........................
+[2022-06-27 05:37:24] [build-stdout]   Signability test complete.
+[2022-06-27 05:37:24] [build-stdout]   
+[2022-06-27 05:37:24] [build-stdout]   Errors:
+[2022-06-27 05:37:24] [build-stdout]   None
+[2022-06-27 05:37:24] [build-stdout]   
+[2022-06-27 05:37:24] [build-stdout]   Warnings:
+[2022-06-27 05:37:24] [build-stdout]   None
+[2022-06-27 05:37:24] [build-stdout]   
+[2022-06-27 05:37:24] [build-stdout]   Catalog generation complete.
+[2022-06-27 05:37:24] [build-stdout]   C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3\usbdriver3.cat
+[2022-06-27 05:37:24] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (2) is building "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (2:3) on node 1 (TestSign target(s)).
+[2022-06-27 05:37:24] [build-stdout] TestSign:
+[2022-06-27 05:37:24] [build-stdout]   The driver package will be test-signed. Driver signing options can be changed from the project properties.
+[2022-06-27 05:37:24] [build-stdout]   Sign Inputs: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3\usbdriver3.cat
+[2022-06-27 05:37:24] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe sign /ph /fd "sha256" /sha1 "3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3" 
+[2022-06-27 05:37:24] [build-stdout]   Done Adding Additional Store
+[2022-06-27 05:37:24] [build-stdout]   Successfully signed: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3\usbdriver3.cat
+[2022-06-27 05:37:24] [build-stdout]   
+[2022-06-27 05:37:24] [build-stdout]   Certificate used for signing: issued to = WDKTestCert t-abtamene,133003148183399534 and thumbprint = 3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3
+[2022-06-27 05:37:24] [build-stdout]   Exported Certificate: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Debug\USBDriver3.cer
+[2022-06-27 05:37:24] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (TestSign target(s)).
+[2022-06-27 05:37:24] [build-stdout] FinalizeBuildStatus:
+[2022-06-27 05:37:24] [build-stdout]   Deleting file "x64\Debug\USBDriver3.tlog\unsuccessfulbuild".
+[2022-06-27 05:37:24] [build-stdout]   Touching "x64\Debug\USBDriver3.tlog\USBDriver3.lastbuildstate".
+[2022-06-27 05:37:24] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.vcxproj" (Rebuild target(s)).
+[2022-06-27 05:37:24] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\USBDriver3.sln" (rebuild target(s)).
+[2022-06-27 05:37:24] [build-stdout] Build succeeded.
+[2022-06-27 05:37:24] [build-stdout]     0 Warning(s)
+[2022-06-27 05:37:24] [build-stdout]     0 Error(s)
+[2022-06-27 05:37:24] [build-stdout] Time Elapsed 00:00:18.73
+[2022-06-27 05:37:24] Plumbing command codeql database trace-command completed.
+[2022-06-27 05:37:24] [PROGRESS] database create> Finalizing database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer.
+[2022-06-27 05:37:24] Running plumbing command: codeql database finalize --mode=normal --keep-temporary --no-db-cluster -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer
+[2022-06-27 05:37:24] [PROGRESS] database finalize> Running TRAP import for CodeQL database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer...
+[2022-06-27 05:37:24] Running plumbing command: codeql dataset import --dbscheme=C:\CQL\codeql_home\codeql\cpp\semmlecode.cpp.dbscheme -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\trap\cpp
+[2022-06-27 05:37:25] Clearing disk cache since the version file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp\default\cache\version does not exist
+[2022-06-27 05:37:25] Tuple pool not found. Clearing relations with cached strings
+[2022-06-27 05:37:25] Trimming disk cache at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp\default\cache in mode brutal.
+[2022-06-27 05:37:25] Sequence stamp origin is -6439988015479377970
+[2022-06-27 05:37:25] Pausing evaluation to hard-clear memory at sequence stamp o+0
+[2022-06-27 05:37:25] Unpausing evaluation
+[2022-06-27 05:37:25] Pausing evaluation to quickly trim disk at sequence stamp o+1
+[2022-06-27 05:37:25] Unpausing evaluation
+[2022-06-27 05:37:25] Pausing evaluation to zealously trim disk at sequence stamp o+2
+[2022-06-27 05:37:25] Unpausing evaluation
+[2022-06-27 05:37:25] Trimming completed (0ms): Purged everything.
+[2022-06-27 05:37:25] Scanning for files in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\trap\cpp
+[2022-06-27 05:37:25] Grouping TRAPs by link target
+[2022-06-27 05:37:25] Scanning cpp_predefined.d6444f2f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (1 of 198)
+[2022-06-27 05:37:25] Scanning suppress.h.123c6f6f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (2 of 198)
+[2022-06-27 05:37:25] Scanning warning.h.af27f581.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (3 of 198)
+[2022-06-27 05:37:25] Scanning concurrencysal.h.99be80f7.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (4 of 198)
+[2022-06-27 05:37:25] Scanning sal.h.6417d503.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (5 of 198)
+[2022-06-27 05:37:25] Scanning specstrings_undef.h.67cbf1a6.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (6 of 198)
+[2022-06-27 05:37:25] Scanning specstrings_strict.h.584e048a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (7 of 198)
+[2022-06-27 05:37:25] Scanning sdv_driverspecs.h.d761126d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (8 of 198)
+[2022-06-27 05:37:25] Scanning driverspecs.h.a27bd7aa.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (9 of 198)
+[2022-06-27 05:37:25] Scanning specstrings.h.cd868ed9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (10 of 198)
+[2022-06-27 05:37:25] Scanning vadefs.h.05927859.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (11 of 198)
+[2022-06-27 05:37:25] Scanning crtdefs.h.ecdf845e.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (12 of 198)
+[2022-06-27 05:37:25] Scanning excpt.h.f4cf6112.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (13 of 198)
+[2022-06-27 05:37:25] Scanning crtdefs.h.8e4e8174.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (14 of 198)
+[2022-06-27 05:37:25] Scanning ctype.h.9f417c02.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (15 of 198)
+[2022-06-27 05:37:25] Scanning winpackagefamily.h.679dee80.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (16 of 198)
+[2022-06-27 05:37:25] Scanning winapifamily.h.08e21a82.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (17 of 198)
+[2022-06-27 05:37:25] Scanning kernelspecs.h.870a521b.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (18 of 198)
+[2022-06-27 05:37:25] Scanning basetsd.h.758e3685.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (19 of 198)
+[2022-06-27 05:37:25] Scanning string.h.2d3fa2ee.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (20 of 198)
+[2022-06-27 05:37:25] Scanning guiddef.h.305274d6.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (21 of 198)
+[2022-06-27 05:37:25] Scanning sdkddkver.h.67070798.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (22 of 198)
+[2022-06-27 05:37:25] Scanning ntdef.h.5f891753.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (23 of 198)
+[2022-06-27 05:37:25] Scanning ntstatus.h.1b85e01a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (24 of 198)
+[2022-06-27 05:37:25] Scanning bugcodes.h.d761126d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (25 of 198)
+[2022-06-27 05:37:25] Scanning ntiologc.h.d761126d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (26 of 198)
+[2022-06-27 05:37:25] Scanning mce.h.85eec159.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (27 of 198)
+[2022-06-27 05:37:25] Scanning pshpack4.h.0b5f644f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (28 of 198)
+[2022-06-27 05:37:25] Scanning poppack.h.0b5f644f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (29 of 198)
+[2022-06-27 05:37:25] Scanning pshpack1.h.0b5f644f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (30 of 198)
+[2022-06-27 05:37:25] Scanning guiddef.h.72631d98.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (31 of 198)
+[2022-06-27 05:37:25] Scanning dpfilter.h.66233e49.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (32 of 198)
+[2022-06-27 05:37:25] Scanning apiset.h.e927e456.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (33 of 198)
+[2022-06-27 05:37:25] Scanning ktmtypes.h.9aee1cad.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (34 of 198)
+[2022-06-27 05:37:25] Scanning evntprov.h.a262123a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (35 of 198)
+[2022-06-27 05:37:25] Scanning devpropdef.h.7a86f178.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (36 of 198)
+[2022-06-27 05:37:25] Scanning wdm.h.a3b3ee7e.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (37 of 198)
+[2022-06-27 05:37:26] Scanning ntddk.h.52b79538.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (38 of 198)
+[2022-06-27 05:37:26] Scanning wdftypes.h.27b4a001.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (39 of 198)
+[2022-06-27 05:37:26] Scanning wdfglobals.h.06d15ced.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (40 of 198)
+[2022-06-27 05:37:26] Scanning wdffuncenum.h.31f11ff1.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (41 of 198)
+[2022-06-27 05:37:26] Scanning wdfstatus.h.2089d3a5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (42 of 198)
+[2022-06-27 05:37:26] Scanning wdfassert.h.fd3aafca.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (43 of 198)
+[2022-06-27 05:37:26] Scanning wdfverifier.h.689f0e00.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (44 of 198)
+[2022-06-27 05:37:26] Scanning wdfpool.h.0faa178a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (45 of 198)
+[2022-06-27 05:37:26] Scanning wdfobject.h.992154c9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (46 of 198)
+[2022-06-27 05:37:26] Scanning wdfsync.h.4141c941.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (47 of 198)
+[2022-06-27 05:37:26] Scanning wdfcore.h.d25345d2.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (48 of 198)
+[2022-06-27 05:37:26] Scanning wdfdriver.h.22e4eef9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (49 of 198)
+[2022-06-27 05:37:26] Scanning wdfqueryinterface.h.715a0371.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (50 of 198)
+[2022-06-27 05:37:26] Scanning wdfmemory.h.365cbb2d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (51 of 198)
+[2022-06-27 05:37:26] Scanning wdfchildlist.h.e2884eda.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (52 of 198)
+[2022-06-27 05:37:26] Scanning wdffileobject.h.6a6fc7db.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (53 of 198)
+[2022-06-27 05:37:26] Scanning devpropdef.h.27891ad2.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (54 of 198)
+[2022-06-27 05:37:26] Scanning wdmsec.h.8a4c80fd.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (55 of 198)
+[2022-06-27 05:37:26] Scanning wdfdevice.h.75e19c47.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (56 of 198)
+[2022-06-27 05:37:26] Scanning wdfcollection.h.9c213983.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (57 of 198)
+[2022-06-27 05:37:26] Scanning wdfdpc.h.d5c0ecfa.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (58 of 198)
+[2022-06-27 05:37:26] Scanning wdftimer.h.3907c231.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (59 of 198)
+[2022-06-27 05:37:26] Scanning wdfworkitem.h.0e686d56.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (60 of 198)
+[2022-06-27 05:37:26] Scanning wdfinterrupt.h.478bba67.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (61 of 198)
+[2022-06-27 05:37:26] Scanning wdfresource.h.2cd8ba77.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (62 of 198)
+[2022-06-27 05:37:26] Scanning wdfrequest.h.0b138893.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (63 of 198)
+[2022-06-27 05:37:26] Scanning wdfiotarget.h.e46d5baf.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (64 of 198)
+[2022-06-27 05:37:26] Scanning wdfio.h.f8ff1c5d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (65 of 198)
+[2022-06-27 05:37:26] Scanning wdffdo.h.40433940.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (66 of 198)
+[2022-06-27 05:37:26] Scanning wdfpdo.h.de3ddc03.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (67 of 198)
+[2022-06-27 05:37:26] Scanning wdfcontrol.h.f7cac6a9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (68 of 198)
+[2022-06-27 05:37:26] Scanning wdfwmi.h.76d40557.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (69 of 198)
+[2022-06-27 05:37:26] Scanning wdfstring.h.2adb37f7.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (70 of 198)
+[2022-06-27 05:37:26] Scanning wdfregistry.h.5bd2e2b4.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (71 of 198)
+[2022-06-27 05:37:27] Scanning wdfdmaenabler.h.e2929a84.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (72 of 198)
+[2022-06-27 05:37:27] Scanning wdfdmatransaction.h.a08416e9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (73 of 198)
+[2022-06-27 05:37:27] Scanning wdfcommonbuffer.h.03e7e5fe.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (74 of 198)
+[2022-06-27 05:37:27] Scanning wdfbugcodes.h.a7843544.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (75 of 198)
+[2022-06-27 05:37:27] Scanning wdfroletypes.h.856e536b.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (76 of 198)
+[2022-06-27 05:37:27] Scanning wdfhwaccess.h.0faa178a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (77 of 198)
+[2022-06-27 05:37:27] Scanning wdf.h.1f7be4ec.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (78 of 198)
+[2022-06-27 05:37:27] Scanning pshpack1.h.c236a317.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (79 of 198)
+[2022-06-27 05:37:27] Scanning poppack.h.c236a317.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (80 of 198)
+[2022-06-27 05:37:27] Scanning usbspec.h.02d674e4.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (81 of 198)
+[2022-06-27 05:37:27] Scanning usb.h.644d1ce5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (82 of 198)
+[2022-06-27 05:37:27] Scanning usbdlib.h.c9aeb050.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (83 of 198)
+[2022-06-27 05:37:27] Scanning wdfusb.h.0ccaab11.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (84 of 198)
+[2022-06-27 05:37:27] Scanning guiddef.h.4c93e8e1.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (85 of 198)
+[2022-06-27 05:37:27] Scanning initguid.h.4667082f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (86 of 198)
+[2022-06-27 05:37:27] Scanning Public.h.7e1f6edb.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (87 of 198)
+[2022-06-27 05:37:27] Scanning Device.h.1cc28efb.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (88 of 198)
+[2022-06-27 05:37:27] Scanning Queue.h.1c14b4c1.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (89 of 198)
+[2022-06-27 05:37:27] Scanning Trace.h.67cbf1a6.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (90 of 198)
+[2022-06-27 05:37:27] Scanning Driver.h.1b5fdb63.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (91 of 198)
+[2022-06-27 05:37:27] Scanning guiddef.h.8ff665c5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (92 of 198)
+[2022-06-27 05:37:27] Scanning evntrace.h.a17670e7.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (93 of 198)
+[2022-06-27 05:37:27] Scanning stddef.h.30c022fa.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (94 of 198)
+[2022-06-27 05:37:27] Scanning wmistr.h.9186cb43.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (95 of 198)
+[2022-06-27 05:37:27] Scanning Device.tmh.877a027b.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (96 of 198)
+[2022-06-27 05:37:27] Scanning Device.cpp.c1ecddb5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) (97 of 198)
+[2022-06-27 05:37:27] Scanning suppress.h.c0ebe05d.trap (Driver.c.ff4d8f16_0.trap.tar.br) (98 of 198)
+[2022-06-27 05:37:27] Scanning warning.h.c23ed0db.trap (Driver.c.ff4d8f16_0.trap.tar.br) (99 of 198)
+[2022-06-27 05:37:27] Scanning concurrencysal.h.ebc35fda.trap (Driver.c.ff4d8f16_0.trap.tar.br) (100 of 198)
+[2022-06-27 05:37:27] Scanning sal.h.4a3c7929.trap (Driver.c.ff4d8f16_0.trap.tar.br) (101 of 198)
+[2022-06-27 05:37:27] Scanning specstrings_undef.h.167b6294.trap (Driver.c.ff4d8f16_0.trap.tar.br) (102 of 198)
+[2022-06-27 05:37:27] Scanning specstrings_strict.h.06fd7578.trap (Driver.c.ff4d8f16_0.trap.tar.br) (103 of 198)
+[2022-06-27 05:37:27] Scanning sdv_driverspecs.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) (104 of 198)
+[2022-06-27 05:37:27] Scanning driverspecs.h.40b1a18c.trap (Driver.c.ff4d8f16_0.trap.tar.br) (105 of 198)
+[2022-06-27 05:37:27] Scanning specstrings.h.4a33f18e.trap (Driver.c.ff4d8f16_0.trap.tar.br) (106 of 198)
+[2022-06-27 05:37:27] Scanning vadefs.h.9a85289f.trap (Driver.c.ff4d8f16_0.trap.tar.br) (107 of 198)
+[2022-06-27 05:37:27] Scanning crtdefs.h.b9f9030e.trap (Driver.c.ff4d8f16_0.trap.tar.br) (108 of 198)
+[2022-06-27 05:37:27] Scanning excpt.h.4a2e7ec9.trap (Driver.c.ff4d8f16_0.trap.tar.br) (109 of 198)
+[2022-06-27 05:37:27] Scanning crtdefs.h.3cfdf262.trap (Driver.c.ff4d8f16_0.trap.tar.br) (110 of 198)
+[2022-06-27 05:37:27] Scanning ctype.h.b5a1a318.trap (Driver.c.ff4d8f16_0.trap.tar.br) (111 of 198)
+[2022-06-27 05:37:27] Scanning winpackagefamily.h.164d5f6e.trap (Driver.c.ff4d8f16_0.trap.tar.br) (112 of 198)
+[2022-06-27 05:37:27] Scanning winapifamily.h.b7918b70.trap (Driver.c.ff4d8f16_0.trap.tar.br) (113 of 198)
+[2022-06-27 05:37:27] Scanning kernelspecs.h.3e9b2e73.trap (Driver.c.ff4d8f16_0.trap.tar.br) (114 of 198)
+[2022-06-27 05:37:27] Scanning basetsd.h.32c77334.trap (Driver.c.ff4d8f16_0.trap.tar.br) (115 of 198)
+[2022-06-27 05:37:27] Scanning string.h.3c019998.trap (Driver.c.ff4d8f16_0.trap.tar.br) (116 of 198)
+[2022-06-27 05:37:27] Scanning guiddef.h.e8d69ce6.trap (Driver.c.ff4d8f16_0.trap.tar.br) (117 of 198)
+[2022-06-27 05:37:27] Scanning sdkddkver.h.15b67886.trap (Driver.c.ff4d8f16_0.trap.tar.br) (118 of 198)
+[2022-06-27 05:37:27] Scanning ntdef.h.95af8aac.trap (Driver.c.ff4d8f16_0.trap.tar.br) (119 of 198)
+[2022-06-27 05:37:27] Scanning ntstatus.h.ca355108.trap (Driver.c.ff4d8f16_0.trap.tar.br) (120 of 198)
+[2022-06-27 05:37:27] Scanning bugcodes.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) (121 of 198)
+[2022-06-27 05:37:27] Scanning ntiologc.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) (122 of 198)
+[2022-06-27 05:37:27] Scanning mce.h.a0d03769.trap (Driver.c.ff4d8f16_0.trap.tar.br) (123 of 198)
+[2022-06-27 05:37:27] Scanning pshpack4.h.70e61405.trap (Driver.c.ff4d8f16_0.trap.tar.br) (124 of 198)
+[2022-06-27 05:37:27] Scanning poppack.h.70e61405.trap (Driver.c.ff4d8f16_0.trap.tar.br) (125 of 198)
+[2022-06-27 05:37:27] Scanning pshpack1.h.70e61405.trap (Driver.c.ff4d8f16_0.trap.tar.br) (126 of 198)
+[2022-06-27 05:37:27] Scanning guiddef.h.14afcd24.trap (Driver.c.ff4d8f16_0.trap.tar.br) (127 of 198)
+[2022-06-27 05:37:27] Scanning dpfilter.h.b67644c0.trap (Driver.c.ff4d8f16_0.trap.tar.br) (128 of 198)
+[2022-06-27 05:37:27] Scanning apiset.h.4eae940c.trap (Driver.c.ff4d8f16_0.trap.tar.br) (129 of 198)
+[2022-06-27 05:37:27] Scanning ktmtypes.h.afecde69.trap (Driver.c.ff4d8f16_0.trap.tar.br) (130 of 198)
+[2022-06-27 05:37:27] Scanning evntprov.h.f5781383.trap (Driver.c.ff4d8f16_0.trap.tar.br) (131 of 198)
+[2022-06-27 05:37:27] Scanning devpropdef.h.2151f9ae.trap (Driver.c.ff4d8f16_0.trap.tar.br) (132 of 198)
+[2022-06-27 05:37:27] Scanning wdm.h.c91a998c.trap (Driver.c.ff4d8f16_0.trap.tar.br) (133 of 198)
+[2022-06-27 05:37:27] Scanning ntddk.h.1e9e4b74.trap (Driver.c.ff4d8f16_0.trap.tar.br) (134 of 198)
+[2022-06-27 05:37:27] Scanning wdftypes.h.8f2d4345.trap (Driver.c.ff4d8f16_0.trap.tar.br) (135 of 198)
+[2022-06-27 05:37:27] Scanning wdfglobals.h.b702c5e3.trap (Driver.c.ff4d8f16_0.trap.tar.br) (136 of 198)
+[2022-06-27 05:37:27] Scanning wdffuncenum.h.ba08b19f.trap (Driver.c.ff4d8f16_0.trap.tar.br) (137 of 198)
+[2022-06-27 05:37:27] Scanning wdfstatus.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) (138 of 198)
+[2022-06-27 05:37:27] Scanning wdfassert.h.a6628b28.trap (Driver.c.ff4d8f16_0.trap.tar.br) (139 of 198)
+[2022-06-27 05:37:27] Scanning wdfverifier.h.bee7f023.trap (Driver.c.ff4d8f16_0.trap.tar.br) (140 of 198)
+[2022-06-27 05:37:27] Scanning wdfpool.h.357cd8ce.trap (Driver.c.ff4d8f16_0.trap.tar.br) (141 of 198)
+[2022-06-27 05:37:27] Scanning wdfobject.h.2f0ca609.trap (Driver.c.ff4d8f16_0.trap.tar.br) (142 of 198)
+[2022-06-27 05:37:27] Scanning wdfsync.h.73aa31b4.trap (Driver.c.ff4d8f16_0.trap.tar.br) (143 of 198)
+[2022-06-27 05:37:27] Scanning wdfcore.h.2dc9d0d9.trap (Driver.c.ff4d8f16_0.trap.tar.br) (144 of 198)
+[2022-06-27 05:37:27] Scanning wdfdriver.h.8478d0be.trap (Driver.c.ff4d8f16_0.trap.tar.br) (145 of 198)
+[2022-06-27 05:37:27] Scanning wdfqueryinterface.h.660f21d0.trap (Driver.c.ff4d8f16_0.trap.tar.br) (146 of 198)
+[2022-06-27 05:37:27] Scanning wdfmemory.h.ccc0d9b0.trap (Driver.c.ff4d8f16_0.trap.tar.br) (147 of 198)
+[2022-06-27 05:37:27] Scanning wdfchildlist.h.844ba0dc.trap (Driver.c.ff4d8f16_0.trap.tar.br) (148 of 198)
+[2022-06-27 05:37:27] Scanning wdffileobject.h.98f7ae72.trap (Driver.c.ff4d8f16_0.trap.tar.br) (149 of 198)
+[2022-06-27 05:37:27] Scanning devpropdef.h.e6d65ef9.trap (Driver.c.ff4d8f16_0.trap.tar.br) (150 of 198)
+[2022-06-27 05:37:27] Scanning wdmsec.h.83a5dfca.trap (Driver.c.ff4d8f16_0.trap.tar.br) (151 of 198)
+[2022-06-27 05:37:27] Scanning wdfdevice.h.c97afc81.trap (Driver.c.ff4d8f16_0.trap.tar.br) (152 of 198)
+[2022-06-27 05:37:27] Scanning wdfcollection.h.37c6ecd6.trap (Driver.c.ff4d8f16_0.trap.tar.br) (153 of 198)
+[2022-06-27 05:37:27] Scanning wdfdpc.h.ce7910cb.trap (Driver.c.ff4d8f16_0.trap.tar.br) (154 of 198)
+[2022-06-27 05:37:27] Scanning wdftimer.h.56e46bb1.trap (Driver.c.ff4d8f16_0.trap.tar.br) (155 of 198)
+[2022-06-27 05:37:27] Scanning wdfworkitem.h.ba4a9c9a.trap (Driver.c.ff4d8f16_0.trap.tar.br) (156 of 198)
+[2022-06-27 05:37:27] Scanning wdfinterrupt.h.98197aad.trap (Driver.c.ff4d8f16_0.trap.tar.br) (157 of 198)
+[2022-06-27 05:37:27] Scanning wdfresource.h.04e4a9ce.trap (Driver.c.ff4d8f16_0.trap.tar.br) (158 of 198)
+[2022-06-27 05:37:27] Scanning wdfrequest.h.fe356f0c.trap (Driver.c.ff4d8f16_0.trap.tar.br) (159 of 198)
+[2022-06-27 05:37:27] Scanning wdfiotarget.h.6b2ac828.trap (Driver.c.ff4d8f16_0.trap.tar.br) (160 of 198)
+[2022-06-27 05:37:27] Scanning wdfio.h.3f9e1eb2.trap (Driver.c.ff4d8f16_0.trap.tar.br) (161 of 198)
+[2022-06-27 05:37:27] Scanning wdffdo.h.0a72f6cd.trap (Driver.c.ff4d8f16_0.trap.tar.br) (162 of 198)
+[2022-06-27 05:37:27] Scanning wdfpdo.h.e0d87c64.trap (Driver.c.ff4d8f16_0.trap.tar.br) (163 of 198)
+[2022-06-27 05:37:27] Scanning wdfcontrol.h.b7318387.trap (Driver.c.ff4d8f16_0.trap.tar.br) (164 of 198)
+[2022-06-27 05:37:27] Scanning wdfwmi.h.da2ce496.trap (Driver.c.ff4d8f16_0.trap.tar.br) (165 of 198)
+[2022-06-27 05:37:27] Scanning wdfstring.h.585d77a7.trap (Driver.c.ff4d8f16_0.trap.tar.br) (166 of 198)
+[2022-06-27 05:37:27] Scanning wdfregistry.h.2a843e82.trap (Driver.c.ff4d8f16_0.trap.tar.br) (167 of 198)
+[2022-06-27 05:37:27] Scanning wdfdmaenabler.h.e6999142.trap (Driver.c.ff4d8f16_0.trap.tar.br) (168 of 198)
+[2022-06-27 05:37:27] Scanning wdfdmatransaction.h.bb7fdbfe.trap (Driver.c.ff4d8f16_0.trap.tar.br) (169 of 198)
+[2022-06-27 05:37:28] Scanning wdfcommonbuffer.h.8e9138d8.trap (Driver.c.ff4d8f16_0.trap.tar.br) (170 of 198)
+[2022-06-27 05:37:28] Scanning wdfbugcodes.h.ea9af241.trap (Driver.c.ff4d8f16_0.trap.tar.br) (171 of 198)
+[2022-06-27 05:37:28] Scanning wdfroletypes.h.d5a96134.trap (Driver.c.ff4d8f16_0.trap.tar.br) (172 of 198)
+[2022-06-27 05:37:28] Scanning wdfhwaccess.h.357cd8ce.trap (Driver.c.ff4d8f16_0.trap.tar.br) (173 of 198)
+[2022-06-27 05:37:28] Scanning wdf.h.8634e612.trap (Driver.c.ff4d8f16_0.trap.tar.br) (174 of 198)
+[2022-06-27 05:37:28] Scanning usbspec.h.a951460f.trap (Driver.c.ff4d8f16_0.trap.tar.br) (175 of 198)
+[2022-06-27 05:37:28] Scanning usb.h.5a633045.trap (Driver.c.ff4d8f16_0.trap.tar.br) (176 of 198)
+[2022-06-27 05:37:28] Scanning usbdlib.h.dcbfb1ff.trap (Driver.c.ff4d8f16_0.trap.tar.br) (177 of 198)
+[2022-06-27 05:37:28] Scanning wdfusb.h.4d98e832.trap (Driver.c.ff4d8f16_0.trap.tar.br) (178 of 198)
+[2022-06-27 05:37:28] Scanning guiddef.h.f65b4f91.trap (Driver.c.ff4d8f16_0.trap.tar.br) (179 of 198)
+[2022-06-27 05:37:28] Scanning initguid.h.f516791d.trap (Driver.c.ff4d8f16_0.trap.tar.br) (180 of 198)
+[2022-06-27 05:37:28] Scanning Public.h.12331186.trap (Driver.c.ff4d8f16_0.trap.tar.br) (181 of 198)
+[2022-06-27 05:37:28] Scanning Device.h.79eda15a.trap (Driver.c.ff4d8f16_0.trap.tar.br) (182 of 198)
+[2022-06-27 05:37:28] Scanning Queue.h.92f03fa2.trap (Driver.c.ff4d8f16_0.trap.tar.br) (183 of 198)
+[2022-06-27 05:37:28] Scanning Trace.h.167b6294.trap (Driver.c.ff4d8f16_0.trap.tar.br) (184 of 198)
+[2022-06-27 05:37:28] Scanning Driver.h.53c44aa4.trap (Driver.c.ff4d8f16_0.trap.tar.br) (185 of 198)
+[2022-06-27 05:37:28] Scanning guiddef.h.29add26d.trap (Driver.c.ff4d8f16_0.trap.tar.br) (186 of 198)
+[2022-06-27 05:37:28] Scanning evntrace.h.bc17ed04.trap (Driver.c.ff4d8f16_0.trap.tar.br) (187 of 198)
+[2022-06-27 05:37:28] Scanning stddef.h.17bff76f.trap (Driver.c.ff4d8f16_0.trap.tar.br) (188 of 198)
+[2022-06-27 05:37:28] Scanning wmistr.h.6728496d.trap (Driver.c.ff4d8f16_0.trap.tar.br) (189 of 198)
+[2022-06-27 05:37:28] Scanning Driver.tmh.893beb55.trap (Driver.c.ff4d8f16_0.trap.tar.br) (190 of 198)
+[2022-06-27 05:37:28] Scanning Driver.c.ff4d8f16.trap (Driver.c.ff4d8f16_0.trap.tar.br) (191 of 198)
+[2022-06-27 05:37:28] Scanning Queue.tmh.dce979b7.trap (Queue.cpp.67d1762f_0.trap.tar.br) (192 of 198)
+[2022-06-27 05:37:28] Scanning Queue.cpp.67d1762f.trap (Queue.cpp.67d1762f_0.trap.tar.br) (193 of 198)
+[2022-06-27 05:37:28] Scanning 12151730_0.trap.br (194 of 198)
+[2022-06-27 05:37:28] Scanning 32126412_0.trap.br (195 of 198)
+[2022-06-27 05:37:28] Scanning 30567520_0.trap.br (196 of 198)
+[2022-06-27 05:37:28] Scanning USBDriver3.sys.trap.br (197 of 198)
+[2022-06-27 05:37:28] Scanning sourceLocationPrefix.trap.gz (198 of 198)
+[2022-06-27 05:37:28] Assembling USBDriver3.sys.link with 196 files (1 of 2)
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_RtlxQueryRegistryValues(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[827881a1];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[df17dbcd];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_HalReadDmaCounter(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_HalGetDmaAlignment(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_IoMapTransfer(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_IoFreeMapRegisters(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_IoFreeAdapterChannel(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_IoFlushAdapterBuffers(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_IoAllocateAdapterChannel(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_HalFreeCommonBuffer(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Non-unique implementations of @"fun_decl_HalAllocateCommonBuffer(?)": C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[f3109b18];lib_win64, C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h[96725992];lib_win64
+[2022-06-27 05:37:28] [WARN] Total of 45 non-unique implementations encountered.
+[2022-06-27 05:37:28] Assembling no link target with 2 files (2 of 2)
+[2022-06-27 05:37:28] Importing cpp_predefined.d6444f2f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for no link target (1 of 198)
+[2022-06-27 05:37:28] Importing suppress.h.123c6f6f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (2 of 198)
+[2022-06-27 05:37:28] Importing warning.h.af27f581.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (3 of 198)
+[2022-06-27 05:37:28] Importing concurrencysal.h.99be80f7.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (4 of 198)
+[2022-06-27 05:37:28] Importing sal.h.6417d503.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (5 of 198)
+[2022-06-27 05:37:28] Importing specstrings_undef.h.67cbf1a6.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (6 of 198)
+[2022-06-27 05:37:28] Importing specstrings_strict.h.584e048a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (7 of 198)
+[2022-06-27 05:37:28] Importing sdv_driverspecs.h.d761126d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (8 of 198)
+[2022-06-27 05:37:28] Importing driverspecs.h.a27bd7aa.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (9 of 198)
+[2022-06-27 05:37:28] Importing specstrings.h.cd868ed9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (10 of 198)
+[2022-06-27 05:37:28] Importing vadefs.h.05927859.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (11 of 198)
+[2022-06-27 05:37:28] Importing crtdefs.h.ecdf845e.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (12 of 198)
+[2022-06-27 05:37:28] Importing excpt.h.f4cf6112.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (13 of 198)
+[2022-06-27 05:37:28] Importing crtdefs.h.8e4e8174.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (14 of 198)
+[2022-06-27 05:37:28] Importing ctype.h.9f417c02.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (15 of 198)
+[2022-06-27 05:37:28] Importing winpackagefamily.h.679dee80.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (16 of 198)
+[2022-06-27 05:37:28] Importing winapifamily.h.08e21a82.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (17 of 198)
+[2022-06-27 05:37:28] Importing kernelspecs.h.870a521b.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (18 of 198)
+[2022-06-27 05:37:28] Importing basetsd.h.758e3685.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (19 of 198)
+[2022-06-27 05:37:28] Importing string.h.2d3fa2ee.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (20 of 198)
+[2022-06-27 05:37:29] Importing guiddef.h.305274d6.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (21 of 198)
+[2022-06-27 05:37:29] Importing sdkddkver.h.67070798.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (22 of 198)
+[2022-06-27 05:37:29] Importing ntdef.h.5f891753.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (23 of 198)
+[2022-06-27 05:37:29] Importing ntstatus.h.1b85e01a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (24 of 198)
+[2022-06-27 05:37:29] Importing bugcodes.h.d761126d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (25 of 198)
+[2022-06-27 05:37:29] Importing ntiologc.h.d761126d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (26 of 198)
+[2022-06-27 05:37:29] Importing mce.h.85eec159.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (27 of 198)
+[2022-06-27 05:37:29] Importing pshpack4.h.0b5f644f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (28 of 198)
+[2022-06-27 05:37:29] Importing poppack.h.0b5f644f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (29 of 198)
+[2022-06-27 05:37:29] Importing pshpack1.h.0b5f644f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (30 of 198)
+[2022-06-27 05:37:29] Importing guiddef.h.72631d98.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (31 of 198)
+[2022-06-27 05:37:29] Importing dpfilter.h.66233e49.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (32 of 198)
+[2022-06-27 05:37:29] Importing apiset.h.e927e456.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (33 of 198)
+[2022-06-27 05:37:29] Importing ktmtypes.h.9aee1cad.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (34 of 198)
+[2022-06-27 05:37:29] Importing evntprov.h.a262123a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (35 of 198)
+[2022-06-27 05:37:29] Importing devpropdef.h.7a86f178.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (36 of 198)
+[2022-06-27 05:37:29] Importing wdm.h.a3b3ee7e.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (37 of 198)
+[2022-06-27 05:37:31] Importing ntddk.h.52b79538.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (38 of 198)
+[2022-06-27 05:37:32] Importing wdftypes.h.27b4a001.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (39 of 198)
+[2022-06-27 05:37:32] Importing wdfglobals.h.06d15ced.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (40 of 198)
+[2022-06-27 05:37:32] Importing wdffuncenum.h.31f11ff1.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (41 of 198)
+[2022-06-27 05:37:32] Importing wdfstatus.h.2089d3a5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (42 of 198)
+[2022-06-27 05:37:32] Importing wdfassert.h.fd3aafca.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (43 of 198)
+[2022-06-27 05:37:32] Importing wdfverifier.h.689f0e00.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (44 of 198)
+[2022-06-27 05:37:32] Importing wdfpool.h.0faa178a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (45 of 198)
+[2022-06-27 05:37:32] Importing wdfobject.h.992154c9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (46 of 198)
+[2022-06-27 05:37:32] Importing wdfsync.h.4141c941.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (47 of 198)
+[2022-06-27 05:37:32] Importing wdfcore.h.d25345d2.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (48 of 198)
+[2022-06-27 05:37:32] Importing wdfdriver.h.22e4eef9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (49 of 198)
+[2022-06-27 05:37:32] Importing wdfqueryinterface.h.715a0371.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (50 of 198)
+[2022-06-27 05:37:32] Importing wdfmemory.h.365cbb2d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (51 of 198)
+[2022-06-27 05:37:32] Importing wdfchildlist.h.e2884eda.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (52 of 198)
+[2022-06-27 05:37:32] Importing wdffileobject.h.6a6fc7db.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (53 of 198)
+[2022-06-27 05:37:32] Importing devpropdef.h.27891ad2.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (54 of 198)
+[2022-06-27 05:37:32] Importing wdmsec.h.8a4c80fd.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (55 of 198)
+[2022-06-27 05:37:32] Importing wdfdevice.h.75e19c47.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (56 of 198)
+[2022-06-27 05:37:32] Importing wdfcollection.h.9c213983.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (57 of 198)
+[2022-06-27 05:37:32] Importing wdfdpc.h.d5c0ecfa.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (58 of 198)
+[2022-06-27 05:37:32] Importing wdftimer.h.3907c231.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (59 of 198)
+[2022-06-27 05:37:32] Importing wdfworkitem.h.0e686d56.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (60 of 198)
+[2022-06-27 05:37:32] Importing wdfinterrupt.h.478bba67.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (61 of 198)
+[2022-06-27 05:37:32] Importing wdfresource.h.2cd8ba77.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (62 of 198)
+[2022-06-27 05:37:32] Importing wdfrequest.h.0b138893.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (63 of 198)
+[2022-06-27 05:37:32] Importing wdfiotarget.h.e46d5baf.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (64 of 198)
+[2022-06-27 05:37:32] Importing wdfio.h.f8ff1c5d.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (65 of 198)
+[2022-06-27 05:37:33] Importing wdffdo.h.40433940.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (66 of 198)
+[2022-06-27 05:37:33] Importing wdfpdo.h.de3ddc03.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (67 of 198)
+[2022-06-27 05:37:33] Importing wdfcontrol.h.f7cac6a9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (68 of 198)
+[2022-06-27 05:37:33] Importing wdfwmi.h.76d40557.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (69 of 198)
+[2022-06-27 05:37:33] Importing wdfstring.h.2adb37f7.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (70 of 198)
+[2022-06-27 05:37:33] Importing wdfregistry.h.5bd2e2b4.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (71 of 198)
+[2022-06-27 05:37:33] Importing wdfdmaenabler.h.e2929a84.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (72 of 198)
+[2022-06-27 05:37:33] Importing wdfdmatransaction.h.a08416e9.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (73 of 198)
+[2022-06-27 05:37:33] Importing wdfcommonbuffer.h.03e7e5fe.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (74 of 198)
+[2022-06-27 05:37:33] Importing wdfbugcodes.h.a7843544.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (75 of 198)
+[2022-06-27 05:37:33] Importing wdfroletypes.h.856e536b.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (76 of 198)
+[2022-06-27 05:37:33] Importing wdfhwaccess.h.0faa178a.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (77 of 198)
+[2022-06-27 05:37:33] Importing wdf.h.1f7be4ec.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (78 of 198)
+[2022-06-27 05:37:33] Importing pshpack1.h.c236a317.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (79 of 198)
+[2022-06-27 05:37:33] Importing poppack.h.c236a317.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (80 of 198)
+[2022-06-27 05:37:33] Importing usbspec.h.02d674e4.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (81 of 198)
+[2022-06-27 05:37:33] Importing usb.h.644d1ce5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (82 of 198)
+[2022-06-27 05:37:33] Importing usbdlib.h.c9aeb050.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (83 of 198)
+[2022-06-27 05:37:33] Importing wdfusb.h.0ccaab11.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (84 of 198)
+[2022-06-27 05:37:33] Importing guiddef.h.4c93e8e1.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (85 of 198)
+[2022-06-27 05:37:33] Importing initguid.h.4667082f.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (86 of 198)
+[2022-06-27 05:37:33] Importing Public.h.7e1f6edb.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (87 of 198)
+[2022-06-27 05:37:33] Importing Device.h.1cc28efb.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (88 of 198)
+[2022-06-27 05:37:33] Importing Queue.h.1c14b4c1.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (89 of 198)
+[2022-06-27 05:37:33] Importing Trace.h.67cbf1a6.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (90 of 198)
+[2022-06-27 05:37:33] Importing Driver.h.1b5fdb63.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (91 of 198)
+[2022-06-27 05:37:33] Importing guiddef.h.8ff665c5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (92 of 198)
+[2022-06-27 05:37:33] Importing evntrace.h.a17670e7.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (93 of 198)
+[2022-06-27 05:37:33] Importing stddef.h.30c022fa.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (94 of 198)
+[2022-06-27 05:37:33] Importing wmistr.h.9186cb43.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (95 of 198)
+[2022-06-27 05:37:33] Importing Device.tmh.877a027b.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (96 of 198)
+[2022-06-27 05:37:33] Importing Device.cpp.c1ecddb5.trap (Device.cpp.c1ecddb5_0.trap.tar.br) for USBDriver3.sys.link (97 of 198)
+[2022-06-27 05:37:33] Importing suppress.h.c0ebe05d.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (98 of 198)
+[2022-06-27 05:37:33] Importing warning.h.c23ed0db.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (99 of 198)
+[2022-06-27 05:37:33] Importing concurrencysal.h.ebc35fda.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (100 of 198)
+[2022-06-27 05:37:33] Importing sal.h.4a3c7929.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (101 of 198)
+[2022-06-27 05:37:33] Importing specstrings_undef.h.167b6294.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (102 of 198)
+[2022-06-27 05:37:33] Importing specstrings_strict.h.06fd7578.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (103 of 198)
+[2022-06-27 05:37:33] Importing sdv_driverspecs.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (104 of 198)
+[2022-06-27 05:37:33] Importing driverspecs.h.40b1a18c.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (105 of 198)
+[2022-06-27 05:37:33] Importing specstrings.h.4a33f18e.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (106 of 198)
+[2022-06-27 05:37:33] Importing vadefs.h.9a85289f.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (107 of 198)
+[2022-06-27 05:37:33] Importing crtdefs.h.b9f9030e.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (108 of 198)
+[2022-06-27 05:37:33] Importing excpt.h.4a2e7ec9.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (109 of 198)
+[2022-06-27 05:37:33] Importing crtdefs.h.3cfdf262.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (110 of 198)
+[2022-06-27 05:37:33] Importing ctype.h.b5a1a318.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (111 of 198)
+[2022-06-27 05:37:33] Importing winpackagefamily.h.164d5f6e.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (112 of 198)
+[2022-06-27 05:37:33] Importing winapifamily.h.b7918b70.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (113 of 198)
+[2022-06-27 05:37:33] Importing kernelspecs.h.3e9b2e73.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (114 of 198)
+[2022-06-27 05:37:33] Importing basetsd.h.32c77334.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (115 of 198)
+[2022-06-27 05:37:33] Importing string.h.3c019998.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (116 of 198)
+[2022-06-27 05:37:33] Importing guiddef.h.e8d69ce6.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (117 of 198)
+[2022-06-27 05:37:33] Importing sdkddkver.h.15b67886.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (118 of 198)
+[2022-06-27 05:37:33] Importing ntdef.h.95af8aac.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (119 of 198)
+[2022-06-27 05:37:33] Importing ntstatus.h.ca355108.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (120 of 198)
+[2022-06-27 05:37:33] Importing bugcodes.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (121 of 198)
+[2022-06-27 05:37:33] Importing ntiologc.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (122 of 198)
+[2022-06-27 05:37:33] Importing mce.h.a0d03769.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (123 of 198)
+[2022-06-27 05:37:33] Importing pshpack4.h.70e61405.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (124 of 198)
+[2022-06-27 05:37:33] Importing poppack.h.70e61405.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (125 of 198)
+[2022-06-27 05:37:33] Importing pshpack1.h.70e61405.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (126 of 198)
+[2022-06-27 05:37:33] Importing guiddef.h.14afcd24.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (127 of 198)
+[2022-06-27 05:37:33] Importing dpfilter.h.b67644c0.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (128 of 198)
+[2022-06-27 05:37:33] Importing apiset.h.4eae940c.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (129 of 198)
+[2022-06-27 05:37:33] Importing ktmtypes.h.afecde69.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (130 of 198)
+[2022-06-27 05:37:33] Importing evntprov.h.f5781383.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (131 of 198)
+[2022-06-27 05:37:33] Importing devpropdef.h.2151f9ae.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (132 of 198)
+[2022-06-27 05:37:33] Importing wdm.h.c91a998c.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (133 of 198)
+[2022-06-27 05:37:34] Importing ntddk.h.1e9e4b74.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (134 of 198)
+[2022-06-27 05:37:35] Importing wdftypes.h.8f2d4345.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (135 of 198)
+[2022-06-27 05:37:35] Importing wdfglobals.h.b702c5e3.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (136 of 198)
+[2022-06-27 05:37:35] Importing wdffuncenum.h.ba08b19f.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (137 of 198)
+[2022-06-27 05:37:35] Importing wdfstatus.h.8610835b.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (138 of 198)
+[2022-06-27 05:37:35] Importing wdfassert.h.a6628b28.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (139 of 198)
+[2022-06-27 05:37:35] Importing wdfverifier.h.bee7f023.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (140 of 198)
+[2022-06-27 05:37:35] Importing wdfpool.h.357cd8ce.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (141 of 198)
+[2022-06-27 05:37:35] Importing wdfobject.h.2f0ca609.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (142 of 198)
+[2022-06-27 05:37:35] Importing wdfsync.h.73aa31b4.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (143 of 198)
+[2022-06-27 05:37:35] Importing wdfcore.h.2dc9d0d9.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (144 of 198)
+[2022-06-27 05:37:35] Importing wdfdriver.h.8478d0be.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (145 of 198)
+[2022-06-27 05:37:35] Importing wdfqueryinterface.h.660f21d0.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (146 of 198)
+[2022-06-27 05:37:35] Importing wdfmemory.h.ccc0d9b0.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (147 of 198)
+[2022-06-27 05:37:35] Importing wdfchildlist.h.844ba0dc.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (148 of 198)
+[2022-06-27 05:37:35] Importing wdffileobject.h.98f7ae72.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (149 of 198)
+[2022-06-27 05:37:35] Importing devpropdef.h.e6d65ef9.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (150 of 198)
+[2022-06-27 05:37:35] Importing wdmsec.h.83a5dfca.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (151 of 198)
+[2022-06-27 05:37:35] Importing wdfdevice.h.c97afc81.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (152 of 198)
+[2022-06-27 05:37:35] Importing wdfcollection.h.37c6ecd6.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (153 of 198)
+[2022-06-27 05:37:35] Importing wdfdpc.h.ce7910cb.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (154 of 198)
+[2022-06-27 05:37:35] Importing wdftimer.h.56e46bb1.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (155 of 198)
+[2022-06-27 05:37:35] Importing wdfworkitem.h.ba4a9c9a.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (156 of 198)
+[2022-06-27 05:37:35] Importing wdfinterrupt.h.98197aad.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (157 of 198)
+[2022-06-27 05:37:35] Importing wdfresource.h.04e4a9ce.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (158 of 198)
+[2022-06-27 05:37:35] Importing wdfrequest.h.fe356f0c.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (159 of 198)
+[2022-06-27 05:37:35] Importing wdfiotarget.h.6b2ac828.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (160 of 198)
+[2022-06-27 05:37:35] Importing wdfio.h.3f9e1eb2.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (161 of 198)
+[2022-06-27 05:37:35] Importing wdffdo.h.0a72f6cd.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (162 of 198)
+[2022-06-27 05:37:35] Importing wdfpdo.h.e0d87c64.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (163 of 198)
+[2022-06-27 05:37:35] Importing wdfcontrol.h.b7318387.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (164 of 198)
+[2022-06-27 05:37:35] Importing wdfwmi.h.da2ce496.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (165 of 198)
+[2022-06-27 05:37:35] Importing wdfstring.h.585d77a7.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (166 of 198)
+[2022-06-27 05:37:35] Importing wdfregistry.h.2a843e82.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (167 of 198)
+[2022-06-27 05:37:35] Importing wdfdmaenabler.h.e6999142.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (168 of 198)
+[2022-06-27 05:37:35] Importing wdfdmatransaction.h.bb7fdbfe.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (169 of 198)
+[2022-06-27 05:37:35] Importing wdfcommonbuffer.h.8e9138d8.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (170 of 198)
+[2022-06-27 05:37:35] Importing wdfbugcodes.h.ea9af241.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (171 of 198)
+[2022-06-27 05:37:35] Importing wdfroletypes.h.d5a96134.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (172 of 198)
+[2022-06-27 05:37:35] Importing wdfhwaccess.h.357cd8ce.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (173 of 198)
+[2022-06-27 05:37:35] Importing wdf.h.8634e612.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (174 of 198)
+[2022-06-27 05:37:35] Importing usbspec.h.a951460f.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (175 of 198)
+[2022-06-27 05:37:35] Importing usb.h.5a633045.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (176 of 198)
+[2022-06-27 05:37:35] Importing usbdlib.h.dcbfb1ff.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (177 of 198)
+[2022-06-27 05:37:35] Importing wdfusb.h.4d98e832.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (178 of 198)
+[2022-06-27 05:37:35] Importing guiddef.h.f65b4f91.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (179 of 198)
+[2022-06-27 05:37:35] Importing initguid.h.f516791d.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (180 of 198)
+[2022-06-27 05:37:35] Importing Public.h.12331186.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (181 of 198)
+[2022-06-27 05:37:35] Importing Device.h.79eda15a.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (182 of 198)
+[2022-06-27 05:37:35] Importing Queue.h.92f03fa2.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (183 of 198)
+[2022-06-27 05:37:35] Importing Trace.h.167b6294.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (184 of 198)
+[2022-06-27 05:37:35] Importing Driver.h.53c44aa4.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (185 of 198)
+[2022-06-27 05:37:35] Importing guiddef.h.29add26d.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (186 of 198)
+[2022-06-27 05:37:35] Importing evntrace.h.bc17ed04.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (187 of 198)
+[2022-06-27 05:37:36] Importing stddef.h.17bff76f.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (188 of 198)
+[2022-06-27 05:37:36] Importing wmistr.h.6728496d.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (189 of 198)
+[2022-06-27 05:37:36] Importing Driver.tmh.893beb55.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (190 of 198)
+[2022-06-27 05:37:36] Importing Driver.c.ff4d8f16.trap (Driver.c.ff4d8f16_0.trap.tar.br) for USBDriver3.sys.link (191 of 198)
+[2022-06-27 05:37:36] Importing Queue.tmh.dce979b7.trap (Queue.cpp.67d1762f_0.trap.tar.br) for USBDriver3.sys.link (192 of 198)
+[2022-06-27 05:37:36] Importing Queue.cpp.67d1762f.trap (Queue.cpp.67d1762f_0.trap.tar.br) for USBDriver3.sys.link (193 of 198)
+[2022-06-27 05:37:36] Importing 12151730_0.trap.br for USBDriver3.sys.link (194 of 198)
+[2022-06-27 05:37:36] Importing 32126412_0.trap.br for USBDriver3.sys.link (195 of 198)
+[2022-06-27 05:37:36] Importing 30567520_0.trap.br for USBDriver3.sys.link (196 of 198)
+[2022-06-27 05:37:36] Importing USBDriver3.sys.trap.br for USBDriver3.sys.link (197 of 198)
+[2022-06-27 05:37:36] Importing sourceLocationPrefix.trap.gz for no link target (198 of 198)
+[2022-06-27 05:37:36] Merging 1 fragment for builtintypes.
+[2022-06-27 05:37:36] Merging 1 fragment for unspecifiedtype.
+[2022-06-27 05:37:36] Merging 1 fragment for files.
+[2022-06-27 05:37:36] Merging 6 fragments for locations_default.
+[2022-06-27 05:37:37] Merging 1 fragment for link_targets.
+[2022-06-27 05:37:37] Merging 1 fragment for locations_stmt.
+[2022-06-27 05:37:37] Merging 1 fragment for locations_expr.
+[2022-06-27 05:37:37] Merging 1 fragment for usertypes.
+[2022-06-27 05:37:37] Merging 1 fragment for namespaces.
+[2022-06-27 05:37:37] Merging 1 fragment for specialnamequalifyingelements.
+[2022-06-27 05:37:37] Merging 1 fragment for mangled_name.
+[2022-06-27 05:37:37] Merging 1 fragment for specifiers.
+[2022-06-27 05:37:37] Merging 1 fragment for numlines.
+[2022-06-27 05:37:37] Merging 1 fragment for preprocdirects.
+[2022-06-27 05:37:37] Merging 1 fragment for preproctext.
+[2022-06-27 05:37:37] Merging 1 fragment for preprocfalse.
+[2022-06-27 05:37:37] Merging 3 fragments for macroinvocations.
+[2022-06-27 05:37:37] Merging 1 fragment for comments.
+[2022-06-27 05:37:37] Merging 1 fragment for commentbinding.
+[2022-06-27 05:37:37] Merging 1 fragment for containerparent.
+[2022-06-27 05:37:37] Merging 1 fragment for folders.
+[2022-06-27 05:37:37] Merging 1 fragment for preprocpair.
+[2022-06-27 05:37:37] Merging 1 fragment for includes.
+[2022-06-27 05:37:37] Merging 1 fragment for preproctrue.
+[2022-06-27 05:37:37] Merging 4 fragments for macro_argument_unexpanded.
+[2022-06-27 05:37:37] Merging 4 fragments for macro_argument_expanded.
+[2022-06-27 05:37:38] Merging 1 fragment for type_mentions.
+[2022-06-27 05:37:38] Merging 1 fragment for functions.
+[2022-06-27 05:37:38] Merging 1 fragment for link_parent.
+[2022-06-27 05:37:38] Merging 1 fragment for function_return_type.
+[2022-06-27 05:37:38] Merging 1 fragment for derivedtypes.
+[2022-06-27 05:37:38] Merging 1 fragment for pointerishsize.
+[2022-06-27 05:37:38] Merging 1 fragment for params.
+[2022-06-27 05:37:38] Merging 1 fragment for typedefbase.
+[2022-06-27 05:37:38] Merging 1 fragment for type_decls.
+[2022-06-27 05:37:38] Merging 1 fragment for type_decl_top.
+[2022-06-27 05:37:38] Merging 1 fragment for fun_decls.
+[2022-06-27 05:37:38] Merging 1 fragment for fun_decl_specifiers.
+[2022-06-27 05:37:38] Merging 1 fragment for param_decl_bind.
+[2022-06-27 05:37:38] Merging 3 fragments for macroparent.
+[2022-06-27 05:37:38] Merging 1 fragment for funspecifiers.
+[2022-06-27 05:37:38] Merging 1 fragment for var_decls.
+[2022-06-27 05:37:38] Merging 1 fragment for compgenerated.
+[2022-06-27 05:37:38] Merging 1 fragment for member.
+[2022-06-27 05:37:38] Merging 1 fragment for fun_decl_empty_throws.
+[2022-06-27 05:37:38] Merging 1 fragment for usertypesize.
+[2022-06-27 05:37:38] Merging 1 fragment for is_pod_class.
+[2022-06-27 05:37:38] Merging 1 fragment for is_standard_layout_class.
+[2022-06-27 05:37:38] Merging 1 fragment for is_complete.
+[2022-06-27 05:37:38] Merging 1 fragment for type_def.
+[2022-06-27 05:37:38] Merging 1 fragment for membervariables.
+[2022-06-27 05:37:38] Merging 1 fragment for fieldoffsets.
+[2022-06-27 05:37:38] Merging 1 fragment for var_def.
+[2022-06-27 05:37:38] Merging 1 fragment for arraysizes.
+[2022-06-27 05:37:38] Merging 1 fragment for values.
+[2022-06-27 05:37:38] Merging 1 fragment for valuetext.
+[2022-06-27 05:37:38] Merging 1 fragment for exprs.
+[2022-06-27 05:37:38] Merging 1 fragment for expr_types.
+[2022-06-27 05:37:38] Merging 1 fragment for valuebind.
+[2022-06-27 05:37:38] Merging 1 fragment for exprconv.
+[2022-06-27 05:37:38] Merging 1 fragment for conversionkinds.
+[2022-06-27 05:37:38] Merging 1 fragment for typespecifiers.
+[2022-06-27 05:37:38] Merging 1 fragment for varspecifiers.
+[2022-06-27 05:37:38] Merging 1 fragment for enumconstants.
+[2022-06-27 05:37:38] Merging 1 fragment for initialisers.
+[2022-06-27 05:37:38] Merging 1 fragment for exprparents.
+[2022-06-27 05:37:39] Merging 1 fragment for attributes.
+[2022-06-27 05:37:39] Merging 1 fragment for attribute_arg_value.
+[2022-06-27 05:37:39] Merging 1 fragment for attribute_args.
+[2022-06-27 05:37:39] Merging 1 fragment for funcattributes.
+[2022-06-27 05:37:39] Merging 1 fragment for fun_def.
+[2022-06-27 05:37:39] Merging 1 fragment for affectedbymacroexpansion.
+[2022-06-27 05:37:39] Merging 1 fragment for stmts.
+[2022-06-27 05:37:39] Merging 1 fragment for expr_isload.
+[2022-06-27 05:37:39] Merging 1 fragment for stmtparents.
+[2022-06-27 05:37:39] Merging 1 fragment for blockscope.
+[2022-06-27 05:37:39] Merging 1 fragment for function_entry_point.
+[2022-06-27 05:37:39] Merging 1 fragment for varbind.
+[2022-06-27 05:37:39] Merging 1 fragment for is_function_template.
+[2022-06-27 05:37:39] Merging 1 fragment for function_template_argument.
+[2022-06-27 05:37:39] Merging 1 fragment for function_template_argument_value.
+[2022-06-27 05:37:39] Merging 1 fragment for inmacroexpansion.
+[2022-06-27 05:37:39] Merging 1 fragment for macrolocationbind.
+[2022-06-27 05:37:39] Merging 1 fragment for routinetypes.
+[2022-06-27 05:37:39] Merging 1 fragment for routinetypeargs.
+[2022-06-27 05:37:39] Merging 1 fragment for funbind.
+[2022-06-27 05:37:39] Merging 1 fragment for expr_cond_guard.
+[2022-06-27 05:37:39] Merging 1 fragment for expr_cond_true.
+[2022-06-27 05:37:39] Merging 1 fragment for iscall.
+[2022-06-27 05:37:39] Merging 1 fragment for expr_cond_false.
+[2022-06-27 05:37:39] Merging 1 fragment for sizeof_bind.
+[2022-06-27 05:37:39] Merging 1 fragment for is_class_template.
+[2022-06-27 05:37:39] Merging 1 fragment for class_template_argument.
+[2022-06-27 05:37:39] Merging 1 fragment for class_template_argument_value.
+[2022-06-27 05:37:39] Merging 1 fragment for bitfield.
+[2022-06-27 05:37:39] Merging 1 fragment for static_asserts.
+[2022-06-27 05:37:39] Merging 1 fragment for enclosingfunction.
+[2022-06-27 05:37:39] Merging 1 fragment for localvariables.
+[2022-06-27 05:37:39] Merging 1 fragment for stmt_decl_bind.
+[2022-06-27 05:37:39] Merging 1 fragment for stmt_decl_entry_bind.
+[2022-06-27 05:37:39] Merging 1 fragment for aggregate_array_init.
+[2022-06-27 05:37:39] Merging 1 fragment for if_then.
+[2022-06-27 05:37:39] Merging 1 fragment for if_else.
+[2022-06-27 05:37:39] Merging 1 fragment for expr_ancestor.
+[2022-06-27 05:37:39] Merging 1 fragment for for_condition.
+[2022-06-27 05:37:39] Merging 1 fragment for for_body.
+[2022-06-27 05:37:39] Merging 1 fragment for for_update.
+[2022-06-27 05:37:39] Merging 1 fragment for derivations.
+[2022-06-27 05:37:39] Merging 1 fragment for direct_base_offsets.
+[2022-06-27 05:37:39] Merging 1 fragment for derspecifiers.
+[2022-06-27 05:37:39] Merging 1 fragment for typeattributes.
+[2022-06-27 05:37:39] Merging 1 fragment for varattributes.
+[2022-06-27 05:37:39] Merging 1 fragment for globalvariables.
+[2022-06-27 05:37:39] Merging 1 fragment for var_decl_specifiers.
+[2022-06-27 05:37:39] Merging 1 fragment for fun_decl_typedef_type.
+[2022-06-27 05:37:39] Merging 1 fragment for jumpinfo.
+[2022-06-27 05:37:39] Merging 1 fragment for for_initialization.
+[2022-06-27 05:37:39] Merging 1 fragment for function_deleted.
+[2022-06-27 05:37:39] Merging 1 fragment for switch_body.
+[2022-06-27 05:37:39] Merging 1 fragment for switch_case.
+[2022-06-27 05:37:39] Merging 1 fragment for aggregate_field_init.
+[2022-06-27 05:37:39] Merging 1 fragment for usings.
+[2022-06-27 05:37:39] Merging 1 fragment for namespace_decls.
+[2022-06-27 05:37:39] Merging 1 fragment for using_container.
+[2022-06-27 05:37:39] Merging 1 fragment for member_function_this_type.
+[2022-06-27 05:37:39] Merging 1 fragment for fileannotations.
+[2022-06-27 05:37:39] Merging 1 fragment for while_body.
+[2022-06-27 05:37:39] Merging 1 fragment for compilations.
+[2022-06-27 05:37:39] Merging 1 fragment for compilation_args.
+[2022-06-27 05:37:40] Merging 1 fragment for compilation_compiling_files.
+[2022-06-27 05:37:40] Merging 1 fragment for compilation_time.
+[2022-06-27 05:37:40] Merging 1 fragment for compilation_finished.
+[2022-06-27 05:37:40] Merging 1 fragment for sourceLocationPrefix.
+[2022-06-27 05:37:40] Saving string and id pools to disk.
+[2022-06-27 05:37:40] Finished importing trap files.
+[2022-06-27 05:37:40] Pausing evaluation to close the cache at sequence stamp o+3
+[2022-06-27 05:37:40] The disk cache is freshly trimmed; leave it be.
+[2022-06-27 05:37:40] Unpausing evaluation
+[2022-06-27 05:37:40] Plumbing command codeql dataset import completed.
+[2022-06-27 05:37:40] [PROGRESS] database finalize> TRAP import complete (15.6s).
+[2022-06-27 05:37:40] Running plumbing command: codeql database cleanup --mode=normal --keep-temporary -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer
+[2022-06-27 05:37:40] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2022-06-27 05:37:40] [PROGRESS] database cleanup> TRAP files cleaned up (31ms).
+[2022-06-27 05:37:40] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2022-06-27 05:37:40] [PROGRESS] database cleanup> Scratch directory cleaned up (7ms).
+[2022-06-27 05:37:40] Running plumbing command: codeql dataset cleanup --mode=normal -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp
+[2022-06-27 05:37:40] [PROGRESS] dataset cleanup> Cleaning up dataset in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp.
+[2022-06-27 05:37:41] Trimming disk cache at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp\default\cache in mode normal.
+[2022-06-27 05:37:41] Sequence stamp origin is -6439987947744558994
+[2022-06-27 05:37:41] Pausing evaluation to zealously trim disk at sequence stamp o+0
+[2022-06-27 05:37:41] Unpausing evaluation
+[2022-06-27 05:37:41] Trimming completed (4ms): Trimmed disposable data from cache.
+[2022-06-27 05:37:41] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-06-27 05:37:41] The disk cache is freshly trimmed; leave it be.
+[2022-06-27 05:37:41] Unpausing evaluation
+[2022-06-27 05:37:41] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2022-06-27 05:37:41] [PROGRESS] dataset cleanup> Finalizing dataset in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp
+[2022-06-27 05:37:41] [DETAILS] dataset cleanup> Finished deleting ID pool from C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp (14ms).
+[2022-06-27 05:37:41] Plumbing command codeql dataset cleanup completed.
+[2022-06-27 05:37:41] Plumbing command codeql database cleanup completed with status 0.
+[2022-06-27 05:37:41] Plumbing command codeql database finalize completed.
+[2022-06-27 05:37:41] [PROGRESS] database create> Successfully created database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer.
+[2022-06-27 05:37:41] Terminating normally.

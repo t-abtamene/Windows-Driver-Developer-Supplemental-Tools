@@ -1,0 +1,49 @@
+[2022-06-27 05:37:42] This is codeql database analyze --format=sarifv2.1.0 --output=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\analysis_files\sizeofonpointer.sarif C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql
+[2022-06-27 05:37:42] Log file was started late.
+[2022-06-27 05:37:42] [PROGRESS] database analyze> Running queries.
+[2022-06-27 05:37:42] Running plumbing command: codeql database run-queries --evaluator-log-level=1 --ml-model-path= --native-library-path= --warnings=show --qlconfig-file=C:\CQL\codeql_home\codeql\qlconfig.yml --no-rerun -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql
+[2022-06-27 05:37:42] Calling plumbing command: codeql resolve ram --format=json
+[2022-06-27 05:37:42] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx4045M",
+                        "--off-heap-ram=4045"
+                      ]
+[2022-06-27 05:37:42] Spawning plumbing command: execute queries -J-Xmx4045M --off-heap-ram=4045 --verbosity=progress --logdir=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\log --evaluator-log-level=1 --ml-model-path=C:\CQL\codeql_home\codeql --native-library-path=C:\CQL\codeql_home\codeql --warnings=show --qlconfig-file=C:\CQL\codeql_home\codeql\qlconfig.yml --no-rerun --output=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\results -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\db-cpp C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql
+[2022-06-27 05:37:49] Plumbing command codeql execute queries terminated with status 0.
+[2022-06-27 05:37:49] Plumbing command codeql database run-queries completed with status 0.
+[2022-06-27 05:37:49] [PROGRESS] database analyze> Interpreting results.
+[2022-06-27 05:37:49] Running plumbing command: codeql database interpret-results --format=sarifv2.1.0 -o=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\analysis_files\sizeofonpointer.sarif --max-paths=4 --csv-location-format=line-column --print-diagnostics-summary --print-metrics-summary --qlconfig-file=C:\CQL\codeql_home\codeql\qlconfig.yml -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql
+[2022-06-27 05:37:49] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\CQL\codeql_home\codeql\qlconfig.yml --format=json -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql
+[2022-06-27 05:37:50] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\windows-drivers\\queries\\codeql-custom-queries-cpp\\sizeofonpointer\\query\\sizeofonpointer.ql"
+                      ]
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Scanning for qlpack.yml from C:\CQL\codeql_home\codeql\.codeqlmanifest.json
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Scanning for qlpack.yml from C:\CQL\codeql_home\
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Not scanning from C:\CQL\codeql_home\codeql which is already done.
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Scanning for qlpack.yml from C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\.codeqlmanifest.json
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Scanning for qlpack.yml from C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\codeql-queries\.codeqlmanifest.json
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Scanning for qlpack.yml from C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\codeql-queries\ruby\.codeqlmanifest.json
+[2022-06-27 05:37:50] [PROGRESS] database interpret-results> Interpreting C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql...
+[2022-06-27 05:37:50] Calling plumbing command: codeql resolve library-path --query=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql --full-library-path=none --dbscheme=none --format=json
+[2022-06-27 05:37:50] [DETAILS] resolve library-path> Resolving query at normalized path C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql.
+[2022-06-27 05:37:50] [DETAILS] resolve library-path> Found enclosing pack 'windows-drivers' at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries.
+[2022-06-27 05:37:50] [DETAILS] resolve library-path> Adding compilation cache at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\.cache.
+[2022-06-27 05:37:50] [DETAILS] resolve library-path> Dbscheme was explicitly overridden as C:\CQL\codeql_home\codeql\none
+[2022-06-27 05:37:50] [DETAILS] resolve library-path> Library path was overridden on command line.
+[2022-06-27 05:37:50] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\CQL\\codeql_home\\codeql\\none"
+                        ],
+                        "dbscheme" : "C:\\CQL\\codeql_home\\codeql\\none",
+                        "compilationCache" : [
+                          "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\windows-drivers\\queries\\.cache"
+                        ],
+                        "relativeName" : "windows-drivers\\codeql-custom-queries-cpp\\sizeofonpointer\\query\\sizeofonpointer.ql",
+                        "qlPackName" : "windows-drivers"
+                      }
+[2022-06-27 05:37:50] [DETAILS] database interpret-results>  ... found results file at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\databases\sizeofonpointer\results\windows-drivers\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.bqrs.
+[2022-06-27 05:37:50] [DETAILS] database interpret-results> Intepreted problem query "sizeof call on a pointer" (cpp/example/sizeof-on-pointer) at path C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\query\sizeofonpointer.ql.
+[2022-06-27 05:38:03] Plumbing command codeql database interpret-results completed.
+[2022-06-27 05:38:03] Terminating normally.

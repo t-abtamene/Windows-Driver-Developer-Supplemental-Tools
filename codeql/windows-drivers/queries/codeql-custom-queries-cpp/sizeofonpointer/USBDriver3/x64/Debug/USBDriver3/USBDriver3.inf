@@ -1,0 +1,91 @@
+;
+; USBDriver3.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USBDevice
+ClassGuid={88BAE032-5A81-49f0-BC3D-A4FF138216D6}
+Provider=%ManufacturerName%
+CatalogFile=USBDriver3.cat
+DriverVer = 06/27/2022,5.37.6.907
+PnpLockDown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+USBDriver3_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+USBDriver3.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%USBDriver3.DeviceDesc%=USBDriver3_Device, USB\VID_vvvv&PID_pppp
+
+[USBDriver3_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+USBDriver3.sys
+
+[USBDriver3_Device.NT.HW]
+AddReg=USBDriver3_AddReg
+
+[USBDriver3_AddReg]
+; By default, USBDevice class uses iProduct descriptor to name the device in
+; Device Manager on Windows 8 and higher.
+; Uncomment for this device to use %DeviceName% on Windows 8 and higher:
+;HKR,,FriendlyName,,%USBDriver3.DeviceDesc%
+
+;-------------- Service installation
+[USBDriver3_Device.NT.Services]
+AddService = USBDriver3,%SPSVCINST_ASSOCSERVICE%, USBDriver3_Service_Inst
+
+; -------------- USBDriver3 driver install sections
+[USBDriver3_Service_Inst]
+DisplayName    = %USBDriver3.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\USBDriver3.sys
+
+;
+;--- USBDriver3_Device Coinstaller installation ------
+;
+
+[USBDriver3_Device.NT.CoInstallers]
+AddReg=USBDriver3_Device_CoInstaller_AddReg
+CopyFiles=USBDriver3_Device_CoInstaller_CopyFiles
+
+[USBDriver3_Device_CoInstaller_AddReg]
+;
+
+
+[USBDriver3_Device_CoInstaller_CopyFiles]
+;
+
+
+[USBDriver3_Device.NT.Wdf]
+KmdfService =  USBDriver3, USBDriver3_wdfsect
+[USBDriver3_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Universal Serial Bus devices"
+DiskName = "USBDriver3 Installation Disk"
+USBDriver3.DeviceDesc = "USBDriver3 Device"
+USBDriver3.SVCDESC = "USBDriver3 Service"
+REG_MULTI_SZ = 0x00010000
