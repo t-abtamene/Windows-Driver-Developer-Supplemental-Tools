@@ -1,8 +1,0 @@
-﻿  Building 'KMDFTestTemplate' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
-  Stamping x64\Debug\KMDFTestTemplate.inf
-  Stamping [Version] section with DriverVer=06/30/2022,5.58.47.248
-  Device.c
-  Driver.c
-C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\KMDFTestTemplate\Driver.c(63,5): error C4013: 'top_level_call' undefined; assuming extern returning int
-  Queue.c
-  Generating Code...

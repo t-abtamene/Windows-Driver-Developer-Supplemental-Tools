@@ -1,1 +1,0 @@
-C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28135\x64\Debug\KMDFTestTemplate.sys
