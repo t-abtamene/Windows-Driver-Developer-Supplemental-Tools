@@ -1,0 +1,7 @@
+---
+sourceLocationPrefix: "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\\
+  codeql\\windows-drivers\\queries\\PortedQueries\\out\\C28135"
+baselineLinesOfCode: 276
+unicodeNewlines: false
+columnKind: "utf8"
+primaryLanguage: "cpp"
