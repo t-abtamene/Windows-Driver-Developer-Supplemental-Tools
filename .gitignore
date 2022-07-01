@@ -1,3 +1,6 @@
 # query compilation caches
+
 */codeql/**/*.cache
 codeql/**/*.cache
+out
+/out/*

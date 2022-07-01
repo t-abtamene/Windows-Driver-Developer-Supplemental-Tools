@@ -1,2 +1,0 @@
-C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\EXP\USBDriver3\x64\Release\USBDriver3.sys
-C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\codeql-custom-queries-cpp\sizeofonpointer\USBDriver3\x64\Release\USBDriver3.sys
