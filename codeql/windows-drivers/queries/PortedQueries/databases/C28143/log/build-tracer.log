@@ -1,0 +1,623 @@
+[T 17:08:37 14992] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:37 14992] Initialising tags...
+[T 17:08:37 14992] ID set to 0000000000003A90_0000000000000001 (parent root)
+[T 17:08:37 14992] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/clang-cl.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/cl.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/lld-link.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--ms-linker"
+[T 17:08:37 14992] Prepend[1] "--semmle-linker-executable"
+[T 17:08:37 14992] Prepend[2] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/link.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--ms-linker"
+[T 17:08:37 14992] Prepend[1] "--semmle-linker-executable"
+[T 17:08:37 14992] Prepend[2] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/*-as.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--assembler"
+[T 17:08:37 14992] Prepend[1] "--codeql-assembler-executable"
+[T 17:08:37 14992] Prepend[2] "${compiler}"
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/as.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--assembler"
+[T 17:08:37 14992] Prepend[1] "--codeql-assembler-executable"
+[T 17:08:37 14992] Prepend[2] "${compiler}"
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/collect2.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--linker"
+[T 17:08:37 14992] Prepend[1] "--semmle-linker-executable"
+[T 17:08:37 14992] Prepend[2] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/*-ld*.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--linker"
+[T 17:08:37 14992] Prepend[1] "--semmle-linker-executable"
+[T 17:08:37 14992] Prepend[2] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/ld*.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--linker"
+[T 17:08:37 14992] Prepend[1] "--semmle-linker-executable"
+[T 17:08:37 14992] Prepend[2] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/cx51.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/c51.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/*-g++.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/*-gcc.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/*-clang.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/armcc.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/g++*.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/gcc*.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Compilers file as of 2022-06-30 17:08:37
+[T 17:08:37 14992] Compiler pattern: **/clang*.exe
+[T 17:08:37 14992] Replace intercepted call: 0
+[T 17:08:37 14992] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 17:08:37 14992] Prepend[0] "--mimic"
+[T 17:08:37 14992] Prepend[1] ""${compiler}""
+[T 17:08:37 14992] Initialising tags...
+[T 17:08:37 14992] ID set to 0000000000003A90_0000000000000002 (parent root)
+[T 17:08:37 14992] ==== Candidate to intercept: C:\CQL\codeql_home\codeql\tools\win64\runner.exe ====
+[T 17:08:37 16864] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:37 16864] Initialising tags...
+[T 17:08:37 16864] ID set to 00000000000041E0_0000000000000001 (parent 0000000000003A90_0000000000000001)
+[T 17:08:37 16864] ==== Candidate to intercept: C:\Windows\System32\cmd.exe ====
+[T 17:08:37 18512] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:37 18512] Initialising tags...
+[T 17:08:38 18512] ID set to 0000000000004850_0000000000000001 (parent 00000000000041E0_0000000000000001)
+[T 17:08:38 18512] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe ====
+[T 17:08:38 18512] Found LdrLoadDll (wow-64) at 0000000077CED1C0
+[T 17:08:38 1996] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:38 1996] Initialising tags...
+[T 17:08:38 1996] Failed to close tags database (-30793).
+[T 17:08:38 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:39 16716] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 16716] Initialising tags...
+[T 17:08:39 16716] Failed to close tags database (-30793).
+[T 17:08:39 16716] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\stampinf.exe ====
+[T 17:08:39 16716] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[T 17:08:39 1252] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 1252] Initialising tags...
+[T 17:08:39 1252] ID set to 00000000000004E4_0000000000000001 (parent root)
+[T 17:08:39 11060] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 11060] Initialising tags...
+[T 17:08:39 11060] ID set to 0000000000002B34_0000000000000001 (parent root)
+[T 17:08:39 8916] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 8916] Initialising tags...
+[T 17:08:39 8916] Failed to close tags database (-30793).
+[T 17:08:39 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:39 1488] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 1488] Initialising tags...
+[T 17:08:39 1488] Failed to close tags database (-30793).
+[T 17:08:39 1488] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\tracewpp.exe ====
+[T 17:08:39 1488] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[T 17:08:39 11324] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 11324] Initialising tags...
+[T 17:08:39 11324] ID set to 0000000000002C3C_0000000000000001 (parent root)
+[T 17:08:39 18836] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 18836] Initialising tags...
+[T 17:08:39 18836] ID set to 0000000000004994_0000000000000001 (parent root)
+[T 17:08:39 19584] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:39 19584] Initialising tags...
+[T 17:08:39 19584] Failed to close tags database (-30793).
+[T 17:08:40 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:40 9884] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:40 9884] Initialising tags...
+[T 17:08:40 9884] Failed to close tags database (-30793).
+[T 17:08:40 9884] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx86\x64\cl.exe ====
+[T 17:08:40 9884] === Intercepted call to C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx86\x64\cl.exe === 
+[T 17:08:40 8088] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:40 8088] Initialising tags...
+[T 17:08:40 8088] ID set to 0000000000001F98_0000000000000001 (parent root)
+[T 17:08:40 17576] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:40 9884] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[E 17:08:42 17576] CodeQL C/C++ Extractor 1.29.0-SNAPSHOT
+[E 17:08:42 17576] Current directory: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143
+[E 17:08:42 17576] Command: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe --mimic "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx86\x64\cl.exe" @C:\Users\t-abtamene\AppData\Local\Temp\tmpea7ba4d7a0ca4b739d89ff3d7a1ad922.rsp
+[E 17:08:42 17576] Expanded response file C:\Users\t-abtamene\AppData\Local\Temp\tmpea7ba4d7a0ca4b739d89ff3d7a1ad922.rsp: /c /Ix64\Debug\ /Zi /nologo /W4 /WX /diagnostics:column /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0A00 /D WINVER=0x0A00 /D WINNT=1 /D NTDDI_VERSION=0xA00000C /D DBG=1 /D KMDF_VERSION_MAJOR=1 /D KMDF_VERSION_MINOR=15 /D ENABLE_WPP_RECORDER=1 /GF /Gm- /Zp8 /GS /guard:cf /Gy /fp:precise /Qspectre /Zc:wchar_t- /Zc:forScope /Zc:inline /GR- /Fox64\Debug\ /Fdx64\Debug\vc143.pdb /external:W4 /Gz /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 "/FIC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" /FC /errorReport:queue /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ Device.c Driver.c Queue.c
+Warning: Unrecognised command line argument /guard:cf
+Warning: Unrecognised command line argument /external:W4
+[E 17:08:42 17576] Checking whether C compilation already happened.
+[E 17:08:42 17576] Checking for tag c-compilation-happened
+[E 17:08:42 17576] Looks like C compilation didn't already happen.
+[E 17:08:42 17576] Checking whether C compilation has been attempted.
+[E 17:08:42 17576] Checking for tag c-compilation-attempted
+[E 17:08:42 17576] Marking C compilation as attempted.
+[E 17:08:42 17576] Setting tag c-compilation-attempted
+[E 17:08:43 17576] Processed command line: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe --trapfolder C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp --src_archive C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src --mimic_config C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working/compiler_mimic_cache/bfa2cc475056 --object_filename x64\Debug\ -w --error_limit 1000 --disable_system_macros --variadic_macros --microsoft --c --microsoft_version 1932 --target win64 -D_MSC_FULL_VER=193231329 -D_MSC_BUILD=0 -D_M_AMD64=100 -D_M_X64=100 -D_WIN64 -D_MT -Ix64\Debug\ -D_WIN64 -D_AMD64_ -DAMD64 -DDEPRECATE_DDK_FUNCTIONS=1 -DMSC_NOOPT -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DWINNT=1 -DNTDDI_VERSION=0xA00000C -DDBG=1 -DKMDF_VERSION_MAJOR=1 -DKMDF_VERSION_MINOR=15 -DENABLE_WPP_RECORDER=1 --pack_alignment 8 --default_calling_convention __stdcall --preinclude "C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" -D_KERNEL_MODE=1 "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\km\crt" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\km" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\Include\wdf\kmdf\1.15" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\include" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\atlmfc\include" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\UnitTest\include" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\winrt" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\cppwinrt" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8.1\Include\um" -- Device.c Driver.c Queue.c
+[E 17:08:43 17576] Starting compilation TRAP C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/compilations/2/11085895_0.trap.br
+Device.c:
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Device.c
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/warning.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/suppress.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Driver.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/ntddk.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/excpt.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sal.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/concurrencysal.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_strict.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_undef.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/driverspecs.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdv_driverspecs.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/vadefs.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntdef.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/ctype.h
+[E 17:08:43 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winapifamily.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winpackagefamily.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/kernelspecs.h
+[E 17:08:43 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/basetsd.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/string.h
+[E 17:08:44 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdkddkver.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntstatus.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/bugcodes.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntiologc.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/mce.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:44 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 17:08:44 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:44 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:44 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/dpfilter.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/apiset.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ktmtypes.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntprov.h
+[E 17:08:44 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdf.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdftypes.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfglobals.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffuncenum.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfstatus.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfassert.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfverifier.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfpool.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfobject.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfsync.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcore.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdriver.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfqueryinterface.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfmemory.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfchildlist.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffileobject.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdevice.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdmsec.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcollection.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdpc.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdftimer.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfworkitem.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfinterrupt.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfresource.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfrequest.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfiotarget.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfio.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffdo.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfpdo.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcontrol.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfwmi.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfstring.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfregistry.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdmaenabler.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdmatransaction.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcommonbuffer.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfbugcodes.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfroletypes.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfhwaccess.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/usb.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/usbspec.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/usbdlib.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfusb.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/initguid.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Device.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Public.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Queue.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Trace.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntrace.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/stddef.h
+[E 17:08:45 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:45 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/wmistr.h
+[E 17:08:46 17576] Creating trap tarball C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/tarballs/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Device.c.b62c98e7_0.trap.tar.br
+[E 17:08:46 17576] Emitting trap files for Device.c
+[E 17:08:46 17576] Opening existencedb in \\?\C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\existencedb\db
+[E 17:08:49 17576] Wrote 95 files to C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/tarballs/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Device.c.b62c98e7_0.trap.tar.br
+Driver.c:
+[E 17:08:49 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Driver.c
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/warning.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/suppress.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Driver.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/ntddk.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/excpt.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sal.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/concurrencysal.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_strict.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_undef.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/driverspecs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdv_driverspecs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/vadefs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntdef.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/ctype.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winapifamily.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winpackagefamily.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/kernelspecs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/basetsd.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/string.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdkddkver.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntstatus.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/bugcodes.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntiologc.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/mce.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/dpfilter.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/apiset.h
+[E 17:08:49 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ktmtypes.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntprov.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdf.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdftypes.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfglobals.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffuncenum.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfstatus.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfassert.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfverifier.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfpool.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfobject.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfsync.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcore.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdriver.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfqueryinterface.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfmemory.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfchildlist.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffileobject.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdevice.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdmsec.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcollection.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdpc.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdftimer.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfworkitem.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfinterrupt.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfresource.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfrequest.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfiotarget.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfio.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffdo.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfpdo.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcontrol.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfwmi.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfstring.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfregistry.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdmaenabler.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdmatransaction.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcommonbuffer.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfbugcodes.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfroletypes.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfhwaccess.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/usb.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/usbspec.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/usbdlib.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfusb.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/initguid.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Device.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Public.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Queue.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Trace.h
+[E 17:08:50 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntrace.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/stddef.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:50 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/wmistr.h
+[E 17:08:50 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/driver_snippet.c
+[E 17:08:50 17576] Creating trap tarball C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/tarballs/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Driver.c.88f88b47_0.trap.tar.br
+[E 17:08:50 17576] Emitting trap files for Driver.c
+[E 17:08:51 17576] Wrote 3 files to C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/tarballs/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Driver.c.88f88b47_0.trap.tar.br
+Queue.c:
+[E 17:08:51 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Queue.c
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/warning.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/suppress.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Driver.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/ntddk.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/excpt.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sal.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/concurrencysal.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_strict.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_undef.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/driverspecs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdv_driverspecs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/vadefs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntdef.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/ctype.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winapifamily.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winpackagefamily.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/kernelspecs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/basetsd.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/string.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdkddkver.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntstatus.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/bugcodes.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntiologc.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/mce.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 17:08:51 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/dpfilter.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/apiset.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ktmtypes.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntprov.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdf.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdftypes.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfglobals.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffuncenum.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfstatus.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfassert.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfverifier.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfpool.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfobject.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfsync.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcore.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdriver.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfqueryinterface.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfmemory.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfchildlist.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffileobject.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdevice.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdmsec.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcollection.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdpc.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdftimer.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfworkitem.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfinterrupt.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfresource.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfrequest.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfiotarget.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfio.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdffdo.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfpdo.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcontrol.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfwmi.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfstring.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfregistry.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdmaenabler.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfdmatransaction.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfcommonbuffer.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfbugcodes.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfroletypes.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfhwaccess.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/usb.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/usbspec.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/usbdlib.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/wdf/kmdf/1.15/wdfusb.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/initguid.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Device.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Public.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Queue.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Trace.h
+[E 17:08:52 17576] Archiving C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Queue.tmh
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntrace.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/stddef.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 17:08:52 17576] Already archived C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/wmistr.h
+[E 17:08:53 17576] Creating trap tarball C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/tarballs/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Queue.c.124c17a8_0.trap.tar.br
+[E 17:08:53 17576] Emitting trap files for Queue.c
+[E 17:08:53 17576] Wrote 2 files to C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/tarballs/C_/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/Queue.c.124c17a8_0.trap.tar.br
+[E 17:08:53 17576] Finished compilation TRAP C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp/compilations/2/11085895_0.trap.br
+[E 17:08:53 17576] Marking C compilation as happened.
+[E 17:08:53 17576] Setting tag c-compilation-happened
+[T 17:08:53 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:53 19524] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:53 19524] Initialising tags...
+[T 17:08:53 19524] Failed to close tags database (-30793).
+[T 17:08:53 19524] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx86\x64\link.exe ====
+[T 17:08:53 19524] === Intercepted call to C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx86\x64\link.exe === 
+[T 17:08:53 11132] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:53 11132] Initialising tags...
+[T 17:08:53 11132] ID set to 0000000000002B7C_0000000000000001 (parent root)
+[T 17:08:53 19524] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[E 17:08:54 12576] CodeQL C/C++ Extractor 1.29.0-SNAPSHOT
+[E 17:08:54 12576] Current directory: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143
+[E 17:08:54 12576] Command: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe --ms-linker --semmle-linker-executable "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx86\x64\link.exe" /ERRORREPORT:QUEUE @C:\Users\t-abtamene\AppData\Local\Temp\tmp404d0e9ae5b946a0970465167498396a.rsp
+[E 17:08:54 12576] Expanded response file C:\Users\t-abtamene\AppData\Local\Temp\tmp404d0e9ae5b946a0970465167498396a.rsp: /OUT:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys /VERSION:10.0 /INCREMENTAL:NO /NOLOGO /WX /SECTION:INIT,d "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\BufferOverflowFastFailK.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\ntoskrnl.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\hal.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wmilib.lib" "C:\Program Files (x86)\Windows Kits\10\lib\wdf\kmdf\x64\1.15\WdfLdr.lib" "C:\Program Files (x86)\Windows Kits\10\lib\wdf\kmdf\x64\1.15\WdfDriverEntry.lib" usbdex.lib ntstrsafe.lib "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wpprecorder.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.pdb /SUBSYSTEM:NATIVE,10.00 /Driver /OPT:REF /OPT:ICF /ENTRY:FxDriverEntry /RELEASE /IMPLIB:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.lib /MERGE:_TEXT=.text;_PAGE=PAGE /MACHINE:X64 /PROFILE /guard:cf /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:10.0 /pdbcompress /debugtype:pdata x64\Debug\Device.obj x64\Debug\Driver.obj x64\Debug\Queue.obj
+[E 17:08:54 12576] Warning[extractor-c++]: In print_object_names: Could not open object file "usbdex.lib" (error 2: No such file or directory).
+[E 17:08:54 12576] Warning[extractor-c++]: In print_object_names: Could not open object file "ntstrsafe.lib" (error 2: No such file or directory).
+[T 17:08:54 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:54 19652] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:54 19652] Initialising tags...
+[T 17:08:54 19652] Failed to close tags database (-30793).
+[T 17:08:54 19652] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe ====
+[T 17:08:54 19652] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[T 17:08:54 19120] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:54 19120] Initialising tags...
+[T 17:08:54 19120] ID set to 0000000000004AB0_0000000000000001 (parent root)
+[T 17:08:54 4044] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:54 4044] Initialising tags...
+[T 17:08:54 4044] ID set to 0000000000000FCC_0000000000000001 (parent root)
+[T 17:08:54 5644] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:54 5644] Initialising tags...
+[T 17:08:54 5644] Failed to close tags database (-30793).
+[T 17:08:55 1996] ==== Candidate to intercept: C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe ====
+[T 17:08:55 13708] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:55 13708] Initialising tags...
+[T 17:08:55 13708] Failed to close tags database (-30793).
+[T 17:08:55 13708] ==== Candidate to intercept: C:\Windows\Microsoft.NET\Framework\v4.0.30319\cvtres.exe ====
+[T 17:08:55 11812] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:55 11812] Initialising tags...
+[T 17:08:55 11812] Failed to close tags database (-30793).
+[T 17:08:55 1996] ==== Candidate to intercept: C:\Windows\SysWOW64\cmd.exe ====
+[T 17:08:55 19120] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:55 19120] Initialising tags...
+[T 17:08:55 19120] Failed to close tags database (-30793).
+[T 17:08:55 19120] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\apivalidator.exe ====
+[T 17:08:55 19808] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:55 19808] Initialising tags...
+[T 17:08:55 19808] ID set to 0000000000004D60_0000000000000001 (parent root)
+[T 17:08:55 19184] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:55 19184] Initialising tags...
+[T 17:08:55 19184] ID set to 0000000000004AF0_0000000000000001 (parent root)
+[T 17:08:56 19184] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\aitstatic.exe ====
+[T 17:08:56 9992] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:56 9992] Initialising tags...
+[T 17:08:56 9992] ID set to 0000000000002708_0000000000000001 (parent 0000000000004AF0_0000000000000001)
+[T 17:08:56 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:56 4180] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:56 4180] Initialising tags...
+[T 17:08:56 4180] Failed to close tags database (-30793).
+[T 17:08:56 4180] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\Inf2Cat.exe ====
+[T 17:08:56 13100] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:56 13100] Initialising tags...
+[T 17:08:56 13100] ID set to 000000000000332C_0000000000000002 (parent root)
+[T 17:08:56 4180] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[T 17:08:56 20092] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:56 20092] Initialising tags...
+[T 17:08:56 20092] ID set to 0000000000004E7C_0000000000000001 (parent root)
+[T 17:08:56 9992] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:56 9992] Initialising tags...
+[T 17:08:56 9992] ID set to 0000000000002708_0000000000000002 (parent root)
+[T 17:08:56 17172] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:56 17172] Initialising tags...
+[T 17:08:56 17172] ID set to 0000000000004314_0000000000000001 (parent root)
+[T 17:08:57 17172] ==== Candidate to intercept: C:\Windows\System32\expand.exe ====
+[T 17:08:57 20196] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:57 20196] Initialising tags...
+[T 17:08:57 20196] ID set to 0000000000004EE4_0000000000000001 (parent 0000000000004314_0000000000000001)
+[T 17:08:57 17172] ==== Candidate to intercept: C:\Windows\System32\expand.exe ====
+[T 17:08:57 13100] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:57 13100] Initialising tags...
+[T 17:08:57 13100] ID set to 000000000000332C_0000000000000003 (parent 0000000000004314_0000000000000001)
+[T 17:08:57 1996] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\Tracker.exe ====
+[T 17:08:57 20564] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:57 20564] Initialising tags...
+[T 17:08:57 20564] Failed to close tags database (-30793).
+[T 17:08:57 20564] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe ====
+[T 17:08:57 20564] ==== Candidate to intercept: C:\Windows\System32\rundll32.exe ====
+[T 17:08:58 20620] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:58 20620] Initialising tags...
+[T 17:08:58 20620] ID set to 000000000000508C_0000000000000001 (parent root)
+[T 17:08:58 20612] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:58 20612] Initialising tags...
+[T 17:08:58 20612] ID set to 0000000000005084_0000000000000001 (parent root)
+[T 17:08:58 20604] Reading configuration file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\working\tracing\compiler-tracing5690953452910499153.spec...
+[T 17:08:58 20604] Initialising tags...
+[T 17:08:58 20604] Failed to close tags database (-30793).

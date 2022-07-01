@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+9b0123a7258d47e8b15bad5ab8a873cee8891884",
+        "semanticVersion" : "0.9.6+c9104d6aad4938c6e555d35673f1a3a4f093d0c8",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {

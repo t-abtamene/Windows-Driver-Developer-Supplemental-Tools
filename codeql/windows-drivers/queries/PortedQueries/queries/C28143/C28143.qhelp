@@ -1,0 +1,24 @@
+<!DOCTYPE qhelp PUBLIC "-//Semmle//qhelp//EN" "qhelp.dtd">
+<qhelp>
+	<overview>
+		<p>
+			A dispatch routine that calls IoMarkIrpPending must also return STATUS_PENDING
+			
+		</p>
+	</overview>
+	<recommendation>
+		<p>
+			A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING.
+		</p>
+	</recommendation>
+	<example>
+		<sample src="driver_snippet.c" />
+	</example>
+	<references>
+		<li>
+			<a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/28143-iomarkirppending-must-return-statuspending">
+				C28143
+			</a>
+		</li>
+	</references>
+</qhelp>
