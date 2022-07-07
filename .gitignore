@@ -4,3 +4,4 @@
 codeql/**/*.cache
 out
 /out/*
+*/databases/*

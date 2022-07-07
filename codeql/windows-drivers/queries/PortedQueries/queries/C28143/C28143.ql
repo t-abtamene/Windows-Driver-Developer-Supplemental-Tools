@@ -8,20 +8,26 @@
 
 import cpp
 
-class WdmCallbackRoutineTypedef extends TypedefType {
-  WdmCallbackRoutineTypedef() { this.getName().matches("IO_COMPLETION_ROUTINE") }
+class IORoutineTypedef extends TypedefType {
+  IORoutineTypedef() { this.getName().matches("IO_COMPLETION_ROUTINE") }
 }
 
-//Chooses functions whose Role Type is IO_COMPLETION_ROUTINE
-class WdmCallbackRoutine extends Function {
-  WdmCallbackRoutineTypedef callbackType;
+class DriverDispatchDRoutineTypedef extends TypedefType {
+  DriverDispatchDRoutineTypedef() { this.getName().matches("DRIVER_DISPATCH") }
+}
 
-  WdmCallbackRoutine() {
-    exists(FunctionDeclarationEntry fde |
-      fde.getFunction() = this and
-      fde.getTypedefType() = callbackType
-    )
-  }
+predicate isIOCompletionRoutine(Function f) {
+  exists(FunctionDeclarationEntry fde |
+    fde.getFunction() = f and
+    fde.getTypedefType() instanceof IORoutineTypedef
+  )
+}
+
+predicate isDriverDispatchRoutine(Function f) {
+  exists(FunctionDeclarationEntry fde |
+    fde.getFunction() = f and
+    fde.getTypedefType() instanceof DriverDispatchDRoutineTypedef
+  )
 }
 
 from FunctionCall call, ReturnStmt rs
@@ -31,6 +37,7 @@ where
     rs.getExpr().getValueText() != "STATUS_PENDING" or
     rs.getExpr().(Literal).getValue().toInt() != 259
   ) and
-  call.getEnclosingFunction().getBlock().getLastStmt() = rs and
-  not call.getEnclosingFunction() instanceof WdmCallbackRoutine
+  call.getEnclosingBlock().getLastStmt() = rs and
+  not isIOCompletionRoutine(call.getEnclosingFunction()) and
+  isDriverDispatchRoutine(call.getEnclosingFunction())
 select call, "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
