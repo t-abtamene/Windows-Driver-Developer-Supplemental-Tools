@@ -2,14 +2,14 @@
 // driver_snippet.c
 //
 
-//Raises Warning
+//Avoids Warning
 NTSTATUS func1(PIRP Irp){
     IoMarkIrpPending(Irp);
     return STATUS_PENDING;
 
 }
 
-//Avoids warning
+//Raises warning
 NTSTATUS func2(PIRP Irp){
     IoMarkIrpPending(Irp);
     return STATUS_SUCCESS;

@@ -4,9 +4,9 @@ KEVENT kevent1;
 
 void top_level_call() {
     KEVENT kevent2;
-    //Raises Warning
+    //Avoids Warning
     KeWaitForSingleObject(&kevent1, UserRequest, UserMode, FALSE, NULL);
-    //Avoids warning
+    //Raises warning
     KeWaitForSingleObject(&kevent2, UserRequest, UserMode, FALSE, NULL);
 
 }

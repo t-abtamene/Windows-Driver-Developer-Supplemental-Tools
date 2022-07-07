@@ -1,0 +1,551 @@
+[2022-07-07 11:40:53] This is codeql database create -l=cpp -c msbuild /p:Platform=x64 /t:rebuild ..\..\databases\C28143
+[2022-07-07 11:40:53] Log file was started late.
+[2022-07-07 11:40:53] [PROGRESS] database create> Initializing database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143.
+[2022-07-07 11:40:53] Running plumbing command: codeql database init --language=cpp --source-root=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143 --allow-missing-source-root=false --allow-already-existing -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143
+[2022-07-07 11:40:53] [PROGRESS] database init> Counting lines of code in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143
+[2022-07-07 11:40:54] [PROGRESS] database init> Resolving extractor cpp.
+[2022-07-07 11:40:54] Calling plumbing command: codeql resolve languages --format=json
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Scanning for codeql-extractor.yml from C:\CQL\codeql_home\codeql\.codeqlmanifest.json
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\cpp\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\csharp\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\csv\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\go\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\html\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\java\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\javascript\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\properties\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\python\codeql-extractor.yml.
+[2022-07-07 11:40:54] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\xml\codeql-extractor.yml.
+[2022-07-07 11:40:54] Plumbing command codeql resolve languages completed:
+                      {
+                        "cpp" : [
+                          "C:\\CQL\\codeql_home\\codeql\\cpp"
+                        ],
+                        "csharp" : [
+                          "C:\\CQL\\codeql_home\\codeql\\csharp"
+                        ],
+                        "csv" : [
+                          "C:\\CQL\\codeql_home\\codeql\\csv"
+                        ],
+                        "go" : [
+                          "C:\\CQL\\codeql_home\\codeql\\go"
+                        ],
+                        "html" : [
+                          "C:\\CQL\\codeql_home\\codeql\\html"
+                        ],
+                        "java" : [
+                          "C:\\CQL\\codeql_home\\codeql\\java"
+                        ],
+                        "javascript" : [
+                          "C:\\CQL\\codeql_home\\codeql\\javascript"
+                        ],
+                        "properties" : [
+                          "C:\\CQL\\codeql_home\\codeql\\properties"
+                        ],
+                        "python" : [
+                          "C:\\CQL\\codeql_home\\codeql\\python"
+                        ],
+                        "xml" : [
+                          "C:\\CQL\\codeql_home\\codeql\\xml"
+                        ]
+                      }
+[2022-07-07 11:40:54] [DETAILS] database init> Found candidate extractor root for cpp: C:\CQL\codeql_home\codeql\cpp.
+[2022-07-07 11:40:54] [PROGRESS] database init> Successfully loaded extractor C/C++ (cpp) from C:\CQL\codeql_home\codeql\cpp.
+[2022-07-07 11:40:54] [PROGRESS] database init> Created skeleton CodeQL database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143. This in-progress database is ready to be populated by an extractor.
+[2022-07-07 11:40:54] Plumbing command codeql database init completed.
+[2022-07-07 11:40:54] [PROGRESS] database create> Running build command: [msbuild, /p:Platform=x64, /t:rebuild]
+[2022-07-07 11:40:54] Running plumbing command: codeql database trace-command --working-dir=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143 --index-traceless-dbs --no-db-cluster -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143 msbuild /p:Platform=x64 /t:rebuild
+[2022-07-07 11:40:54] Setting up tracing from specification at C:\CQL\codeql_home\codeql\cpp\tools\win64\compiler-tracing.spec.
+[2022-07-07 11:40:54] [PROGRESS] database trace-command> Running command in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143: [msbuild, /p:Platform=x64, /t:rebuild]
+[2022-07-07 11:40:55] [build-stdout] Microsoft (R) Build Engine version 17.2.1+52cd2da31 for .NET Framework
+[2022-07-07 11:40:55] [build-stdout] Copyright (C) Microsoft Corporation. All rights reserved.
+[2022-07-07 11:40:55] [build-stdout] Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+[2022-07-07 11:40:55] [build-stdout] Build started 7/7/2022 11:40:55 AM.
+[2022-07-07 11:40:55] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.sln" on node 1 (rebuild target(s)).
+[2022-07-07 11:40:55] [build-stdout] ValidateSolutionConfiguration:
+[2022-07-07 11:40:55] [build-stdout]   Building solution configuration "Debug|x64".
+[2022-07-07 11:40:55] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.sln" (1) is building "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (2) on node 1 (Rebuild target(s)).
+[2022-07-07 11:40:55] [build-stdout] _PrepareForClean:
+[2022-07-07 11:40:55] [build-stdout]   Deleting file "x64\Debug\KMDFTestTemplate.tlog\KMDFTestTemplate.lastbuildstate".
+[2022-07-07 11:40:55] [build-stdout] CoreClean:
+[2022-07-07 11:40:55] [build-stdout]   Deleting file "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys".
+[2022-07-07 11:40:55] [build-stdout] CleanOutput:
+[2022-07-07 11:40:55] [build-stdout]   Deleting file "x64\Debug\KMDFTestTemplate.sys.recipe".
+[2022-07-07 11:40:55] [build-stdout]   Deleting file "x64\Debug\KMDFTestTemplate.vcxproj.FileListAbsolute.txt".
+[2022-07-07 11:40:55] [build-stdout]   Deleting file "x64\Debug\KMDFTestTemplate\KMDFTestTemplate.inf".
+[2022-07-07 11:40:55] [build-stdout]   Deleting file "x64\Debug\KMDFTestTemplate\KMDFTestTemplate.sys".
+[2022-07-07 11:40:55] [build-stdout]   Removing directory "x64\Debug\KMDFTestTemplate\".
+[2022-07-07 11:40:55] [build-stdout] DriverBuildNotifications:
+[2022-07-07 11:40:55] [build-stdout]   Building 'KMDFTestTemplate' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+[2022-07-07 11:40:55] [build-stdout]   Using KMDF 1.15.
+[2022-07-07 11:40:55] [build-stdout] InitializeBuildStatus:
+[2022-07-07 11:40:55] [build-stdout]   Creating "x64\Debug\KMDFTestTemplate.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[2022-07-07 11:40:55] [build-stdout] StampInf:
+[2022-07-07 11:40:55] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\stampinf.exe -d "*" -a "amd64" -v "*" -k "1.15"  -x -f x64\Debug\KMDFTestTemplate.inf 
+[2022-07-07 11:40:55] [build-stdout]   Copying "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.inf" to "x64\Debug\KMDFTestTemplate.inf" for stamping
+[2022-07-07 11:40:55] [build-stdout]   Stamping x64\Debug\KMDFTestTemplate.inf
+[2022-07-07 11:40:55] [build-stdout]   Stamping [Version] section with DriverVer=07/07/2022,11.40.55.796
+[2022-07-07 11:40:55] [build-stdout] RunWpp:
+[2022-07-07 11:40:55] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\tracewpp.exe -cfgdir:"C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\wppconfig\rev1" -scan:"trace.h" -odir:"x64\Debug\\" -km Device.c Driver.c Queue.c 
+[2022-07-07 11:40:56] [build-stdout] ClCompile:
+[2022-07-07 11:40:56] [build-stdout]   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\HostX64\x64\CL.exe /c /Ix64\Debug\ /Zi /nologo /W4 /WX /diagnostics:column /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0A00 /D WINVER=0x0A00 /D WINNT=1 /D NTDDI_VERSION=0xA00000C /D DBG=1 /D KMDF_VERSION_MAJOR=1 /D KMDF_VERSION_MINOR=15 /D ENABLE_WPP_RECORDER=1 /GF /Gm- /Zp8 /GS /guard:cf /Gy /fp:precise /Qspectre /Zc:wchar_t- /Zc:forScope /Zc:inline /GR- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W4 /Gz /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 /FI"C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" /FC /errorReport:queue /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ Device.c Driver.c Queue.c
+[2022-07-07 11:40:56] [build-stdout]   Device.c
+[2022-07-07 11:40:56] [build-stdout]   Driver.c
+[2022-07-07 11:40:56] [build-stdout]   Queue.c
+[2022-07-07 11:40:57] [build-stdout]   Generating Code...
+[2022-07-07 11:41:02] [build-stdout] Link:
+[2022-07-07 11:41:02] [build-stdout]   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys" /VERSION:"10.0" /INCREMENTAL:NO /NOLOGO /WX /SECTION:"INIT,d" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\BufferOverflowFastFailK.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\ntoskrnl.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\hal.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wmilib.lib" "C:\Program Files (x86)\Windows Kits\10\lib\wdf\kmdf\x64\1.15\WdfLdr.lib" "C:\Program Files (x86)\Windows Kits\10\lib\wdf\kmdf\x64\1.15\WdfDriverEntry.lib" usbdex.lib ntstrsafe.lib "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wpprecorder.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.pdb" /SUBSYSTEM:NATIVE,"10.00" /Driver /OPT:REF /OPT:ICF /ENTRY:"FxDriverEntry" /RELEASE /IMPLIB:"C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.lib" /MERGE:"_TEXT=.text;_PAGE=PAGE" /MACHINE:X64 /PROFILE /guard:cf /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:10.0 /pdbcompress /debugtype:pdata x64\Debug\Device.obj
+[2022-07-07 11:41:02] [build-stdout]   x64\Debug\Driver.obj
+[2022-07-07 11:41:02] [build-stdout]   x64\Debug\Queue.obj
+[2022-07-07 11:41:03] [build-stdout]   KMDFTestTemplate.vcxproj -> C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys
+[2022-07-07 11:41:03] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (2) is building "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (2:2) on node 1 (TestSign target(s)).
+[2022-07-07 11:41:03] [build-stdout] TestSign:
+[2022-07-07 11:41:03] [build-stdout]   The driver will be test-signed. Driver signing options can be changed from the project properties.
+[2022-07-07 11:41:03] [build-stdout]   Sign Inputs: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys
+[2022-07-07 11:41:03] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe sign /ph /fd "sha256" /sha1 "3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3" 
+[2022-07-07 11:41:03] [build-stdout]   Done Adding Additional Store
+[2022-07-07 11:41:03] [build-stdout]   Successfully signed: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys
+[2022-07-07 11:41:03] [build-stdout]   
+[2022-07-07 11:41:03] [build-stdout]   Certificate used for signing: issued to = WDKTestCert t-abtamene,133003148183399534 and thumbprint = 3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3
+[2022-07-07 11:41:03] [build-stdout]   Exported Certificate: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.cer
+[2022-07-07 11:41:03] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (TestSign target(s)).
+[2022-07-07 11:41:03] [build-stdout] ApiValidator:
+[2022-07-07 11:41:03] [build-stdout]   Validating 'Universal' driver using ApiValidator.exe
+[2022-07-07 11:41:03] [build-stdout]   cmd.exe /D /C "C:\Users\t-abtamene\AppData\Local\Temp\tmp569d5756e3a5496c96b079175ffdff7b.cmd"
+[2022-07-07 11:41:03] [build-stdout]   "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64\ApiValidator.exe" -DriverPackagePath:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys -SupportedApiXmlFiles:"C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\universalDDIs\x64\UniversalDDIs.xml" -ModuleWhiteListXmlFiles:"C:\Program Files (x86)\Windows Kits\10\build\10.0.22621.0\universalDDIs\x64\ModuleWhiteList.xml" -ApiExtractorExePath:"C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x64" 
+[2022-07-07 11:41:04] [build-stdout]   Driver is 'Universal'.
+[2022-07-07 11:41:04] [build-stdout] DriverPackageTarget:
+[2022-07-07 11:41:04] [build-stdout]   Packaging up the following projects for the following configurations:
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]    Configuration='' Platform=''
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   The following files will be packaged:
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   File to package:      C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys.
+[2022-07-07 11:41:04] [build-stdout]   Location in Package:  \KMDFTestTemplate.sys.
+[2022-07-07 11:41:04] [build-stdout]   Requested by project: 
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   File to package:      x64\Debug\KMDFTestTemplate.inf.
+[2022-07-07 11:41:04] [build-stdout]   Location in Package:  \KMDFTestTemplate.inf.
+[2022-07-07 11:41:04] [build-stdout]   Requested by project: 
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   Creating directory "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate".
+[2022-07-07 11:41:04] [build-stdout]   Copying file from "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.sys" to "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate\KMDFTestTemplate.sys".
+[2022-07-07 11:41:04] [build-stdout]   Copying file from "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.inf" to "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate\KMDFTestTemplate.inf".
+[2022-07-07 11:41:04] [build-stdout] Inf2Cat:
+[2022-07-07 11:41:04] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\inf2cat.exe /os:10_x64 /driver:C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate\ 
+[2022-07-07 11:41:04] [build-stdout]   ........................
+[2022-07-07 11:41:04] [build-stdout]   Signability test complete.
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   Errors:
+[2022-07-07 11:41:04] [build-stdout]   None
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   Warnings:
+[2022-07-07 11:41:04] [build-stdout]   None
+[2022-07-07 11:41:04] [build-stdout]   
+[2022-07-07 11:41:04] [build-stdout]   Catalog generation complete.
+[2022-07-07 11:41:04] [build-stdout]   C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate\kmdftesttemplate.cat
+[2022-07-07 11:41:05] [build-stdout] Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (2) is building "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (2:3) on node 1 (TestSign target(s)).
+[2022-07-07 11:41:05] [build-stdout] TestSign:
+[2022-07-07 11:41:05] [build-stdout]   The driver package will be test-signed. Driver signing options can be changed from the project properties.
+[2022-07-07 11:41:05] [build-stdout]   Sign Inputs: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate\kmdftesttemplate.cat
+[2022-07-07 11:41:05] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe sign /ph /fd "sha256" /sha1 "3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3" 
+[2022-07-07 11:41:05] [build-stdout]   Done Adding Additional Store
+[2022-07-07 11:41:05] [build-stdout]   Successfully signed: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate\kmdftesttemplate.cat
+[2022-07-07 11:41:05] [build-stdout]   
+[2022-07-07 11:41:05] [build-stdout]   Certificate used for signing: issued to = WDKTestCert t-abtamene,133003148183399534 and thumbprint = 3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3
+[2022-07-07 11:41:05] [build-stdout]   Exported Certificate: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\x64\Debug\KMDFTestTemplate.cer
+[2022-07-07 11:41:05] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (TestSign target(s)).
+[2022-07-07 11:41:05] [build-stdout] FinalizeBuildStatus:
+[2022-07-07 11:41:05] [build-stdout]   Deleting file "x64\Debug\KMDFTestTemplate.tlog\unsuccessfulbuild".
+[2022-07-07 11:41:05] [build-stdout]   Touching "x64\Debug\KMDFTestTemplate.tlog\KMDFTestTemplate.lastbuildstate".
+[2022-07-07 11:41:05] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.vcxproj" (Rebuild target(s)).
+[2022-07-07 11:41:05] [build-stdout] Done Building Project "C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\out\C28143\KMDFTestTemplate.sln" (rebuild target(s)).
+[2022-07-07 11:41:05] [build-stdout] Build succeeded.
+[2022-07-07 11:41:05] [build-stdout]     0 Warning(s)
+[2022-07-07 11:41:05] [build-stdout]     0 Error(s)
+[2022-07-07 11:41:05] [build-stdout] Time Elapsed 00:00:09.98
+[2022-07-07 11:41:05] Plumbing command codeql database trace-command completed.
+[2022-07-07 11:41:05] [PROGRESS] database create> Finalizing database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143.
+[2022-07-07 11:41:05] Running plumbing command: codeql database finalize --mode=normal --keep-temporary --no-db-cluster -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143
+[2022-07-07 11:41:05] [PROGRESS] database finalize> Running TRAP import for CodeQL database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143...
+[2022-07-07 11:41:05] Running plumbing command: codeql dataset import --dbscheme=C:\CQL\codeql_home\codeql\cpp\semmlecode.cpp.dbscheme -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp
+[2022-07-07 11:41:05] Clearing disk cache since the version file C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp\default\cache\version does not exist
+[2022-07-07 11:41:05] Tuple pool not found. Clearing relations with cached strings
+[2022-07-07 11:41:05] Trimming disk cache at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp\default\cache in mode brutal.
+[2022-07-07 11:41:05] Sequence stamp origin is -6436183446059749611
+[2022-07-07 11:41:05] Pausing evaluation to hard-clear memory at sequence stamp o+0
+[2022-07-07 11:41:05] Unpausing evaluation
+[2022-07-07 11:41:05] Pausing evaluation to quickly trim disk at sequence stamp o+1
+[2022-07-07 11:41:05] Unpausing evaluation
+[2022-07-07 11:41:05] Pausing evaluation to zealously trim disk at sequence stamp o+2
+[2022-07-07 11:41:05] Unpausing evaluation
+[2022-07-07 11:41:05] Trimming completed (26ms): Purged everything.
+[2022-07-07 11:41:05] Scanning for files in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\trap\cpp
+[2022-07-07 11:41:05] Grouping TRAPs by link target
+[2022-07-07 11:41:05] Scanning cpp_predefined.d6444f2f.trap (Device.c.b62c98e7_0.trap.tar.br) (1 of 103)
+[2022-07-07 11:41:05] Scanning suppress.h.c0ebe05d.trap (Device.c.b62c98e7_0.trap.tar.br) (2 of 103)
+[2022-07-07 11:41:05] Scanning warning.h.c23ed0db.trap (Device.c.b62c98e7_0.trap.tar.br) (3 of 103)
+[2022-07-07 11:41:05] Scanning concurrencysal.h.ebc35fda.trap (Device.c.b62c98e7_0.trap.tar.br) (4 of 103)
+[2022-07-07 11:41:05] Scanning sal.h.4a3c7929.trap (Device.c.b62c98e7_0.trap.tar.br) (5 of 103)
+[2022-07-07 11:41:05] Scanning specstrings_undef.h.167b6294.trap (Device.c.b62c98e7_0.trap.tar.br) (6 of 103)
+[2022-07-07 11:41:05] Scanning specstrings_strict.h.06fd7578.trap (Device.c.b62c98e7_0.trap.tar.br) (7 of 103)
+[2022-07-07 11:41:05] Scanning sdv_driverspecs.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) (8 of 103)
+[2022-07-07 11:41:05] Scanning driverspecs.h.40b1a18c.trap (Device.c.b62c98e7_0.trap.tar.br) (9 of 103)
+[2022-07-07 11:41:05] Scanning specstrings.h.4a33f18e.trap (Device.c.b62c98e7_0.trap.tar.br) (10 of 103)
+[2022-07-07 11:41:05] Scanning vadefs.h.9a85289f.trap (Device.c.b62c98e7_0.trap.tar.br) (11 of 103)
+[2022-07-07 11:41:05] Scanning crtdefs.h.b9f9030e.trap (Device.c.b62c98e7_0.trap.tar.br) (12 of 103)
+[2022-07-07 11:41:05] Scanning excpt.h.4a2e7ec9.trap (Device.c.b62c98e7_0.trap.tar.br) (13 of 103)
+[2022-07-07 11:41:05] Scanning crtdefs.h.3cfdf262.trap (Device.c.b62c98e7_0.trap.tar.br) (14 of 103)
+[2022-07-07 11:41:05] Scanning ctype.h.b5a1a318.trap (Device.c.b62c98e7_0.trap.tar.br) (15 of 103)
+[2022-07-07 11:41:05] Scanning winpackagefamily.h.164d5f6e.trap (Device.c.b62c98e7_0.trap.tar.br) (16 of 103)
+[2022-07-07 11:41:05] Scanning winapifamily.h.b7918b70.trap (Device.c.b62c98e7_0.trap.tar.br) (17 of 103)
+[2022-07-07 11:41:05] Scanning kernelspecs.h.3e9b2e73.trap (Device.c.b62c98e7_0.trap.tar.br) (18 of 103)
+[2022-07-07 11:41:05] Scanning basetsd.h.32c77334.trap (Device.c.b62c98e7_0.trap.tar.br) (19 of 103)
+[2022-07-07 11:41:05] Scanning string.h.3c019998.trap (Device.c.b62c98e7_0.trap.tar.br) (20 of 103)
+[2022-07-07 11:41:05] Scanning guiddef.h.e8d69ce6.trap (Device.c.b62c98e7_0.trap.tar.br) (21 of 103)
+[2022-07-07 11:41:05] Scanning sdkddkver.h.15b67886.trap (Device.c.b62c98e7_0.trap.tar.br) (22 of 103)
+[2022-07-07 11:41:05] Scanning ntdef.h.95af8aac.trap (Device.c.b62c98e7_0.trap.tar.br) (23 of 103)
+[2022-07-07 11:41:05] Scanning ntstatus.h.ca355108.trap (Device.c.b62c98e7_0.trap.tar.br) (24 of 103)
+[2022-07-07 11:41:05] Scanning bugcodes.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) (25 of 103)
+[2022-07-07 11:41:05] Scanning ntiologc.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) (26 of 103)
+[2022-07-07 11:41:05] Scanning mce.h.a0d03769.trap (Device.c.b62c98e7_0.trap.tar.br) (27 of 103)
+[2022-07-07 11:41:05] Scanning pshpack4.h.70e61405.trap (Device.c.b62c98e7_0.trap.tar.br) (28 of 103)
+[2022-07-07 11:41:05] Scanning poppack.h.70e61405.trap (Device.c.b62c98e7_0.trap.tar.br) (29 of 103)
+[2022-07-07 11:41:05] Scanning pshpack1.h.70e61405.trap (Device.c.b62c98e7_0.trap.tar.br) (30 of 103)
+[2022-07-07 11:41:05] Scanning guiddef.h.14afcd24.trap (Device.c.b62c98e7_0.trap.tar.br) (31 of 103)
+[2022-07-07 11:41:05] Scanning dpfilter.h.b67644c0.trap (Device.c.b62c98e7_0.trap.tar.br) (32 of 103)
+[2022-07-07 11:41:05] Scanning apiset.h.4eae940c.trap (Device.c.b62c98e7_0.trap.tar.br) (33 of 103)
+[2022-07-07 11:41:05] Scanning ktmtypes.h.afecde69.trap (Device.c.b62c98e7_0.trap.tar.br) (34 of 103)
+[2022-07-07 11:41:05] Scanning evntprov.h.f5781383.trap (Device.c.b62c98e7_0.trap.tar.br) (35 of 103)
+[2022-07-07 11:41:05] Scanning devpropdef.h.2151f9ae.trap (Device.c.b62c98e7_0.trap.tar.br) (36 of 103)
+[2022-07-07 11:41:05] Scanning wdm.h.c91a998c.trap (Device.c.b62c98e7_0.trap.tar.br) (37 of 103)
+[2022-07-07 11:41:06] Scanning ntddk.h.1e9e4b74.trap (Device.c.b62c98e7_0.trap.tar.br) (38 of 103)
+[2022-07-07 11:41:06] Scanning wdftypes.h.8f2d4345.trap (Device.c.b62c98e7_0.trap.tar.br) (39 of 103)
+[2022-07-07 11:41:06] Scanning wdfglobals.h.b702c5e3.trap (Device.c.b62c98e7_0.trap.tar.br) (40 of 103)
+[2022-07-07 11:41:06] Scanning wdffuncenum.h.ba08b19f.trap (Device.c.b62c98e7_0.trap.tar.br) (41 of 103)
+[2022-07-07 11:41:06] Scanning wdfstatus.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) (42 of 103)
+[2022-07-07 11:41:06] Scanning wdfassert.h.a6628b28.trap (Device.c.b62c98e7_0.trap.tar.br) (43 of 103)
+[2022-07-07 11:41:06] Scanning wdfverifier.h.bee7f023.trap (Device.c.b62c98e7_0.trap.tar.br) (44 of 103)
+[2022-07-07 11:41:06] Scanning wdfpool.h.357cd8ce.trap (Device.c.b62c98e7_0.trap.tar.br) (45 of 103)
+[2022-07-07 11:41:06] Scanning wdfobject.h.2f0ca609.trap (Device.c.b62c98e7_0.trap.tar.br) (46 of 103)
+[2022-07-07 11:41:06] Scanning wdfsync.h.73aa31b4.trap (Device.c.b62c98e7_0.trap.tar.br) (47 of 103)
+[2022-07-07 11:41:06] Scanning wdfcore.h.2dc9d0d9.trap (Device.c.b62c98e7_0.trap.tar.br) (48 of 103)
+[2022-07-07 11:41:06] Scanning wdfdriver.h.8478d0be.trap (Device.c.b62c98e7_0.trap.tar.br) (49 of 103)
+[2022-07-07 11:41:06] Scanning wdfqueryinterface.h.660f21d0.trap (Device.c.b62c98e7_0.trap.tar.br) (50 of 103)
+[2022-07-07 11:41:06] Scanning wdfmemory.h.ccc0d9b0.trap (Device.c.b62c98e7_0.trap.tar.br) (51 of 103)
+[2022-07-07 11:41:06] Scanning wdfchildlist.h.844ba0dc.trap (Device.c.b62c98e7_0.trap.tar.br) (52 of 103)
+[2022-07-07 11:41:06] Scanning wdffileobject.h.98f7ae72.trap (Device.c.b62c98e7_0.trap.tar.br) (53 of 103)
+[2022-07-07 11:41:06] Scanning devpropdef.h.e6d65ef9.trap (Device.c.b62c98e7_0.trap.tar.br) (54 of 103)
+[2022-07-07 11:41:06] Scanning wdmsec.h.83a5dfca.trap (Device.c.b62c98e7_0.trap.tar.br) (55 of 103)
+[2022-07-07 11:41:06] Scanning wdfdevice.h.c97afc81.trap (Device.c.b62c98e7_0.trap.tar.br) (56 of 103)
+[2022-07-07 11:41:06] Scanning wdfcollection.h.37c6ecd6.trap (Device.c.b62c98e7_0.trap.tar.br) (57 of 103)
+[2022-07-07 11:41:06] Scanning wdfdpc.h.ce7910cb.trap (Device.c.b62c98e7_0.trap.tar.br) (58 of 103)
+[2022-07-07 11:41:06] Scanning wdftimer.h.56e46bb1.trap (Device.c.b62c98e7_0.trap.tar.br) (59 of 103)
+[2022-07-07 11:41:06] Scanning wdfworkitem.h.ba4a9c9a.trap (Device.c.b62c98e7_0.trap.tar.br) (60 of 103)
+[2022-07-07 11:41:06] Scanning wdfinterrupt.h.98197aad.trap (Device.c.b62c98e7_0.trap.tar.br) (61 of 103)
+[2022-07-07 11:41:06] Scanning wdfresource.h.04e4a9ce.trap (Device.c.b62c98e7_0.trap.tar.br) (62 of 103)
+[2022-07-07 11:41:06] Scanning wdfrequest.h.fe356f0c.trap (Device.c.b62c98e7_0.trap.tar.br) (63 of 103)
+[2022-07-07 11:41:06] Scanning wdfiotarget.h.6b2ac828.trap (Device.c.b62c98e7_0.trap.tar.br) (64 of 103)
+[2022-07-07 11:41:06] Scanning wdfio.h.3f9e1eb2.trap (Device.c.b62c98e7_0.trap.tar.br) (65 of 103)
+[2022-07-07 11:41:06] Scanning wdffdo.h.0a72f6cd.trap (Device.c.b62c98e7_0.trap.tar.br) (66 of 103)
+[2022-07-07 11:41:06] Scanning wdfpdo.h.e0d87c64.trap (Device.c.b62c98e7_0.trap.tar.br) (67 of 103)
+[2022-07-07 11:41:06] Scanning wdfcontrol.h.b7318387.trap (Device.c.b62c98e7_0.trap.tar.br) (68 of 103)
+[2022-07-07 11:41:06] Scanning wdfwmi.h.da2ce496.trap (Device.c.b62c98e7_0.trap.tar.br) (69 of 103)
+[2022-07-07 11:41:06] Scanning wdfstring.h.585d77a7.trap (Device.c.b62c98e7_0.trap.tar.br) (70 of 103)
+[2022-07-07 11:41:06] Scanning wdfregistry.h.2a843e82.trap (Device.c.b62c98e7_0.trap.tar.br) (71 of 103)
+[2022-07-07 11:41:06] Scanning wdfdmaenabler.h.e6999142.trap (Device.c.b62c98e7_0.trap.tar.br) (72 of 103)
+[2022-07-07 11:41:06] Scanning wdfdmatransaction.h.bb7fdbfe.trap (Device.c.b62c98e7_0.trap.tar.br) (73 of 103)
+[2022-07-07 11:41:06] Scanning wdfcommonbuffer.h.8e9138d8.trap (Device.c.b62c98e7_0.trap.tar.br) (74 of 103)
+[2022-07-07 11:41:06] Scanning wdfbugcodes.h.ea9af241.trap (Device.c.b62c98e7_0.trap.tar.br) (75 of 103)
+[2022-07-07 11:41:06] Scanning wdfroletypes.h.d5a96134.trap (Device.c.b62c98e7_0.trap.tar.br) (76 of 103)
+[2022-07-07 11:41:06] Scanning wdfhwaccess.h.357cd8ce.trap (Device.c.b62c98e7_0.trap.tar.br) (77 of 103)
+[2022-07-07 11:41:06] Scanning wdf.h.8634e612.trap (Device.c.b62c98e7_0.trap.tar.br) (78 of 103)
+[2022-07-07 11:41:06] Scanning usbspec.h.a951460f.trap (Device.c.b62c98e7_0.trap.tar.br) (79 of 103)
+[2022-07-07 11:41:06] Scanning usb.h.5a633045.trap (Device.c.b62c98e7_0.trap.tar.br) (80 of 103)
+[2022-07-07 11:41:06] Scanning usbdlib.h.dcbfb1ff.trap (Device.c.b62c98e7_0.trap.tar.br) (81 of 103)
+[2022-07-07 11:41:06] Scanning wdfusb.h.4d98e832.trap (Device.c.b62c98e7_0.trap.tar.br) (82 of 103)
+[2022-07-07 11:41:06] Scanning guiddef.h.f65b4f91.trap (Device.c.b62c98e7_0.trap.tar.br) (83 of 103)
+[2022-07-07 11:41:06] Scanning initguid.h.f516791d.trap (Device.c.b62c98e7_0.trap.tar.br) (84 of 103)
+[2022-07-07 11:41:06] Scanning Public.h.12331186.trap (Device.c.b62c98e7_0.trap.tar.br) (85 of 103)
+[2022-07-07 11:41:06] Scanning Device.h.91593785.trap (Device.c.b62c98e7_0.trap.tar.br) (86 of 103)
+[2022-07-07 11:41:06] Scanning Queue.h.92f03fa2.trap (Device.c.b62c98e7_0.trap.tar.br) (87 of 103)
+[2022-07-07 11:41:06] Scanning Trace.h.167b6294.trap (Device.c.b62c98e7_0.trap.tar.br) (88 of 103)
+[2022-07-07 11:41:06] Scanning Driver.h.fee20774.trap (Device.c.b62c98e7_0.trap.tar.br) (89 of 103)
+[2022-07-07 11:41:06] Scanning guiddef.h.29add26d.trap (Device.c.b62c98e7_0.trap.tar.br) (90 of 103)
+[2022-07-07 11:41:06] Scanning evntrace.h.bc17ed04.trap (Device.c.b62c98e7_0.trap.tar.br) (91 of 103)
+[2022-07-07 11:41:06] Scanning stddef.h.17bff76f.trap (Device.c.b62c98e7_0.trap.tar.br) (92 of 103)
+[2022-07-07 11:41:06] Scanning wmistr.h.6728496d.trap (Device.c.b62c98e7_0.trap.tar.br) (93 of 103)
+[2022-07-07 11:41:06] Scanning Device.tmh.ec24f32b.trap (Device.c.b62c98e7_0.trap.tar.br) (94 of 103)
+[2022-07-07 11:41:06] Scanning Device.c.b62c98e7.trap (Device.c.b62c98e7_0.trap.tar.br) (95 of 103)
+[2022-07-07 11:41:06] Scanning Driver.tmh.f5b35753.trap (Driver.c.88f88b47_0.trap.tar.br) (96 of 103)
+[2022-07-07 11:41:06] Scanning driver_snippet.c.f47db842.trap (Driver.c.88f88b47_0.trap.tar.br) (97 of 103)
+[2022-07-07 11:41:06] Scanning Driver.c.88f88b47.trap (Driver.c.88f88b47_0.trap.tar.br) (98 of 103)
+[2022-07-07 11:41:06] Scanning Queue.tmh.1e39f7f4.trap (Queue.c.124c17a8_0.trap.tar.br) (99 of 103)
+[2022-07-07 11:41:06] Scanning Queue.c.124c17a8.trap (Queue.c.124c17a8_0.trap.tar.br) (100 of 103)
+[2022-07-07 11:41:06] Scanning 431439_0.trap.br (101 of 103)
+[2022-07-07 11:41:06] Scanning KMDFTestTemplate.sys.trap.br (102 of 103)
+[2022-07-07 11:41:06] Scanning sourceLocationPrefix.trap.gz (103 of 103)
+[2022-07-07 11:41:06] Assembling KMDFTestTemplate.sys.link with 101 files (1 of 2)
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WPP_RECORDER_SF_(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh[a9e421a6];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh[0d5da028];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WPP_SF_(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh[39653a6d];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh[36f9dc15];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WppBinary(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh[00000000];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh[00000000];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WppBinary(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Queue.tmh[00000000];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh[00000000];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WppQueryLogger(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh[0fb342f5];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh[0fb342f5];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WppQueryLogger(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Queue.tmh[0fb342f5];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Device.tmh[0fb342f5];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WPP_RECORDER_SF_d(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Queue.tmh[137f0e17];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh[a5bc38c0];lib_win64
+[2022-07-07 11:41:06] [WARN] Non-unique implementations of @"fun_decl_WPP_SF_d(?)": C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Queue.tmh[9d3c5433];lib_win64, C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/PortedQueries/out/C28143/x64/Debug/Driver.tmh[7fc3f6f5];lib_win64
+[2022-07-07 11:41:06] Assembling no link target with 2 files (2 of 2)
+[2022-07-07 11:41:06] Importing cpp_predefined.d6444f2f.trap (Device.c.b62c98e7_0.trap.tar.br) for no link target (1 of 103)
+[2022-07-07 11:41:06] Importing suppress.h.c0ebe05d.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (2 of 103)
+[2022-07-07 11:41:07] Importing warning.h.c23ed0db.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (3 of 103)
+[2022-07-07 11:41:07] Importing concurrencysal.h.ebc35fda.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (4 of 103)
+[2022-07-07 11:41:07] Importing sal.h.4a3c7929.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (5 of 103)
+[2022-07-07 11:41:07] Importing specstrings_undef.h.167b6294.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (6 of 103)
+[2022-07-07 11:41:07] Importing specstrings_strict.h.06fd7578.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (7 of 103)
+[2022-07-07 11:41:07] Importing sdv_driverspecs.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (8 of 103)
+[2022-07-07 11:41:07] Importing driverspecs.h.40b1a18c.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (9 of 103)
+[2022-07-07 11:41:07] Importing specstrings.h.4a33f18e.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (10 of 103)
+[2022-07-07 11:41:07] Importing vadefs.h.9a85289f.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (11 of 103)
+[2022-07-07 11:41:07] Importing crtdefs.h.b9f9030e.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (12 of 103)
+[2022-07-07 11:41:07] Importing excpt.h.4a2e7ec9.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (13 of 103)
+[2022-07-07 11:41:07] Importing crtdefs.h.3cfdf262.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (14 of 103)
+[2022-07-07 11:41:07] Importing ctype.h.b5a1a318.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (15 of 103)
+[2022-07-07 11:41:07] Importing winpackagefamily.h.164d5f6e.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (16 of 103)
+[2022-07-07 11:41:07] Importing winapifamily.h.b7918b70.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (17 of 103)
+[2022-07-07 11:41:07] Importing kernelspecs.h.3e9b2e73.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (18 of 103)
+[2022-07-07 11:41:07] Importing basetsd.h.32c77334.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (19 of 103)
+[2022-07-07 11:41:07] Importing string.h.3c019998.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (20 of 103)
+[2022-07-07 11:41:07] Importing guiddef.h.e8d69ce6.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (21 of 103)
+[2022-07-07 11:41:07] Importing sdkddkver.h.15b67886.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (22 of 103)
+[2022-07-07 11:41:07] Importing ntdef.h.95af8aac.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (23 of 103)
+[2022-07-07 11:41:07] Importing ntstatus.h.ca355108.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (24 of 103)
+[2022-07-07 11:41:08] Importing bugcodes.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (25 of 103)
+[2022-07-07 11:41:08] Importing ntiologc.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (26 of 103)
+[2022-07-07 11:41:08] Importing mce.h.a0d03769.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (27 of 103)
+[2022-07-07 11:41:08] Importing pshpack4.h.70e61405.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (28 of 103)
+[2022-07-07 11:41:08] Importing poppack.h.70e61405.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (29 of 103)
+[2022-07-07 11:41:08] Importing pshpack1.h.70e61405.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (30 of 103)
+[2022-07-07 11:41:08] Importing guiddef.h.14afcd24.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (31 of 103)
+[2022-07-07 11:41:08] Importing dpfilter.h.b67644c0.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (32 of 103)
+[2022-07-07 11:41:08] Importing apiset.h.4eae940c.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (33 of 103)
+[2022-07-07 11:41:08] Importing ktmtypes.h.afecde69.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (34 of 103)
+[2022-07-07 11:41:08] Importing evntprov.h.f5781383.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (35 of 103)
+[2022-07-07 11:41:08] Importing devpropdef.h.2151f9ae.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (36 of 103)
+[2022-07-07 11:41:08] Importing wdm.h.c91a998c.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (37 of 103)
+[2022-07-07 11:41:09] Importing ntddk.h.1e9e4b74.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (38 of 103)
+[2022-07-07 11:41:09] Importing wdftypes.h.8f2d4345.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (39 of 103)
+[2022-07-07 11:41:09] Importing wdfglobals.h.b702c5e3.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (40 of 103)
+[2022-07-07 11:41:09] Importing wdffuncenum.h.ba08b19f.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (41 of 103)
+[2022-07-07 11:41:09] Importing wdfstatus.h.8610835b.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (42 of 103)
+[2022-07-07 11:41:09] Importing wdfassert.h.a6628b28.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (43 of 103)
+[2022-07-07 11:41:09] Importing wdfverifier.h.bee7f023.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (44 of 103)
+[2022-07-07 11:41:09] Importing wdfpool.h.357cd8ce.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (45 of 103)
+[2022-07-07 11:41:09] Importing wdfobject.h.2f0ca609.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (46 of 103)
+[2022-07-07 11:41:09] Importing wdfsync.h.73aa31b4.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (47 of 103)
+[2022-07-07 11:41:09] Importing wdfcore.h.2dc9d0d9.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (48 of 103)
+[2022-07-07 11:41:09] Importing wdfdriver.h.8478d0be.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (49 of 103)
+[2022-07-07 11:41:09] Importing wdfqueryinterface.h.660f21d0.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (50 of 103)
+[2022-07-07 11:41:09] Importing wdfmemory.h.ccc0d9b0.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (51 of 103)
+[2022-07-07 11:41:10] Importing wdfchildlist.h.844ba0dc.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (52 of 103)
+[2022-07-07 11:41:10] Importing wdffileobject.h.98f7ae72.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (53 of 103)
+[2022-07-07 11:41:10] Importing devpropdef.h.e6d65ef9.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (54 of 103)
+[2022-07-07 11:41:10] Importing wdmsec.h.83a5dfca.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (55 of 103)
+[2022-07-07 11:41:10] Importing wdfdevice.h.c97afc81.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (56 of 103)
+[2022-07-07 11:41:10] Importing wdfcollection.h.37c6ecd6.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (57 of 103)
+[2022-07-07 11:41:10] Importing wdfdpc.h.ce7910cb.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (58 of 103)
+[2022-07-07 11:41:10] Importing wdftimer.h.56e46bb1.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (59 of 103)
+[2022-07-07 11:41:10] Importing wdfworkitem.h.ba4a9c9a.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (60 of 103)
+[2022-07-07 11:41:10] Importing wdfinterrupt.h.98197aad.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (61 of 103)
+[2022-07-07 11:41:10] Importing wdfresource.h.04e4a9ce.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (62 of 103)
+[2022-07-07 11:41:10] Importing wdfrequest.h.fe356f0c.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (63 of 103)
+[2022-07-07 11:41:10] Importing wdfiotarget.h.6b2ac828.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (64 of 103)
+[2022-07-07 11:41:10] Importing wdfio.h.3f9e1eb2.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (65 of 103)
+[2022-07-07 11:41:10] Importing wdffdo.h.0a72f6cd.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (66 of 103)
+[2022-07-07 11:41:10] Importing wdfpdo.h.e0d87c64.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (67 of 103)
+[2022-07-07 11:41:10] Importing wdfcontrol.h.b7318387.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (68 of 103)
+[2022-07-07 11:41:10] Importing wdfwmi.h.da2ce496.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (69 of 103)
+[2022-07-07 11:41:10] Importing wdfstring.h.585d77a7.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (70 of 103)
+[2022-07-07 11:41:10] Importing wdfregistry.h.2a843e82.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (71 of 103)
+[2022-07-07 11:41:10] Importing wdfdmaenabler.h.e6999142.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (72 of 103)
+[2022-07-07 11:41:10] Importing wdfdmatransaction.h.bb7fdbfe.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (73 of 103)
+[2022-07-07 11:41:10] Importing wdfcommonbuffer.h.8e9138d8.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (74 of 103)
+[2022-07-07 11:41:10] Importing wdfbugcodes.h.ea9af241.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (75 of 103)
+[2022-07-07 11:41:10] Importing wdfroletypes.h.d5a96134.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (76 of 103)
+[2022-07-07 11:41:10] Importing wdfhwaccess.h.357cd8ce.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (77 of 103)
+[2022-07-07 11:41:10] Importing wdf.h.8634e612.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (78 of 103)
+[2022-07-07 11:41:10] Importing usbspec.h.a951460f.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (79 of 103)
+[2022-07-07 11:41:10] Importing usb.h.5a633045.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (80 of 103)
+[2022-07-07 11:41:10] Importing usbdlib.h.dcbfb1ff.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (81 of 103)
+[2022-07-07 11:41:10] Importing wdfusb.h.4d98e832.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (82 of 103)
+[2022-07-07 11:41:10] Importing guiddef.h.f65b4f91.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (83 of 103)
+[2022-07-07 11:41:10] Importing initguid.h.f516791d.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (84 of 103)
+[2022-07-07 11:41:10] Importing Public.h.12331186.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (85 of 103)
+[2022-07-07 11:41:10] Importing Device.h.91593785.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (86 of 103)
+[2022-07-07 11:41:10] Importing Queue.h.92f03fa2.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (87 of 103)
+[2022-07-07 11:41:10] Importing Trace.h.167b6294.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (88 of 103)
+[2022-07-07 11:41:10] Importing Driver.h.fee20774.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (89 of 103)
+[2022-07-07 11:41:10] Importing guiddef.h.29add26d.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (90 of 103)
+[2022-07-07 11:41:10] Importing evntrace.h.bc17ed04.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (91 of 103)
+[2022-07-07 11:41:10] Importing stddef.h.17bff76f.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (92 of 103)
+[2022-07-07 11:41:10] Importing wmistr.h.6728496d.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (93 of 103)
+[2022-07-07 11:41:10] Importing Device.tmh.ec24f32b.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (94 of 103)
+[2022-07-07 11:41:10] Importing Device.c.b62c98e7.trap (Device.c.b62c98e7_0.trap.tar.br) for KMDFTestTemplate.sys.link (95 of 103)
+[2022-07-07 11:41:10] Importing Driver.tmh.f5b35753.trap (Driver.c.88f88b47_0.trap.tar.br) for KMDFTestTemplate.sys.link (96 of 103)
+[2022-07-07 11:41:10] Importing driver_snippet.c.f47db842.trap (Driver.c.88f88b47_0.trap.tar.br) for KMDFTestTemplate.sys.link (97 of 103)
+[2022-07-07 11:41:10] Importing Driver.c.88f88b47.trap (Driver.c.88f88b47_0.trap.tar.br) for KMDFTestTemplate.sys.link (98 of 103)
+[2022-07-07 11:41:10] Importing Queue.tmh.1e39f7f4.trap (Queue.c.124c17a8_0.trap.tar.br) for KMDFTestTemplate.sys.link (99 of 103)
+[2022-07-07 11:41:10] Importing Queue.c.124c17a8.trap (Queue.c.124c17a8_0.trap.tar.br) for KMDFTestTemplate.sys.link (100 of 103)
+[2022-07-07 11:41:10] Importing 431439_0.trap.br for KMDFTestTemplate.sys.link (101 of 103)
+[2022-07-07 11:41:10] Importing KMDFTestTemplate.sys.trap.br for KMDFTestTemplate.sys.link (102 of 103)
+[2022-07-07 11:41:10] Importing sourceLocationPrefix.trap.gz for no link target (103 of 103)
+[2022-07-07 11:41:10] Merging 1 fragment for builtintypes.
+[2022-07-07 11:41:10] Merging 1 fragment for unspecifiedtype.
+[2022-07-07 11:41:10] Merging 1 fragment for files.
+[2022-07-07 11:41:10] Merging 3 fragments for locations_default.
+[2022-07-07 11:41:11] Merging 1 fragment for link_targets.
+[2022-07-07 11:41:11] Merging 1 fragment for locations_stmt.
+[2022-07-07 11:41:11] Merging 1 fragment for locations_expr.
+[2022-07-07 11:41:11] Merging 1 fragment for usertypes.
+[2022-07-07 11:41:11] Merging 1 fragment for namespaces.
+[2022-07-07 11:41:11] Merging 1 fragment for specialnamequalifyingelements.
+[2022-07-07 11:41:11] Merging 1 fragment for mangled_name.
+[2022-07-07 11:41:11] Merging 1 fragment for specifiers.
+[2022-07-07 11:41:11] Merging 1 fragment for numlines.
+[2022-07-07 11:41:11] Merging 1 fragment for preprocdirects.
+[2022-07-07 11:41:11] Merging 1 fragment for preproctext.
+[2022-07-07 11:41:11] Merging 1 fragment for preprocfalse.
+[2022-07-07 11:41:11] Merging 2 fragments for macroinvocations.
+[2022-07-07 11:41:11] Merging 1 fragment for comments.
+[2022-07-07 11:41:11] Merging 1 fragment for commentbinding.
+[2022-07-07 11:41:11] Merging 1 fragment for containerparent.
+[2022-07-07 11:41:11] Merging 1 fragment for folders.
+[2022-07-07 11:41:11] Merging 1 fragment for preprocpair.
+[2022-07-07 11:41:11] Merging 1 fragment for includes.
+[2022-07-07 11:41:11] Merging 1 fragment for preproctrue.
+[2022-07-07 11:41:11] Merging 2 fragments for macro_argument_unexpanded.
+[2022-07-07 11:41:11] Merging 2 fragments for macro_argument_expanded.
+[2022-07-07 11:41:11] Merging 1 fragment for type_mentions.
+[2022-07-07 11:41:11] Merging 1 fragment for functions.
+[2022-07-07 11:41:11] Merging 1 fragment for link_parent.
+[2022-07-07 11:41:11] Merging 1 fragment for function_return_type.
+[2022-07-07 11:41:11] Merging 1 fragment for derivedtypes.
+[2022-07-07 11:41:11] Merging 1 fragment for pointerishsize.
+[2022-07-07 11:41:11] Merging 1 fragment for params.
+[2022-07-07 11:41:11] Merging 1 fragment for typedefbase.
+[2022-07-07 11:41:11] Merging 1 fragment for type_decls.
+[2022-07-07 11:41:11] Merging 1 fragment for type_decl_top.
+[2022-07-07 11:41:11] Merging 1 fragment for fun_decls.
+[2022-07-07 11:41:11] Merging 1 fragment for fun_decl_specifiers.
+[2022-07-07 11:41:11] Merging 1 fragment for param_decl_bind.
+[2022-07-07 11:41:11] Merging 2 fragments for macroparent.
+[2022-07-07 11:41:11] Merging 1 fragment for funspecifiers.
+[2022-07-07 11:41:11] Merging 1 fragment for var_decls.
+[2022-07-07 11:41:11] Merging 1 fragment for usertypesize.
+[2022-07-07 11:41:11] Merging 1 fragment for is_pod_class.
+[2022-07-07 11:41:11] Merging 1 fragment for is_standard_layout_class.
+[2022-07-07 11:41:11] Merging 1 fragment for is_complete.
+[2022-07-07 11:41:11] Merging 1 fragment for member.
+[2022-07-07 11:41:11] Merging 1 fragment for type_def.
+[2022-07-07 11:41:11] Merging 1 fragment for membervariables.
+[2022-07-07 11:41:11] Merging 1 fragment for fieldoffsets.
+[2022-07-07 11:41:11] Merging 1 fragment for var_def.
+[2022-07-07 11:41:11] Merging 1 fragment for arraysizes.
+[2022-07-07 11:41:11] Merging 1 fragment for values.
+[2022-07-07 11:41:12] Merging 1 fragment for valuetext.
+[2022-07-07 11:41:12] Merging 1 fragment for exprs.
+[2022-07-07 11:41:12] Merging 1 fragment for expr_types.
+[2022-07-07 11:41:12] Merging 1 fragment for valuebind.
+[2022-07-07 11:41:12] Merging 1 fragment for varspecifiers.
+[2022-07-07 11:41:12] Merging 1 fragment for typespecifiers.
+[2022-07-07 11:41:12] Merging 1 fragment for enumconstants.
+[2022-07-07 11:41:12] Merging 1 fragment for initialisers.
+[2022-07-07 11:41:12] Merging 1 fragment for exprparents.
+[2022-07-07 11:41:12] Merging 1 fragment for attributes.
+[2022-07-07 11:41:12] Merging 1 fragment for attribute_arg_value.
+[2022-07-07 11:41:12] Merging 1 fragment for attribute_args.
+[2022-07-07 11:41:12] Merging 1 fragment for funcattributes.
+[2022-07-07 11:41:12] Merging 1 fragment for fun_def.
+[2022-07-07 11:41:12] Merging 1 fragment for affectedbymacroexpansion.
+[2022-07-07 11:41:12] Merging 1 fragment for stmts.
+[2022-07-07 11:41:12] Merging 1 fragment for expr_isload.
+[2022-07-07 11:41:12] Merging 1 fragment for stmtparents.
+[2022-07-07 11:41:12] Merging 1 fragment for blockscope.
+[2022-07-07 11:41:12] Merging 1 fragment for function_entry_point.
+[2022-07-07 11:41:12] Merging 1 fragment for varbind.
+[2022-07-07 11:41:12] Merging 1 fragment for exprconv.
+[2022-07-07 11:41:12] Merging 1 fragment for conversionkinds.
+[2022-07-07 11:41:12] Merging 1 fragment for inmacroexpansion.
+[2022-07-07 11:41:12] Merging 1 fragment for macrolocationbind.
+[2022-07-07 11:41:12] Merging 1 fragment for compgenerated.
+[2022-07-07 11:41:12] Merging 1 fragment for routinetypes.
+[2022-07-07 11:41:12] Merging 1 fragment for routinetypeargs.
+[2022-07-07 11:41:12] Merging 1 fragment for funbind.
+[2022-07-07 11:41:12] Merging 1 fragment for expr_cond_guard.
+[2022-07-07 11:41:12] Merging 1 fragment for expr_cond_true.
+[2022-07-07 11:41:12] Merging 1 fragment for iscall.
+[2022-07-07 11:41:12] Merging 1 fragment for expr_cond_false.
+[2022-07-07 11:41:12] Merging 1 fragment for bitfield.
+[2022-07-07 11:41:12] Merging 1 fragment for sizeof_bind.
+[2022-07-07 11:41:12] Merging 1 fragment for enclosingfunction.
+[2022-07-07 11:41:12] Merging 1 fragment for localvariables.
+[2022-07-07 11:41:12] Merging 1 fragment for stmt_decl_bind.
+[2022-07-07 11:41:12] Merging 1 fragment for stmt_decl_entry_bind.
+[2022-07-07 11:41:12] Merging 1 fragment for aggregate_array_init.
+[2022-07-07 11:41:12] Merging 1 fragment for if_then.
+[2022-07-07 11:41:12] Merging 1 fragment for if_else.
+[2022-07-07 11:41:12] Merging 1 fragment for expr_ancestor.
+[2022-07-07 11:41:12] Merging 1 fragment for for_condition.
+[2022-07-07 11:41:12] Merging 1 fragment for for_body.
+[2022-07-07 11:41:12] Merging 1 fragment for for_update.
+[2022-07-07 11:41:12] Merging 1 fragment for typeattributes.
+[2022-07-07 11:41:12] Merging 1 fragment for varattributes.
+[2022-07-07 11:41:12] Merging 1 fragment for globalvariables.
+[2022-07-07 11:41:12] Merging 1 fragment for var_decl_specifiers.
+[2022-07-07 11:41:12] Merging 1 fragment for fun_decl_typedef_type.
+[2022-07-07 11:41:12] Merging 1 fragment for jumpinfo.
+[2022-07-07 11:41:12] Merging 1 fragment for for_initialization.
+[2022-07-07 11:41:12] Merging 1 fragment for switch_body.
+[2022-07-07 11:41:12] Merging 1 fragment for switch_case.
+[2022-07-07 11:41:12] Merging 1 fragment for aggregate_field_init.
+[2022-07-07 11:41:12] Merging 1 fragment for fileannotations.
+[2022-07-07 11:41:12] Merging 1 fragment for while_body.
+[2022-07-07 11:41:12] Merging 1 fragment for compilations.
+[2022-07-07 11:41:12] Merging 1 fragment for compilation_args.
+[2022-07-07 11:41:12] Merging 1 fragment for compilation_compiling_files.
+[2022-07-07 11:41:12] Merging 1 fragment for compilation_time.
+[2022-07-07 11:41:12] Merging 1 fragment for compilation_finished.
+[2022-07-07 11:41:12] Merging 1 fragment for sourceLocationPrefix.
+[2022-07-07 11:41:12] Saving string and id pools to disk.
+[2022-07-07 11:41:13] Finished importing trap files.
+[2022-07-07 11:41:13] Pausing evaluation to close the cache at sequence stamp o+3
+[2022-07-07 11:41:13] The disk cache is freshly trimmed; leave it be.
+[2022-07-07 11:41:13] Unpausing evaluation
+[2022-07-07 11:41:13] Plumbing command codeql dataset import completed.
+[2022-07-07 11:41:13] [PROGRESS] database finalize> TRAP import complete (7.7s).
+[2022-07-07 11:41:13] Running plumbing command: codeql database cleanup --mode=normal --keep-temporary -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143
+[2022-07-07 11:41:13] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2022-07-07 11:41:13] [PROGRESS] database cleanup> TRAP files cleaned up (17ms).
+[2022-07-07 11:41:13] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2022-07-07 11:41:13] [PROGRESS] database cleanup> Scratch directory cleaned up (7ms).
+[2022-07-07 11:41:13] Running plumbing command: codeql dataset cleanup --mode=normal -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp
+[2022-07-07 11:41:13] [PROGRESS] dataset cleanup> Cleaning up dataset in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp.
+[2022-07-07 11:41:13] Trimming disk cache at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp\default\cache in mode normal.
+[2022-07-07 11:41:13] Sequence stamp origin is -6436183412491331909
+[2022-07-07 11:41:13] Pausing evaluation to zealously trim disk at sequence stamp o+0
+[2022-07-07 11:41:13] Unpausing evaluation
+[2022-07-07 11:41:13] Trimming completed (1ms): Trimmed disposable data from cache.
+[2022-07-07 11:41:13] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-07-07 11:41:13] The disk cache is freshly trimmed; leave it be.
+[2022-07-07 11:41:13] Unpausing evaluation
+[2022-07-07 11:41:13] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2022-07-07 11:41:13] [PROGRESS] dataset cleanup> Finalizing dataset in C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp
+[2022-07-07 11:41:13] [DETAILS] dataset cleanup> Finished deleting ID pool from C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143\db-cpp (11ms).
+[2022-07-07 11:41:13] Plumbing command codeql dataset cleanup completed.
+[2022-07-07 11:41:13] Plumbing command codeql database cleanup completed with status 0.
+[2022-07-07 11:41:13] Plumbing command codeql database finalize completed.
+[2022-07-07 11:41:13] [PROGRESS] database create> Successfully created database at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28143.
+[2022-07-07 11:41:13] Terminating normally.
