@@ -1,0 +1,251 @@
+[T 06:33:23 25204] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:23 25204] Initialising tags...
+[T 06:33:23 25204] ID set to 0000000000006274_0000000000000001 (parent root)
+[T 06:33:23 25204] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/clang-cl.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/cl.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/lld-link.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--ms-linker"
+[T 06:33:23 25204] Prepend[1] "--semmle-linker-executable"
+[T 06:33:23 25204] Prepend[2] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/link.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--ms-linker"
+[T 06:33:23 25204] Prepend[1] "--semmle-linker-executable"
+[T 06:33:23 25204] Prepend[2] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/*-as.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--assembler"
+[T 06:33:23 25204] Prepend[1] "--codeql-assembler-executable"
+[T 06:33:23 25204] Prepend[2] "${compiler}"
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/as.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--assembler"
+[T 06:33:23 25204] Prepend[1] "--codeql-assembler-executable"
+[T 06:33:23 25204] Prepend[2] "${compiler}"
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/collect2.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--linker"
+[T 06:33:23 25204] Prepend[1] "--semmle-linker-executable"
+[T 06:33:23 25204] Prepend[2] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/*-ld*.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--linker"
+[T 06:33:23 25204] Prepend[1] "--semmle-linker-executable"
+[T 06:33:23 25204] Prepend[2] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/ld*.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--linker"
+[T 06:33:23 25204] Prepend[1] "--semmle-linker-executable"
+[T 06:33:23 25204] Prepend[2] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/cx51.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/c51.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/*-g++.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/*-gcc.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/*-clang.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/armcc.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/g++*.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/gcc*.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Compilers file as of 2022-07-08 06:33:23
+[T 06:33:23 25204] Compiler pattern: **/clang*.exe
+[T 06:33:23 25204] Replace intercepted call: 0
+[T 06:33:23 25204] Extractor: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe
+[T 06:33:23 25204] Prepend[0] "--mimic"
+[T 06:33:23 25204] Prepend[1] ""${compiler}""
+[T 06:33:23 25204] Initialising tags...
+[T 06:33:23 25204] ID set to 0000000000006274_0000000000000002 (parent root)
+[T 06:33:23 25204] ==== Candidate to intercept: C:\CQL\codeql_home\codeql\tools\win64\runner.exe ====
+[T 06:33:23 29736] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:23 29736] Initialising tags...
+[T 06:33:23 29736] ID set to 0000000000007428_0000000000000001 (parent 0000000000006274_0000000000000001)
+[T 06:33:24 29736] ==== Candidate to intercept: C:\Windows\System32\cmd.exe ====
+[T 06:33:24 23860] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:24 23860] Initialising tags...
+[T 06:33:24 23860] ID set to 0000000000005D34_0000000000000001 (parent 0000000000007428_0000000000000001)
+[T 06:33:24 23860] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\MSBuild.exe ====
+[T 06:33:24 26068] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:24 26068] Initialising tags...
+[T 06:33:24 26068] ID set to 00000000000065D4_0000000000000001 (parent 0000000000005D34_0000000000000001)
+[T 06:33:24 26068] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Tracker.exe ====
+[T 06:33:25 18928] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:25 18928] Initialising tags...
+[T 06:33:25 18928] ID set to 00000000000049F0_0000000000000001 (parent 00000000000065D4_0000000000000001)
+[T 06:33:25 18928] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx64\x64\cl.exe ====
+[T 06:33:25 18928] === Intercepted call to C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx64\x64\cl.exe === 
+[T 06:33:25 18928] ==== Candidate to intercept: C:\Windows\SysWOW64\rundll32.exe ====
+[T 06:33:25 26768] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:25 26768] Initialising tags...
+[T 06:33:25 18928] Found LdrLoadDll (wow-64) at 000000007733D1C0
+[E 06:33:25 26768] CodeQL C/C++ Extractor 1.29.0-SNAPSHOT
+[E 06:33:25 26768] Current directory: C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver
+[E 06:33:25 26768] Command: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe --mimic "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx64\x64\cl.exe" @C:\Users\t-abtamene\AppData\Local\Temp\tmp311a5da31f924db5a617cbf564e891a7.rsp
+[E 06:33:26 26768] Expanded response file C:\Users\t-abtamene\AppData\Local\Temp\tmp311a5da31f924db5a617cbf564e891a7.rsp: /c /Ix64\Debug\ /Zi /nologo /W4 /WX /diagnostics:column /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0A00 /D WINVER=0x0A00 /D WINNT=1 /D NTDDI_VERSION=0xA00000C /D DBG=1 /GF /Gm- /Zp8 /GS /guard:cf /Gy /fp:precise /Qspectre /Zc:wchar_t- /Zc:forScope /Zc:inline /GR- /Fox64\Debug\ /Fdx64\Debug\vc143.pdb /external:W4 /Gz /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 "/FIC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" /FC /errorReport:queue /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ fail_driver1.c
+Warning: Unrecognised command line argument /guard:cf
+Warning: Unrecognised command line argument /external:W4
+[E 06:33:26 26768] Checking whether C compilation already happened.
+[E 06:33:26 26768] Checking for tag c-compilation-happened
+[E 06:33:26 26768] Checking CODEQL_TRACER_DB_ID 00000000000049F0_0000000000000001
+[E 06:33:26 26768] Looks like C compilation didn't already happen.
+[E 06:33:26 26768] Checking whether C compilation has been attempted.
+[E 06:33:26 26768] Checking for tag c-compilation-attempted
+[E 06:33:26 26768] Checking CODEQL_TRACER_DB_ID 00000000000049F0_0000000000000001
+[E 06:33:26 26768] Marking C compilation as attempted.
+[E 06:33:26 26768] Setting tag c-compilation-attempted
+[E 06:33:26 26768] Starting from CODEQL_TRACER_DB_ID 00000000000049F0_0000000000000001
+[E 06:33:26 26768] Set tag for00000000000049F0_0000000000000001
+[E 06:33:26 26768] Set tag for00000000000065D4_0000000000000001
+[E 06:33:26 26768] Set tag for0000000000005D34_0000000000000001
+[E 06:33:26 26768] Set tag for0000000000007428_0000000000000001
+[E 06:33:26 26768] Set tag for0000000000006274_0000000000000001
+[E 06:33:26 26768] Set tag forroot
+[E 06:33:27 26768] Processed command line: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe --trapfolder C:\Users\t-abtamene\Desktop\randomDatabases\C28169\trap\cpp --src_archive C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src --mimic_config C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working/compiler_mimic_cache/c8d25b61ed56 --object_filename x64\Debug\ -w --error_limit 1000 --disable_system_macros --variadic_macros --microsoft --c --microsoft_version 1932 --target win64 -D_MSC_FULL_VER=193231329 -D_MSC_BUILD=0 -D_M_AMD64=100 -D_M_X64=100 -D_WIN64 -D_MT -Ix64\Debug\ -D_WIN64 -D_AMD64_ -DAMD64 -DDEPRECATE_DDK_FUNCTIONS=1 -DMSC_NOOPT -D_WIN32_WINNT=0x0A00 -DWINVER=0x0A00 -DWINNT=1 -DNTDDI_VERSION=0xA00000C -DDBG=1 --pack_alignment 8 --default_calling_convention __stdcall --preinclude "C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" -D_KERNEL_MODE=1 "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\km\crt" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\km" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\include" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\atlmfc\include" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt" "-IC:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\VS\UnitTest\include" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\winrt" "-IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\cppwinrt" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8.1\Include\um" -- fail_driver1.c
+[E 06:33:27 26768] Starting compilation TRAP C:\Users\t-abtamene\Desktop\randomDatabases\C28169\trap\cpp/compilations/1/61176159_0.trap.br
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/CQL/Windows-driver-samples/tools/sdv/samples/SDV-FailDriver-WDM/driver/fail_driver1.c
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/warning.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/suppress.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/CQL/Windows-driver-samples/tools/sdv/samples/SDV-FailDriver-WDM/driver/fail_driver1.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/wdm.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/excpt.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sal.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/concurrencysal.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_strict.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/specstrings_undef.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/driverspecs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdv_driverspecs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/vadefs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntdef.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/ctype.h
+[E 06:33:27 26768] Already archived C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winapifamily.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/winpackagefamily.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/kernelspecs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/basetsd.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/string.h
+[E 06:33:27 26768] Already archived C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/crt/crtdefs.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/sdkddkver.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntstatus.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/bugcodes.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ntiologc.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/km/mce.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 06:33:27 26768] Already archived C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack4.h
+[E 06:33:27 26768] Already archived C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/pshpack1.h
+[E 06:33:27 26768] Already archived C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/poppack.h
+[E 06:33:27 26768] Already archived C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/guiddef.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/dpfilter.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/apiset.h
+[E 06:33:27 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/ktmtypes.h
+[E 06:33:28 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/evntprov.h
+[E 06:33:28 26768] Archiving C:\Users\t-abtamene\Desktop\randomDatabases\C28169\src/C_/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared/devpropdef.h
+[E 06:33:28 26768] Creating trap tarball C:\Users\t-abtamene\Desktop\randomDatabases\C28169\trap\cpp/tarballs/C_/CQL/Windows-driver-samples/tools/sdv/samples/SDV-FailDriver-WDM/driver/fail_driver1.c.54d2efb1_0.trap.tar.br
+[E 06:33:28 26768] Emitting trap files for fail_driver1.c
+[E 06:33:28 26768] Opening existencedb in \\?\C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\existencedb\db
+[E 06:33:29 26768] Wrote 39 files to C:\Users\t-abtamene\Desktop\randomDatabases\C28169\trap\cpp/tarballs/C_/CQL/Windows-driver-samples/tools/sdv/samples/SDV-FailDriver-WDM/driver/fail_driver1.c.54d2efb1_0.trap.tar.br
+[E 06:33:29 26768] Finished compilation TRAP C:\Users\t-abtamene\Desktop\randomDatabases\C28169\trap\cpp/compilations/1/61176159_0.trap.br
+[E 06:33:29 26768] Marking C compilation as happened.
+[E 06:33:29 26768] Setting tag c-compilation-happened
+[E 06:33:29 26768] Starting from CODEQL_TRACER_DB_ID 00000000000049F0_0000000000000001
+[E 06:33:29 26768] Set tag for00000000000049F0_0000000000000001
+[E 06:33:29 26768] Set tag for00000000000065D4_0000000000000001
+[E 06:33:29 26768] Set tag for0000000000005D34_0000000000000001
+[E 06:33:29 26768] Set tag for0000000000007428_0000000000000001
+[E 06:33:29 26768] Set tag for0000000000006274_0000000000000001
+[E 06:33:29 26768] Set tag forroot
+[T 06:33:29 26068] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Tracker.exe ====
+[T 06:33:29 22444] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:29 22444] Initialising tags...
+[T 06:33:29 22444] ID set to 00000000000057AC_0000000000000001 (parent 00000000000065D4_0000000000000001)
+[T 06:33:29 22444] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx64\x64\link.exe ====
+[T 06:33:29 22444] === Intercepted call to C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx64\x64\link.exe === 
+[T 06:33:29 22444] ==== Candidate to intercept: C:\Windows\SysWOW64\rundll32.exe ====
+[T 06:33:29 29320] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:29 29320] Initialising tags...
+[T 06:33:29 29320] ID set to 0000000000007288_0000000000000001 (parent 00000000000057AC_0000000000000001)
+[T 06:33:29 22444] Found LdrLoadDll (wow-64) at 000000007733D1C0
+[E 06:33:29 29320] CodeQL C/C++ Extractor 1.29.0-SNAPSHOT
+[E 06:33:29 29320] Current directory: C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver
+[E 06:33:29 29320] Command: C:\CQL\codeql_home\codeql\cpp\tools\win64/extractor.exe --ms-linker --semmle-linker-executable "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\Hostx64\x64\link.exe" /ERRORREPORT:QUEUE @C:\Users\t-abtamene\AppData\Local\Temp\tmp2ede65fe8ac9481fa56bab51dddfc982.rsp
+[E 06:33:29 29320] Expanded response file C:\Users\t-abtamene\AppData\Local\Temp\tmp2ede65fe8ac9481fa56bab51dddfc982.rsp: /OUT:x64\Debug\fail_driver1.sys /VERSION:10.0 /INCREMENTAL:NO /NOLOGO /WX /SECTION:INIT,d "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\BufferOverflowFastFailK.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\ntoskrnl.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\hal.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wmilib.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:x64\Debug\fail_driver1.pdb /SUBSYSTEM:NATIVE,10.00 /Driver /OPT:REF /OPT:ICF /ENTRY:GsDriverEntry /RELEASE /IMPLIB:x64\Debug\fail_driver1.lib /MERGE:_TEXT=.text;_PAGE=PAGE /MACHINE:X64 /PROFILE /guard:cf /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:10.0 /pdbcompress /debugtype:pdata x64\Debug\fail_driver1.obj
+[T 06:33:30 26068] ==== Candidate to intercept: C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\amd64\Tracker.exe ====
+[T 06:33:30 31540] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:30 31540] Initialising tags...
+[T 06:33:30 31540] ID set to 0000000000007B34_0000000000000001 (parent 00000000000065D4_0000000000000001)
+[T 06:33:30 31540] ==== Candidate to intercept: C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe ====
+[T 06:33:30 31540] Found LdrLoadDll (wow-64) at 000000007733D1C0
+[T 06:33:30 31540] ==== Candidate to intercept: C:\Windows\SysWOW64\rundll32.exe ====
+[T 06:33:30 17744] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:30 17744] Initialising tags...
+[T 06:33:30 17744] Failed to close tags database (-30793).
+[T 06:33:30 13300] Reading configuration file C:\Users\t-abtamene\Desktop\randomDatabases\C28169\working\tracing\compiler-tracing12333124148952028221.spec...
+[T 06:33:30 13300] Initialising tags...
+[T 06:33:30 13300] Failed to close tags database (-30793).
