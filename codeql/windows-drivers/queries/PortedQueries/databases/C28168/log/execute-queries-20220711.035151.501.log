@@ -1,0 +1,404 @@
+[2022-07-11 03:51:51] This is codeql execute queries -J-Xmx4045M --off-heap-ram=4045 --verbosity=progress --logdir=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28168\log --evaluator-log-level=1 --ml-model-path=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries --native-library-path=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries --warnings=show --qlconfig-file=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\qlconfig.yml --no-rerun --output=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28168\results -- C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\databases\C28168\db-cpp queries\C28168\C28168.ql
+[2022-07-11 03:51:51] Calling plumbing command: codeql resolve queries --qlconfig-file=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\qlconfig.yml --format=json -- queries\C28168\C28168.ql
+[2022-07-11 03:51:51] Plumbing command codeql resolve queries completed:
+                      [
+                        "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\windows-drivers\\queries\\PortedQueries\\queries\\C28168\\C28168.ql"
+                      ]
+[2022-07-11 03:51:51] Creating executor with 1 threads.
+[2022-07-11 03:51:52] Calling plumbing command: codeql resolve library-path --qlconfig-file=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\qlconfig.yml --query=C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql --format=json
+[2022-07-11 03:51:52] [DETAILS] resolve library-path> Resolving query at normalized path C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:51:52] [DETAILS] resolve library-path> Found enclosing pack 'windows-drivers' at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries.
+[2022-07-11 03:51:52] [DETAILS] resolve library-path> Adding compilation cache at C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\.cache.
+[2022-07-11 03:51:52] [DETAILS] resolve library-path> Resolving library dependencies from C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\qlpack.yml.
+[2022-07-11 03:51:52] [DETAILS] resolve library-path> QL pack dependencies for C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries resolved OK.
+[2022-07-11 03:51:52] [DETAILS] resolve library-path> Found dbscheme through QL packs: C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\codeql-queries\cpp\ql\lib\semmlecode.cpp.dbscheme.
+[2022-07-11 03:51:52] Plumbing command codeql resolve library-path completed:
+                      {
+                        "libraryPath" : [
+                          "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\windows-drivers\\queries",
+                          "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\codeql-queries\\cpp\\ql\\lib",
+                          "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\codeql-queries\\cpp\\upgrades"
+                        ],
+                        "dbscheme" : "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\codeql-queries\\cpp\\ql\\lib\\semmlecode.cpp.dbscheme",
+                        "compilationCache" : [
+                          "C:\\CQL\\codeql_home\\Windows-Driver-Developer-Supplemental-Tools\\codeql\\windows-drivers\\queries\\.cache"
+                        ],
+                        "relativeName" : "windows-drivers\\PortedQueries\\queries\\C28168\\C28168.ql",
+                        "qlPackName" : "windows-drivers"
+                      }
+[2022-07-11 03:51:52] [PROGRESS] execute queries> Compiling query plan for C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:51:52] [DETAILS] execute queries> Resolving imports for C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:51:52] Resolved file set for C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql hashes to 05ee97530a0d85a2cbf8e7b21aaa8ed94f7ec59f.
+[2022-07-11 03:51:52] [DETAILS] execute queries> Checking QL for C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:51:53] ExternalModuleBindingPass ...
+[2022-07-11 03:51:53] ExternalModuleBindingPass time: 00:00.617
+[2022-07-11 03:51:53] QLPredicateSynthesiser ...
+[2022-07-11 03:51:53] QLPredicateSynthesiser time: 00:00.013
+[2022-07-11 03:51:53] DeclarationBindingPass ...
+[2022-07-11 03:51:53] DeclarationBindingPass time: 00:00.057
+[2022-07-11 03:51:53] Fixed point time ...
+[2022-07-11 03:51:54] Fixed point time time: 00:00.185
+[2022-07-11 03:51:54] ReferenceBindingPass ...
+[2022-07-11 03:51:54] ReferenceBindingPass time: 00:00.025
+[2022-07-11 03:51:54] EntityTypeUpdateBindingPass ...
+[2022-07-11 03:51:54] EntityTypeUpdateBindingPass time: 00:00.025
+[2022-07-11 03:51:54] DeclarationBindingPass ...
+[2022-07-11 03:51:54] DeclarationBindingPass time: 00:00.017
+[2022-07-11 03:51:54] PredicateBodyBindingPass ...
+[2022-07-11 03:51:54] PredicateBodyBindingPass time: 00:00.300
+[2022-07-11 03:51:54] LanguagePragmaPropagationPass ...
+[2022-07-11 03:51:54] LanguagePragmaPropagationPass time: 00:00.014
+[2022-07-11 03:51:54] Ambiguity checks ...
+[2022-07-11 03:51:54] Ambiguity checks time: 00:00.036
+[2022-07-11 03:51:54] Ql checks ...
+[2022-07-11 03:51:54] Ql checks time: 00:00.260
+[2022-07-11 03:51:56] Compilation pipeline
+[2022-07-11 03:51:56] Type Inference ...
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: Best number of iterations,Maximum number of runs,Number of BDD variables,Size of BDD for typefacts
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,12,12
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,8,8
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,0,0
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,822,2060
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,2,2
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,1,1
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,3,3
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,7,7
+[2022-07-11 03:51:56] CSV_TYPE_HIERARCHY: 0,0,5,5
+[2022-07-11 03:51:57] Type Inference time: 00:01.165
+[2022-07-11 03:51:57] Binding Checks ...
+[2022-07-11 03:51:57] Binding Checks time: 00:00.121
+[2022-07-11 03:51:57] [WARN] execute queries> WARNING: The @id property should be a valid query identifier. (C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql:1,1-7,4)
+[2022-07-11 03:51:57] [DETAILS] execute queries> Optimizing C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:51:57] Processing compilation pipeline
+[2022-07-11 03:51:57] Started compiling a query
+[2022-07-11 03:51:57] Initialising compiler...
+[2022-07-11 03:51:57] 	 ... compiler initialised
+[2022-07-11 03:51:57] About to start query optimisation
+[2022-07-11 03:51:57] Compilation cache hit - skipping compilation.
+[2022-07-11 03:51:58] Compilation cache hit - skipping compilation.
+[2022-07-11 03:51:58] Compilation cache hit - skipping compilation.
+[2022-07-11 03:51:58] Compilation cache hit - skipping compilation.
+[2022-07-11 03:51:58] Compilation cache miss for 4417d96e880c79f667168100ecf51b47e1372f4a.
+[2022-07-11 03:51:59] Stored compiled program for 4417d96e880c79f667168100ecf51b47e1372f4a.
+[2022-07-11 03:51:59] Compilation cache miss for fe78bac2dec2dd310fc88c905f964ab64aaaede1.
+[2022-07-11 03:51:59] Stored compiled program for fe78bac2dec2dd310fc88c905f964ab64aaaede1.
+[2022-07-11 03:51:59] Compilation cache miss for 2658cec7d626c0fef2a0719c814a2ce131d77353.
+[2022-07-11 03:52:00] Stored compiled program for 2658cec7d626c0fef2a0719c814a2ce131d77353.
+[2022-07-11 03:52:00] Compilation cache miss for 06940bcb9f0ed09f6806684298a0ec6c53848f09.
+[2022-07-11 03:52:01] Stored compiled program for 06940bcb9f0ed09f6806684298a0ec6c53848f09.
+[2022-07-11 03:52:01] CSV_COMPILATION: NONE,MISC,RA_TRANSLATION,OPTIMISATIONS
+[2022-07-11 03:52:01] CSV_COMPILATION: 405,538,280,2520
+[2022-07-11 03:52:01] [PROGRESS] execute queries> [1/1 comp 9.3s] Compiled C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:52:01] Of 603 predicates, 0 are used in more than one query.
+[2022-07-11 03:52:01] [PROGRESS] execute queries> Starting evaluation of windows-drivers\PortedQueries\queries\C28168\C28168.ql.
+[2022-07-11 03:52:01] Starting evaluation of C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql
+[2022-07-11 03:52:01] (0s) Start query execution
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Query type,Query predicate,Query name,Stage,Success,Time,Number of results,Cumulative time in query
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,ResolveClass::Cached::isClass#f ResolveClass::Cached::isType#f ResolveClass::Cached::resolveClass#ff,C28168.ql,1,NotRun,0.028,0,63
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: Operation,Overall time,NONE,LOAD_EXTENSIONAL,PAGE_RELATION,SORT_RELATION,NODUPS_RELATION,GLOBAL_DISK_SYNC,GLOBAL_TRIM_DISK,GLOBAL_TRIM_STRINGS,GLOBAL_EVICTOR,SCAN_DISK,IO_TRIMMING,IO_WRITING
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-ResolveClass::Cached::isClass#f ResolveClass::Cached::isType#f ResolveClass::Cached::resolveClass#ff (C28168.ql),0.028,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,Enclosing::exprEnclosingElement#ff Enclosing::stmtEnclosingElement#ff,C28168.ql,2,NotRun,0.015,0,79
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-Enclosing::exprEnclosingElement#ff Enclosing::stmtEnclosingElement#ff (C28168.ql),0.015,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,Expr::Expr::getType_dispred#ff,C28168.ql,3,NotRun,0,0,79
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-Expr::Expr::getType_dispred#ff (C28168.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,Element::ElementBase::toString_dispred#ff,C28168.ql,4,NotRun,0.015,0,95
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-Element::ElementBase::toString_dispred#ff (C28168.ql),0.015,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,WdmDrivers::DispatchRoutineAssignment::getTarget_dispred#ff,C28168.ql,5,NotRun,0,0,95
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-WdmDrivers::DispatchRoutineAssignment::getTarget_dispred#ff (C28168.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,Expr::Expr::getFullyConverted_dispred#ff,C28168.ql,6,NotRun,0,0,95
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-Expr::Expr::getFullyConverted_dispred#ff (C28168.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] CSV_IMB_QUERIES: Stage,WdmDrivers::WdmDispatchRoutine::getDispatchType_dispred#ff WdmDrivers::WdmDispatchRoutine#class#ffff WdmDrivers::WdmDispatchRoutine::getDriverEntry_dispred#ff WdmDrivers::WdmDispatchRoutine::matchesAnnotation_dispred#ff WdmDrivers::WdmDispatchRoutine#ffff,C28168.ql,7,NotRun,0,0,95
+[2022-07-11 03:52:01] CSV_CACHE_DIFF: NotRun-WdmDrivers::WdmDispatchRoutine::getDispatchType_dispred#ff WdmDrivers::WdmDispatchRoutine#class#ffff WdmDrivers::WdmDispatchRoutine::getDriverEntry_dispred#ff WdmDrivers::WdmDispatchRoutine::matchesAnnotation_dispred#ff WdmDrivers::WdmDispatchRoutine#ffff (C28168.ql),0,0,0,0,0,0,0,0,0,0,0,0,0
+[2022-07-11 03:52:01] (0s) Beginning execution of C28168.ql
+[2022-07-11 03:52:01] (0s)  >>> Created relation funbind/2@5ef314 with 254 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation exprs/3@078687 with 4768 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate exprs_10#join_rhs/2@6d0aeb
+[2022-07-11 03:52:01] (0s)  >>> Created relation exprs_10#join_rhs/2@6d0aeb with 4768 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation iscall/2@c0a348 with 243 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate iscall_0#antijoin_rhs/1@8a021d
+[2022-07-11 03:52:01] (0s)  >>> Created relation iscall_0#antijoin_rhs/1@8a021d with 243 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate Access::FunctionAccess::getTarget_dispred#ff/2@406178
+[2022-07-11 03:52:01] (0s)  >>> Created relation Access::FunctionAccess::getTarget_dispred#ff/2@406178 with 11 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate Access::FunctionAccess::getTarget_dispred#ff_10#join_rhs/2@06958c
+[2022-07-11 03:52:01] (0s)  >>> Created relation Access::FunctionAccess::getTarget_dispred#ff_10#join_rhs/2@06958c with 11 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate project#WdmDrivers::WdmDispatchRoutine#class/1@52c47a
+[2022-07-11 03:52:01] (0s)  >>> Created relation project#WdmDrivers::WdmDispatchRoutine#class/1@52c47a with 5 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation functions/3@d321a3 with 1480 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate m#Function::Function::getADeclarationEntry_dispred#bf/1@272a53
+[2022-07-11 03:52:01] (0s)  >>> Created relation m#Function::Function::getADeclarationEntry_dispred#bf/1@272a53 with 1480 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation fun_decls/5@e6e2e6 with 1493 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate fun_decls_10#join_rhs/2@16474d
+[2022-07-11 03:52:01] (0s)  >>> Created relation fun_decls_10#join_rhs/2@16474d with 1493 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate fun_decls_1#join_rhs/1@3242a3
+[2022-07-11 03:52:01] (0s)  >>> Created relation fun_decls_1#join_rhs/1@3242a3 with 1479 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate Function::Function::declEntry_dispred#bf#shared/2@ec5f2d
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::Function::declEntry_dispred#bf#shared/2@ec5f2d with 1493 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation fun_specialized/1@56b1d6 with 0 rows.
+[2022-07-11 03:52:01] (0s) Inferred that Function::TemplateFunction::getAnInstantiation_dispred#fb#antijoin_rhs/1@b0d27d is empty, due to fun_specialized/1@56b1d6.
+[2022-07-11 03:52:01] (0s) Inferred that Function::Function::isSpecialization_dispred#f/1@d309b9 is empty, due to fun_specialized/1@56b1d6.
+[2022-07-11 03:52:01] (0s) Inferred that Function::Function::declEntry_dispred#bf#antijoin_rhs/2@52a9b0 is empty, due to fun_specialized/1@56b1d6.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::Function::declEntry_dispred#bf#antijoin_rhs/2@52a9b0 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::TemplateFunction::getAnInstantiation_dispred#fb#antijoin_rhs/1@b0d27d with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::Function::isSpecialization_dispred#f/1@d309b9 with 0 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate Function::Function::declEntry_dispred#bf/2@ca7929
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::Function::declEntry_dispred#bf/2@ca7929 with 1493 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation function_instantiation/2@8cadda with 0 rows.
+[2022-07-11 03:52:01] (0s) Inferred that m#Declaration::Declaration::getATemplateArgument_dispred#bf/1@7ee7be is empty, due to function_instantiation/2@8cadda.
+[2022-07-11 03:52:01] (0s) Inferred that Parameter::Parameter::getFunction_dispred#fb/2@dbc280 is empty, due to function_instantiation/2@8cadda.
+[2022-07-11 03:52:01] (0s) Inferred that function_instantiation_10#join_rhs/2@ae1426 is empty, due to function_instantiation/2@8cadda.
+[2022-07-11 03:52:01] (0s) Inferred that project#function_instantiation/1@5e96c0 is empty, due to function_instantiation/2@8cadda.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getTemplateArgumentType_dispred#bff/3@364453 is empty, due to m#Declaration::Declaration::getATemplateArgument_dispred#bf/1@7ee7be.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getTemplateArgumentValue_dispred#bff/3@5cedb0 is empty, due to m#Declaration::Declaration::getATemplateArgument_dispred#bf/1@7ee7be.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getATemplateArgument_dispred#bf/2@ee4bb6 is empty, due to m#Declaration::Declaration::getATemplateArgument_dispred#bf/1@7ee7be.
+[2022-07-11 03:52:01] (0s) Inferred that Parameter::Parameter::getFunction_dispred#fb_10#join_rhs/2@8a1cca is empty, due to Parameter::Parameter::getFunction_dispred#fb/2@dbc280.
+[2022-07-11 03:52:01] (0s) Inferred that Parameter::Parameter::getAnEffectiveDeclarationEntry_dispred#ff#antijoin_rhs/1@ff05c0 is empty, due to Parameter::Parameter::getFunction_dispred#fb/2@dbc280.
+[2022-07-11 03:52:01] (0s) Inferred that Function::TemplateFunction::getAnInstantiation_dispred#ff/2@ccf333 is empty, due to function_instantiation_10#join_rhs/2@ae1426.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getTemplateArgumentType_dispred#bff/3@ec26ca is empty, due to project#function_instantiation/1@5e96c0.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getTemplateArgumentValue_dispred#bff/3@317082 is empty, due to project#function_instantiation/1@5e96c0.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getATemplateArgument_dispred#bf/2@f26b3d is empty, due to project#function_instantiation/1@5e96c0.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getTemplateArgumentValue_dispred#bff_01#antijoin_rhs/2@283479 is empty, due to Declaration::Declaration::getTemplateArgumentValue_dispred#bff/3@5cedb0.
+[2022-07-11 03:52:01] (0s) Inferred that project#Declaration::Declaration::getATemplateArgument_dispred#bf/1@18ee2f is empty, due to Declaration::Declaration::getATemplateArgument_dispred#bf/2@ee4bb6.
+[2022-07-11 03:52:01] (0s) Inferred that project#Declaration::Declaration::getATemplateArgument_dispred#bf/1@d10dc5 is empty, due to Declaration::Declaration::getATemplateArgument_dispred#bf/2@f26b3d.
+[2022-07-11 03:52:01] (0s) Inferred that Declaration::Declaration::getTemplateArgumentValue_dispred#bff_01#antijoin_rhs/2@23707d is empty, due to Declaration::Declaration::getTemplateArgumentValue_dispred#bff/3@317082.
+[2022-07-11 03:52:01] (0s) Inferred that Function::TemplateFunction::getAnInstantiation_dispred#fb/2@a792e9 is empty, due to project#Declaration::Declaration::getATemplateArgument_dispred#bf/1@18ee2f.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::TemplateFunction::getAnInstantiation_dispred#ff/2@ccf333 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Parameter::Parameter::getAnEffectiveDeclarationEntry_dispred#ff#antijoin_rhs/1@ff05c0 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation project#Declaration::Declaration::getATemplateArgument_dispred#bf/1@d10dc5 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation project#function_instantiation/1@5e96c0 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::TemplateFunction::getAnInstantiation_dispred#fb/2@a792e9 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getATemplateArgument_dispred#bf/2@ee4bb6 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getTemplateArgumentType_dispred#bff/3@ec26ca with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getTemplateArgumentValue_dispred#bff/3@5cedb0 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation m#Declaration::Declaration::getATemplateArgument_dispred#bf/1@7ee7be with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getTemplateArgumentValue_dispred#bff/3@317082 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getTemplateArgumentValue_dispred#bff_01#antijoin_rhs/2@283479 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation project#Declaration::Declaration::getATemplateArgument_dispred#bf/1@18ee2f with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Parameter::Parameter::getFunction_dispred#fb/2@dbc280 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Parameter::Parameter::getFunction_dispred#fb_10#join_rhs/2@8a1cca with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getTemplateArgumentType_dispred#bff/3@364453 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getTemplateArgumentValue_dispred#bff_01#antijoin_rhs/2@23707d with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation function_instantiation_10#join_rhs/2@ae1426 with 0 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation Declaration::Declaration::getATemplateArgument_dispred#bf/2@f26b3d with 0 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate Function::Function::getADeclarationEntry_dispred#bf/2@5d4ee1
+[2022-07-11 03:52:01] (0s)  >>> Created relation Function::Function::getADeclarationEntry_dispred#bf/2@5d4ee1 with 1493 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate C28168::AnnotatedDispatchs#class#f#shared/2@00aa27
+[2022-07-11 03:52:01] (0s)  >>> Created relation C28168::AnnotatedDispatchs#class#f#shared/2@00aa27 with 10 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate C28168::AnnotatedDispatchs#class#f#shared#1/3@fc17a3
+[2022-07-11 03:52:01] (0s)  >>> Created relation C28168::AnnotatedDispatchs#class#f#shared#1/3@fc17a3 with 10 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate m#SAL::SALAnnotation::getDeclarationEntry_dispred#fb/1@84d751
+[2022-07-11 03:52:01] (0s)  >>> Created relation m#SAL::SALAnnotation::getDeclarationEntry_dispred#fb/1@84d751 with 10 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation files/2@19948a with 38 rows.
+[2022-07-11 03:52:01] (0s)  >>> Created relation folders/2@90fba3 with 18 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate File::Container::toString#ff/2@a90db0
+[2022-07-11 03:52:01] (0s)  >>> Created relation File::Container::toString#ff/2@a90db0 with 56 rows.
+[2022-07-11 03:52:01] (0s) Starting to evaluate predicate File::Container::getBaseName_dispred#ff/2@88723e
+[2022-07-11 03:52:02] (0s)  >>> Created relation File::Container::getBaseName_dispred#ff/2@88723e with 55 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate File::Container::getBaseName_dispred#ff_10#join_rhs/2@04d739
+[2022-07-11 03:52:02] (0s)  >>> Created relation File::Container::getBaseName_dispred#ff_10#join_rhs/2@04d739 with 55 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation preprocdirects/3@0ee143 with 15608 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation macroinvocations/4@0494b3 with 76654 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation stmts/3@f6486d with 995 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation type_decls/3@0b2006 with 3193 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation var_decls/5@12bae3 with 7395 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation macroparent/2@7e2d0b with 64644 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate macroinvocations_03#join_rhs/2@21f51c
+[2022-07-11 03:52:02] (0s)  >>> Created relation macroinvocations_03#join_rhs/2@21f51c with 76654 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getParentInvocation_dispred#ff/2@8bc971
+[2022-07-11 03:52:02] (0s)  >>> Created relation Macro::MacroAccess::getParentInvocation_dispred#ff/2@8bc971 with 64644 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getParentInvocation_dispred#ff_0#antijoin_rhs/1@f29386
+[2022-07-11 03:52:02] (0s)  >>> Created relation Macro::MacroAccess::getParentInvocation_dispred#ff_0#antijoin_rhs/1@f29386 with 64644 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate SAL::isTopLevelMacroAccess#f/1@00cea0
+[2022-07-11 03:52:02] (0s)  >>> Created relation SAL::isTopLevelMacroAccess#f/1@00cea0 with 12010 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getParentInvocation_dispred#ff_10#join_rhs/2@ce59d8
+[2022-07-11 03:52:02] (0s)  >>> Created relation Macro::MacroAccess::getParentInvocation_dispred#ff_10#join_rhs/2@ce59d8 with 64644 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i1#f3933w (iteration 1)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 12010 rows (order for disjuncts: delta=<standard>).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i2#f3933w (iteration 2)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 22502 rows (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i3#f3933w (iteration 3)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 23893 rows (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i4#f3933w (iteration 4)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 12958 rows (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i5#f3933w (iteration 5)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 4260 rows (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i6#f3933w (iteration 6)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 985 rows (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i7#f3933w (iteration 7)
+[2022-07-11 03:52:02] (0s) 			 - Macro::MacroAccess::getOutermostMacroAccess#ff_delta has 46 rows (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff/2@i8#f3933w (iteration 8)
+[2022-07-11 03:52:02] (0s) Empty delta for Macro::MacroAccess::getOutermostMacroAccess#ff_delta (order for disjuncts: delta=500000).
+[2022-07-11 03:52:02] (0s) Accumulating deltas
+[2022-07-11 03:52:02] (0s)  >>> Created relation Macro::MacroAccess::getOutermostMacroAccess#ff/2@f3933w with 76654 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Macro::MacroAccess::getOutermostMacroAccess#ff_10#join_rhs/2@d33343
+[2022-07-11 03:52:02] (0s)  >>> Created relation Macro::MacroAccess::getOutermostMacroAccess#ff_10#join_rhs/2@d33343 with 76654 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Element::Element::getLocation_dispred#ff/2@754b28
+[2022-07-11 03:52:02] (0s)  >>> Created relation Element::Element::getLocation_dispred#ff/2@754b28 with 105338 rows.
+[2022-07-11 03:52:02] (0s) Starting to evaluate predicate Element::Element::getLocation_dispred#ff_10#join_rhs/2@ed7c45
+[2022-07-11 03:52:02] (0s)  >>> Created relation Element::Element::getLocation_dispred#ff_10#join_rhs/2@ed7c45 with 105338 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation locations_expr/6@d555f9 with 2716 rows.
+[2022-07-11 03:52:02] (0s)  >>> Created relation locations_stmt/6@4cf233 with 996 rows.
+[2022-07-11 03:52:02] (1s)  >>> Created relation locations_default/6@d0a81f with 90310 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Location::Location::fullLocationInfo_dispred#ffffff/6@55da43
+[2022-07-11 03:52:02] (1s)  >>> Created relation Location::Location::fullLocationInfo_dispred#ffffff/6@55da43 with 94022 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Location::Location::fullLocationInfo_dispred#ffffff_10#join_rhs/2@62d5ad
+[2022-07-11 03:52:02] (1s)  >>> Created relation Location::Location::fullLocationInfo_dispred#ffffff_10#join_rhs/2@62d5ad with 94022 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Location::Location::getFile_dispred#ff/2@82f100
+[2022-07-11 03:52:02] (1s)  >>> Created relation Location::Location::getFile_dispred#ff/2@82f100 with 94004 rows.
+[2022-07-11 03:52:02] (1s)  >>> Created relation xmlEncoding/2@a126df with 0 rows.
+[2022-07-11 03:52:02] (1s) Inferred that XML::XMLParent#b/1@5e3e7e is empty, due to xmlEncoding/2@a126df.
+[2022-07-11 03:52:02] (1s) Inferred that Element::Element::getFile_dispred#ff#antijoin_rhs/2@1a8ff0 is empty, due to xmlEncoding/2@a126df.
+[2022-07-11 03:52:02] (1s) Inferred that XML::XMLFile#class#f/1@a13467 is empty, due to XML::XMLParent#b/1@5e3e7e.
+[2022-07-11 03:52:02] (1s)  >>> Created relation XML::XMLParent#b/1@5e3e7e with 0 rows.
+[2022-07-11 03:52:02] (1s)  >>> Created relation Element::Element::getFile_dispred#ff#antijoin_rhs/2@1a8ff0 with 0 rows.
+[2022-07-11 03:52:02] (1s)  >>> Created relation XML::XMLFile#class#f/1@a13467 with 0 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Element::Element::getFile_dispred#ff/2@755832
+[2022-07-11 03:52:02] (1s)  >>> Created relation Element::Element::getFile_dispred#ff/2@755832 with 105338 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Element::Element::getFile_dispred#ff_10#join_rhs/2@0d8862
+[2022-07-11 03:52:02] (1s)  >>> Created relation Element::Element::getFile_dispred#ff_10#join_rhs/2@0d8862 with 105338 rows.
+[2022-07-11 03:52:02] (1s)  >>> Created relation preproctext/3@86080b with 13177 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate preprocdirects_10#join_rhs/2@5c6e7d
+[2022-07-11 03:52:02] (1s)  >>> Created relation preprocdirects_10#join_rhs/2@5c6e7d with 15608 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Macro::Macro::getName_dispred#ff/2@7b7102
+[2022-07-11 03:52:02] (1s)  >>> Created relation Macro::Macro::getName_dispred#ff/2@7b7102 with 10117 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate SAL::SALMacro#class#f/1@3e040a
+[2022-07-11 03:52:02] (1s)  >>> Created relation SAL::SALMacro#class#f/1@3e040a with 1743 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate macroinvocations_130#join_rhs/3@ddb89b
+[2022-07-11 03:52:02] (1s)  >>> Created relation macroinvocations_130#join_rhs/3@ddb89b with 76654 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate SAL::SALAnnotation#f/1@c9c099
+[2022-07-11 03:52:02] (1s)  >>> Created relation SAL::SALAnnotation#f/1@c9c099 with 5559 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate Declaration::DeclarationEntry#class#f/1@185e7c
+[2022-07-11 03:52:02] (1s)  >>> Created relation Declaration::DeclarationEntry#class#f/1@185e7c with 12081 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate SAL::containsSALAnnotation#f/1@d1e426
+[2022-07-11 03:52:02] (1s)  >>> Created relation SAL::containsSALAnnotation#f/1@d1e426 with 17 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate SAL::SALElement#class#f/1@c1dc60
+[2022-07-11 03:52:02] (1s)  >>> Created relation SAL::SALElement#class#f/1@c1dc60 with 17480 rows.
+[2022-07-11 03:52:02] (1s) Starting to evaluate predicate SAL::SALElement::hasStartPosition_dispred#ffff/4@c89d9f
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::SALElement::hasStartPosition_dispred#ffff/4@c89d9f with 17480 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate project#SAL::SALElement::hasStartPosition_dispred#ffff/3@86caab
+[2022-07-11 03:52:03] (1s)  >>> Created relation project#SAL::SALElement::hasStartPosition_dispred#ffff/3@86caab with 17412 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation initialisers/4@b2b18d with 1264 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation params/4@63c3ba with 3567 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation localvariables/3@bab61c with 101 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation globalvariables/3@e49c27 with 238 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation membervariables/3@547322 with 3467 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Variable::Variable#class#b/1@f2dec1
+[2022-07-11 03:52:03] (1s)  >>> Created relation Variable::Variable#class#b/1@f2dec1 with 7373 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Variable::Variable::getInitializer_dispred#ff/2@d110e0
+[2022-07-11 03:52:03] (1s)  >>> Created relation Variable::Variable::getInitializer_dispred#ff/2@d110e0 with 15 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate project#Variable::Variable::getInitializer_dispred#ff/1@a71615
+[2022-07-11 03:52:03] (1s)  >>> Created relation project#Variable::Variable::getInitializer_dispred#ff/1@a71615 with 15 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Variable::VariableDeclarationEntry::getVariable_dispred#fb/2@737854
+[2022-07-11 03:52:03] (1s)  >>> Created relation Variable::VariableDeclarationEntry::getVariable_dispred#fb/2@737854 with 15 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation var_def/1@726b0c with 3983 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation fun_def/1@6bec31 with 232 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation blockscope/2@f70aa8 with 260 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate blockscope_10#join_rhs/2@e928a4
+[2022-07-11 03:52:03] (1s)  >>> Created relation blockscope_10#join_rhs/2@e928a4 with 260 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Function::FunctionDeclarationEntry::getBlock_dispred#ff/2@6f245c
+[2022-07-11 03:52:03] (1s)  >>> Created relation Function::FunctionDeclarationEntry::getBlock_dispred#ff/2@6f245c with 232 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate dom#SAL::MkSALPosition#fff/3@6cb108
+[2022-07-11 03:52:03] (1s)  >>> Created relation dom#SAL::MkSALPosition#fff/3@6cb108 with 17642 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate num#SAL::MkSALPosition#ffff/4@e75fdd
+[2022-07-11 03:52:03] (1s)  >>> Created relation num#SAL::MkSALPosition#ffff/4@e75fdd with 17642 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::SALElement::getStartPosition_dispred#ff/2@73d405
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::SALElement::getStartPosition_dispred#ff/2@73d405 with 17480 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::salAnnotationPos#f/1@ead237
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::salAnnotationPos#f/1@ead237 with 5559 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate num#SAL::MkSALPosition#ffff_0312#rank_range/4@2fb134
+[2022-07-11 03:52:03] (1s)  >>> Created relation num#SAL::MkSALPosition#ffff_0312#rank_range/4@2fb134 with 17642 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate num#SAL::MkSALPosition#ffff_0312312#rank_term/7@9caddd
+[2022-07-11 03:52:03] (1s)  >>> Created relation num#SAL::MkSALPosition#ffff_0312312#rank_term/7@9caddd with 17642 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::salRelevantPositionAt#fff/3@b78041
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::salRelevantPositionAt#fff/3@b78041 with 17642 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::salRelevantPositionAt#fff_201#join_rhs/3@5feb5e
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::salRelevantPositionAt#fff_201#join_rhs/3@5feb5e with 17642 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::annotatesAtPosition#fbff/4@i1#b16f6w (iteration 1)
+[2022-07-11 03:52:03] (1s) 			 - SAL::annotatesAtPosition#fbff_delta has 4 rows (order for disjuncts: delta=<standard>).
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::annotatesAtPosition#fbff/4@i2#b16f6w (iteration 2)
+[2022-07-11 03:52:03] (1s) Empty delta for SAL::annotatesAtPosition#fbff_delta (order for disjuncts: delta=317).
+[2022-07-11 03:52:03] (1s) Accumulating deltas
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::annotatesAtPosition#fbff/4@b16f6w with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate project#SAL::annotatesAtPosition#fbff/2@49be1b
+[2022-07-11 03:52:03] (1s)  >>> Created relation project#SAL::annotatesAtPosition#fbff/2@49be1b with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::SALElement::getStartPosition_dispred#ff_10#join_rhs/2@82e3e8
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::SALElement::getStartPosition_dispred#ff_10#join_rhs/2@82e3e8 with 17480 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::SALAnnotation::getDeclarationEntry_dispred#fb/2@7dd69a
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::SALAnnotation::getDeclarationEntry_dispred#fb/2@7dd69a with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate SAL::SALAnnotation::getDeclarationEntry_dispred#fb_10#join_rhs/2@7a80fb
+[2022-07-11 03:52:03] (1s)  >>> Created relation SAL::SALAnnotation::getDeclarationEntry_dispred#fb_10#join_rhs/2@7a80fb with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Macro::Macro::getBody_dispred#ff/2@f2352f
+[2022-07-11 03:52:03] (1s)  >>> Created relation Macro::Macro::getBody_dispred#ff/2@f2352f with 10117 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Macro::MacroAccess::getMacroName_dispred#ff/2@d6aa96
+[2022-07-11 03:52:03] (1s)  >>> Created relation Macro::MacroAccess::getMacroName_dispred#ff/2@d6aa96 with 76654 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate WdmDrivers::DispatchTypeDefinition#class#ff/2@318b3c
+[2022-07-11 03:52:03] (1s)  >>> Created relation WdmDrivers::DispatchTypeDefinition#class#ff/2@318b3c with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate project#WdmDrivers::DispatchTypeDefinition#class#ff/1@86a3af
+[2022-07-11 03:52:03] (1s)  >>> Created relation project#WdmDrivers::DispatchTypeDefinition#class#ff/1@86a3af with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate C28168::AnnotatedDispatchs#class#f#antijoin_rhs/3@2cdb36
+[2022-07-11 03:52:03] (1s)  >>> Created relation C28168::AnnotatedDispatchs#class#f#antijoin_rhs/3@2cdb36 with 3 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate C28168::AnnotatedDispatchs#class#f/1@12a4f8
+[2022-07-11 03:52:03] (1s)  >>> Created relation C28168::AnnotatedDispatchs#class#f/1@12a4f8 with 1 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate C28168::NonAnnotatedDispatchs#class#f/1@eafed5
+[2022-07-11 03:52:03] (1s)  >>> Created relation C28168::NonAnnotatedDispatchs#class#f/1@eafed5 with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate #select#ff#antijoin_rhs/2@658c35
+[2022-07-11 03:52:03] (1s)  >>> Created relation #select#ff#antijoin_rhs/2@658c35 with 4 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate #select#ff/2@c3a6be
+[2022-07-11 03:52:03] (1s)  >>> Created relation #select#ff/2@c3a6be with 2 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Location::Location::hasLocationInfo_dispred#ffffff/6@1b8ef5
+[2022-07-11 03:52:03] (1s)  >>> Created relation Location::Location::hasLocationInfo_dispred#ffffff/6@1b8ef5 with 94022 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate project#Element::ElementBase::toString_dispred/1@60de6c
+[2022-07-11 03:52:03] (1s)  >>> Created relation project#Element::ElementBase::toString_dispred/1@60de6c with 175656 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation exprparents/3@c6c501 with 3500 rows.
+[2022-07-11 03:52:03] (1s)  >>> Created relation usertypes/3@30a591 with 3116 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate usertypes_0#antijoin_rhs/1@03a80e
+[2022-07-11 03:52:03] (1s)  >>> Created relation usertypes_0#antijoin_rhs/1@03a80e with 3116 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getParent_dispred#ff/2@76d674
+[2022-07-11 03:52:03] (1s)  >>> Created relation Expr::Expr::getParent_dispred#ff/2@76d674 with 3500 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getParent_dispred#ff_10#join_rhs/2@8f9fff
+[2022-07-11 03:52:03] (1s)  >>> Created relation Expr::Expr::getParent_dispred#ff_10#join_rhs/2@8f9fff with 3500 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate locations_expr_23450#join_rhs/5@3d73f3
+[2022-07-11 03:52:03] (1s)  >>> Created relation locations_expr_23450#join_rhs/5@3d73f3 with 2716 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate files_10#join_rhs/2@2fb454
+[2022-07-11 03:52:03] (1s)  >>> Created relation files_10#join_rhs/2@2fb454 with 38 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Location::Location::getFile_dispred#ff_10#join_rhs/2@6bb8ca
+[2022-07-11 03:52:03] (1s)  >>> Created relation Location::Location::getFile_dispred#ff_10#join_rhs/2@6bb8ca with 94004 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Location::UnknownLocation#b/1@231203
+[2022-07-11 03:52:03] (1s)  >>> Created relation Location::UnknownLocation#b/1@231203 with 3 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Location::UnknownExprLocation#class#f/1@3f381c
+[2022-07-11 03:52:03] (1s)  >>> Created relation Location::UnknownExprLocation#class#f/1@3f381c with 1 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getExprLocationOverride#ff#join_rhs/2@af87e2
+[2022-07-11 03:52:03] (1s)  >>> Created relation Expr::Expr::getExprLocationOverride#ff#join_rhs/2@af87e2 with 925 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getExprLocationOverride#ff/2@i1#20fd9w (iteration 1)
+[2022-07-11 03:52:03] (1s) 			 - Expr::Expr::getExprLocationOverride#ff_delta has 5 rows (order for disjuncts: delta=<standard>).
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getExprLocationOverride#ff/2@i2#20fd9w (iteration 2)
+[2022-07-11 03:52:03] (1s) 			 - Expr::Expr::getExprLocationOverride#ff_delta has 4 rows (order for disjuncts: delta=3163).
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getExprLocationOverride#ff/2@i3#20fd9w (iteration 3)
+[2022-07-11 03:52:03] (1s) Empty delta for Expr::Expr::getExprLocationOverride#ff_delta (order for disjuncts: delta=3163).
+[2022-07-11 03:52:03] (1s) Accumulating deltas
+[2022-07-11 03:52:03] (1s)  >>> Created relation Expr::Expr::getExprLocationOverride#ff/2@20fd9w with 9 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate project#Expr::Expr::getExprLocationOverride#ff/1@4cf0fa
+[2022-07-11 03:52:03] (1s)  >>> Created relation project#Expr::Expr::getExprLocationOverride#ff/1@4cf0fa with 9 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate Expr::Expr::getLocation_dispred#ff/2@dade8e
+[2022-07-11 03:52:03] (1s)  >>> Created relation Expr::Expr::getLocation_dispred#ff/2@dade8e with 4768 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate #select#query#ffffffff#shared/3@e2678f
+[2022-07-11 03:52:03] (1s)  >>> Created relation #select#query#ffffffff#shared/3@e2678f with 2 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate #select#query#ffffffff#antijoin_rhs/2@d03b6d
+[2022-07-11 03:52:03] (1s)  >>> Created relation #select#query#ffffffff#antijoin_rhs/2@d03b6d with 2 rows.
+[2022-07-11 03:52:03] (1s) Starting to evaluate predicate #select#query#ffffffff/8@19ff97
+[2022-07-11 03:52:03] (1s)  >>> Created relation #select#query#ffffffff/8@19ff97 with 2 rows.
+[2022-07-11 03:52:03] (1s) Query done
+[2022-07-11 03:52:03] CSV_CACHE_DIFF: #select#query#ffffffff (C28168.ql),1.767,1.372,0.206,0.052,0.096,0.01,0,0,0,0,0,0,0
+[2022-07-11 03:52:03] (1s) Sequence stamp origin is -6434820023804827970
+[2022-07-11 03:52:03] (1s) Pausing evaluation to sync to disk at sequence stamp o+0
+[2022-07-11 03:52:03] (1s) Unpausing evaluation
+[2022-07-11 03:52:03] CSV_IMB_QUERIES: Query,#select#query#ffffffff,C28168.ql,8,Success,1.767,2,1895
+[2022-07-11 03:52:03] Evaluation of C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\queries\C28168\C28168.ql produced BQRS results.
+[2022-07-11 03:52:03] [PROGRESS] execute queries> [1/1 eval 1.9s] Evaluation done; writing results to windows-drivers\PortedQueries\queries\C28168\C28168.bqrs.
+[2022-07-11 03:52:03] [PROGRESS] execute queries> Shutting down query evaluator.
+[2022-07-11 03:52:03] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-07-11 03:52:03] The disk cache is freshly trimmed; leave it be.
+[2022-07-11 03:52:03] Unpausing evaluation
+[2022-07-11 03:52:03] Terminating normally.

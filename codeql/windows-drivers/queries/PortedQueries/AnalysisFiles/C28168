@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/C28169",
-          "name" : "cpp/portedqueries/C28169",
+          "id" : "cpp/portedqueries/C28168",
+          "name" : "cpp/portedqueries/C28168",
           "shortDescription" : {
-            "text" : "DISPATCH_MISSING"
+            "text" : "DISPATCH_MISMATCH"
           },
           "fullDescription" : {
-            "text" : "The dispatch function does not have any _Dispatch_type_ annotations"
+            "text" : "The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry"
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The dispatch function does not have any _Dispatch_type_ annotations",
-            "id" : "cpp/portedqueries/C28169",
+            "description" : "The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry",
+            "id" : "cpp/portedqueries/C28168",
             "kind" : "problem",
-            "name" : "DISPATCH_MISSING",
+            "name" : "DISPATCH_MISMATCH",
             "problem.severity" : "warning"
           }
         } ]
@@ -585,14 +585,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/C28169",
+      "ruleId" : "cpp/portedqueries/C28168",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/C28169",
+        "id" : "cpp/portedqueries/C28168",
         "index" : 0
       },
       "message" : {
-        "text" : "DispatchCreate"
+        "text" : "DispatchCreate : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,14 +602,43 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 109,
-            "endColumn" : 15
+            "startLine" : 45,
+            "startColumn" : 58,
+            "endColumn" : 72
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "d9f91e4a1ece5d64:1",
-        "primaryLocationStartColumnFingerprint" : "0"
+        "primaryLocationLineHash" : "3a79521a785c897d:1",
+        "primaryLocationStartColumnFingerprint" : "53"
+      }
+    }, {
+      "ruleId" : "cpp/portedqueries/C28168",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/portedqueries/C28168",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "DispatchPnp : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "driver/fail_driver1.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 49,
+            "startColumn" : 58,
+            "endColumn" : 69
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "b6ab3882c02f563:1",
+        "primaryLocationStartColumnFingerprint" : "53"
       }
     } ],
     "columnKind" : "utf16CodeUnits",
