@@ -1,0 +1,351 @@
+[2022-07-08 15:15:29] This is codeql database create -l=cpp -s=C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM -c=msbuild /p:Platform=x64 /t:rebuild C:\Users\t-abtamene\Desktop\randomDatabases\C28168
+[2022-07-08 15:15:29] Log file was started late.
+[2022-07-08 15:15:29] [PROGRESS] database create> Initializing database at C:\Users\t-abtamene\Desktop\randomDatabases\C28168.
+[2022-07-08 15:15:29] Running plumbing command: codeql database init --language=cpp --source-root=C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM --allow-missing-source-root=false --allow-already-existing -- C:\Users\t-abtamene\Desktop\randomDatabases\C28168
+[2022-07-08 15:15:29] [PROGRESS] database init> Counting lines of code in C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM
+[2022-07-08 15:15:29] [PROGRESS] database init> Resolving extractor cpp.
+[2022-07-08 15:15:29] Calling plumbing command: codeql resolve languages --format=json
+[2022-07-08 15:15:29] [DETAILS] resolve languages> Scanning for codeql-extractor.yml from C:\CQL\codeql_home\codeql\.codeqlmanifest.json
+[2022-07-08 15:15:29] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\cpp\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\csharp\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\csv\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\go\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\html\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\java\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\javascript\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\properties\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\python\codeql-extractor.yml.
+[2022-07-08 15:15:30] [DETAILS] resolve languages> Parsing C:\CQL\codeql_home\codeql\xml\codeql-extractor.yml.
+[2022-07-08 15:15:30] Plumbing command codeql resolve languages completed:
+                      {
+                        "cpp" : [
+                          "C:\\CQL\\codeql_home\\codeql\\cpp"
+                        ],
+                        "csharp" : [
+                          "C:\\CQL\\codeql_home\\codeql\\csharp"
+                        ],
+                        "csv" : [
+                          "C:\\CQL\\codeql_home\\codeql\\csv"
+                        ],
+                        "go" : [
+                          "C:\\CQL\\codeql_home\\codeql\\go"
+                        ],
+                        "html" : [
+                          "C:\\CQL\\codeql_home\\codeql\\html"
+                        ],
+                        "java" : [
+                          "C:\\CQL\\codeql_home\\codeql\\java"
+                        ],
+                        "javascript" : [
+                          "C:\\CQL\\codeql_home\\codeql\\javascript"
+                        ],
+                        "properties" : [
+                          "C:\\CQL\\codeql_home\\codeql\\properties"
+                        ],
+                        "python" : [
+                          "C:\\CQL\\codeql_home\\codeql\\python"
+                        ],
+                        "xml" : [
+                          "C:\\CQL\\codeql_home\\codeql\\xml"
+                        ]
+                      }
+[2022-07-08 15:15:30] [DETAILS] database init> Found candidate extractor root for cpp: C:\CQL\codeql_home\codeql\cpp.
+[2022-07-08 15:15:30] [PROGRESS] database init> Successfully loaded extractor C/C++ (cpp) from C:\CQL\codeql_home\codeql\cpp.
+[2022-07-08 15:15:30] [PROGRESS] database init> Created skeleton CodeQL database at C:\Users\t-abtamene\Desktop\randomDatabases\C28168. This in-progress database is ready to be populated by an extractor.
+[2022-07-08 15:15:30] Plumbing command codeql database init completed.
+[2022-07-08 15:15:30] [PROGRESS] database create> Running build command: [msbuild, /p:Platform=x64, /t:rebuild]
+[2022-07-08 15:15:30] Running plumbing command: codeql database trace-command --working-dir=C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM --index-traceless-dbs --no-db-cluster -- C:\Users\t-abtamene\Desktop\randomDatabases\C28168 msbuild /p:Platform=x64 /t:rebuild
+[2022-07-08 15:15:30] Setting up tracing from specification at C:\CQL\codeql_home\codeql\cpp\tools\win64\compiler-tracing.spec.
+[2022-07-08 15:15:30] [PROGRESS] database trace-command> Running command in C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM: [msbuild, /p:Platform=x64, /t:rebuild]
+[2022-07-08 15:15:30] [build-stdout] Microsoft (R) Build Engine version 17.2.1+52cd2da31 for .NET Framework
+[2022-07-08 15:15:30] [build-stdout] Copyright (C) Microsoft Corporation. All rights reserved.
+[2022-07-08 15:15:30] [build-stdout] Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+[2022-07-08 15:15:30] [build-stdout] Build started 7/8/2022 3:15:30 PM.
+[2022-07-08 15:15:30] [build-stdout] Project "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\SDV-FailDriver-WDM.sln" on node 1 (rebuild target(s)).
+[2022-07-08 15:15:30] [build-stdout] ValidateSolutionConfiguration:
+[2022-07-08 15:15:30] [build-stdout]   Building solution configuration "Debug|x64".
+[2022-07-08 15:15:30] [build-stdout] Project "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\SDV-FailDriver-WDM.sln" (1) is building "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\fail_driver1.vcxproj" (2) on node 1 (Rebuild target(s)).
+[2022-07-08 15:15:30] [build-stdout] _PrepareForClean:
+[2022-07-08 15:15:30] [build-stdout]   Deleting file "x64\Debug\fail_driver1.tlog\fail_driver1.lastbuildstate".
+[2022-07-08 15:15:30] [build-stdout] CoreClean:
+[2022-07-08 15:15:30] [build-stdout]   Deleting file "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\x64\Debug\fail_driver1.sys".
+[2022-07-08 15:15:30] [build-stdout] CleanOutput:
+[2022-07-08 15:15:30] [build-stdout]   Deleting file "x64\Debug\fail_driver1.cer".
+[2022-07-08 15:15:30] [build-stdout]   Deleting file "x64\Debug\fail_driver1.sys.recipe".
+[2022-07-08 15:15:30] [build-stdout]   Deleting file "x64\Debug\fail_driver1.vcxproj.FileListAbsolute.txt".
+[2022-07-08 15:15:30] [build-stdout] DriverBuildNotifications:
+[2022-07-08 15:15:30] [build-stdout]   Building 'fail_driver1' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+[2022-07-08 15:15:30] [build-stdout]   Using KMDF 1.15.
+[2022-07-08 15:15:30] [build-stdout] InitializeBuildStatus:
+[2022-07-08 15:15:30] [build-stdout]   Creating "x64\Debug\fail_driver1.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+[2022-07-08 15:15:31] [build-stdout] ClCompile:
+[2022-07-08 15:15:31] [build-stdout]   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\HostX64\x64\CL.exe /c /Ix64\Debug\ /Zi /nologo /W4 /WX /diagnostics:column /Od /Oi /Oy- /D _WIN64 /D _AMD64_ /D AMD64 /D DEPRECATE_DDK_FUNCTIONS=1 /D MSC_NOOPT /D _WIN32_WINNT=0x0A00 /D WINVER=0x0A00 /D WINNT=1 /D NTDDI_VERSION=0xA00000C /D DBG=1 /GF /Gm- /Zp8 /GS /guard:cf /Gy /fp:precise /Qspectre /Zc:wchar_t- /Zc:forScope /Zc:inline /GR- /Fo"x64\Debug\\" /Fd"x64\Debug\vc143.pdb" /external:W4 /Gz /wd4748 /wd4603 /wd4627 /wd4986 /wd4987 /FI"C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\warning.h" /FC /errorReport:queue /kernel -cbstring -d2epilogunwind /d1import_no_registry /d2AllowCompatibleILVersions /d2Zi+ fail_driver1.c
+[2022-07-08 15:15:31] [build-stdout]   fail_driver1.c
+[2022-07-08 15:15:34] [build-stdout] Link:
+[2022-07-08 15:15:34] [build-stdout]   C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.32.31326\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"x64\Debug\fail_driver1.sys" /VERSION:"10.0" /INCREMENTAL:NO /NOLOGO /WX /SECTION:"INIT,d" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\BufferOverflowFastFailK.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\ntoskrnl.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\hal.lib" "C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\km\x64\wmilib.lib" /NODEFAULTLIB /MANIFEST:NO /DEBUG /PDB:"x64\Debug\fail_driver1.pdb" /SUBSYSTEM:NATIVE,"10.00" /Driver /OPT:REF /OPT:ICF /ENTRY:"GsDriverEntry" /RELEASE /IMPLIB:"x64\Debug\fail_driver1.lib" /MERGE:"_TEXT=.text;_PAGE=PAGE" /MACHINE:X64 /PROFILE /guard:cf /kernel /IGNORE:4198,4010,4037,4039,4065,4070,4078,4087,4089,4221,4108,4088,4218,4218,4235 /osversion:10.0 /pdbcompress /debugtype:pdata x64\Debug\fail_driver1.obj
+[2022-07-08 15:15:34] [build-stdout]   fail_driver1.vcxproj -> C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\x64\Debug\fail_driver1.sys
+[2022-07-08 15:15:34] [build-stdout] Project "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\fail_driver1.vcxproj" (2) is building "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\fail_driver1.vcxproj" (2:2) on node 1 (TestSign target(s)).
+[2022-07-08 15:15:34] [build-stdout] TestSign:
+[2022-07-08 15:15:34] [build-stdout]   The driver will be test-signed. Driver signing options can be changed from the project properties.
+[2022-07-08 15:15:34] [build-stdout]   Sign Inputs: C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\x64\Debug\fail_driver1.sys
+[2022-07-08 15:15:34] [build-stdout]   C:\Program Files (x86)\Windows Kits\10\bin\10.0.22621.0\x86\signtool.exe sign /ph /fd "sha256" /sha1 "3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3" 
+[2022-07-08 15:15:34] [build-stdout]   Done Adding Additional Store
+[2022-07-08 15:15:34] [build-stdout]   Successfully signed: C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\x64\Debug\fail_driver1.sys
+[2022-07-08 15:15:34] [build-stdout]   
+[2022-07-08 15:15:34] [build-stdout]   Certificate used for signing: issued to = WDKTestCert t-abtamene,133003148183399534 and thumbprint = 3C706D2A3B098E2264C0BDF8A08E0A2F1C4395E3
+[2022-07-08 15:15:34] [build-stdout]   Exported Certificate: x64\Debug\fail_driver1.cer
+[2022-07-08 15:15:34] [build-stdout] Done Building Project "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\fail_driver1.vcxproj" (TestSign target(s)).
+[2022-07-08 15:15:34] [build-stdout] FinalizeBuildStatus:
+[2022-07-08 15:15:34] [build-stdout]   Deleting file "x64\Debug\fail_driver1.tlog\unsuccessfulbuild".
+[2022-07-08 15:15:34] [build-stdout]   Touching "x64\Debug\fail_driver1.tlog\fail_driver1.lastbuildstate".
+[2022-07-08 15:15:34] [build-stdout] Done Building Project "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\fail_driver1.vcxproj" (Rebuild target(s)).
+[2022-07-08 15:15:34] [build-stdout] Done Building Project "C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\SDV-FailDriver-WDM.sln" (rebuild target(s)).
+[2022-07-08 15:15:34] [build-stdout] Build succeeded.
+[2022-07-08 15:15:34] [build-stdout]     0 Warning(s)
+[2022-07-08 15:15:34] [build-stdout]     0 Error(s)
+[2022-07-08 15:15:34] [build-stdout] Time Elapsed 00:00:04.22
+[2022-07-08 15:15:34] Plumbing command codeql database trace-command completed.
+[2022-07-08 15:15:34] [PROGRESS] database create> Finalizing database at C:\Users\t-abtamene\Desktop\randomDatabases\C28168.
+[2022-07-08 15:15:34] Running plumbing command: codeql database finalize --mode=normal --keep-temporary --no-db-cluster -- C:\Users\t-abtamene\Desktop\randomDatabases\C28168
+[2022-07-08 15:15:34] [PROGRESS] database finalize> Running TRAP import for CodeQL database at C:\Users\t-abtamene\Desktop\randomDatabases\C28168...
+[2022-07-08 15:15:34] Running plumbing command: codeql dataset import --dbscheme=C:\CQL\codeql_home\codeql\cpp\semmlecode.cpp.dbscheme -- C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp C:\Users\t-abtamene\Desktop\randomDatabases\C28168\trap\cpp
+[2022-07-08 15:15:35] Clearing disk cache since the version file C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp\default\cache\version does not exist
+[2022-07-08 15:15:35] Tuple pool not found. Clearing relations with cached strings
+[2022-07-08 15:15:35] Trimming disk cache at C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp\default\cache in mode brutal.
+[2022-07-08 15:15:35] Sequence stamp origin is -6435757086791703366
+[2022-07-08 15:15:35] Pausing evaluation to hard-clear memory at sequence stamp o+0
+[2022-07-08 15:15:35] Unpausing evaluation
+[2022-07-08 15:15:35] Pausing evaluation to quickly trim disk at sequence stamp o+1
+[2022-07-08 15:15:35] Unpausing evaluation
+[2022-07-08 15:15:35] Pausing evaluation to zealously trim disk at sequence stamp o+2
+[2022-07-08 15:15:35] Unpausing evaluation
+[2022-07-08 15:15:35] Trimming completed (9ms): Purged everything.
+[2022-07-08 15:15:35] Scanning for files in C:\Users\t-abtamene\Desktop\randomDatabases\C28168\trap\cpp
+[2022-07-08 15:15:35] Grouping TRAPs by link target
+[2022-07-08 15:15:35] Scanning cpp_predefined.1aee4fb1.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (1 of 42)
+[2022-07-08 15:15:35] Scanning suppress.h.c0ebe05d.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (2 of 42)
+[2022-07-08 15:15:35] Scanning warning.h.c23ed0db.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (3 of 42)
+[2022-07-08 15:15:35] Scanning concurrencysal.h.ebc35fda.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (4 of 42)
+[2022-07-08 15:15:35] Scanning sal.h.4a3c7929.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (5 of 42)
+[2022-07-08 15:15:35] Scanning specstrings_undef.h.167b6294.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (6 of 42)
+[2022-07-08 15:15:35] Scanning specstrings_strict.h.06fd7578.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (7 of 42)
+[2022-07-08 15:15:35] Scanning sdv_driverspecs.h.8610835b.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (8 of 42)
+[2022-07-08 15:15:35] Scanning driverspecs.h.40b1a18c.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (9 of 42)
+[2022-07-08 15:15:35] Scanning specstrings.h.4a33f18e.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (10 of 42)
+[2022-07-08 15:15:35] Scanning vadefs.h.9a85289f.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (11 of 42)
+[2022-07-08 15:15:35] Scanning crtdefs.h.b9f9030e.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (12 of 42)
+[2022-07-08 15:15:35] Scanning excpt.h.d2356cba.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (13 of 42)
+[2022-07-08 15:15:35] Scanning crtdefs.h.3cfdf262.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (14 of 42)
+[2022-07-08 15:15:35] Scanning ctype.h.b5a1a318.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (15 of 42)
+[2022-07-08 15:15:35] Scanning winpackagefamily.h.164d5f6e.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (16 of 42)
+[2022-07-08 15:15:35] Scanning winapifamily.h.b7918b70.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (17 of 42)
+[2022-07-08 15:15:35] Scanning kernelspecs.h.3e9b2e73.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (18 of 42)
+[2022-07-08 15:15:35] Scanning basetsd.h.32c77334.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (19 of 42)
+[2022-07-08 15:15:35] Scanning string.h.3c019998.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (20 of 42)
+[2022-07-08 15:15:35] Scanning guiddef.h.e8d69ce6.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (21 of 42)
+[2022-07-08 15:15:35] Scanning sdkddkver.h.15b67886.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (22 of 42)
+[2022-07-08 15:15:35] Scanning ntdef.h.af586058.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (23 of 42)
+[2022-07-08 15:15:35] Scanning ntstatus.h.ca355108.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (24 of 42)
+[2022-07-08 15:15:35] Scanning bugcodes.h.8610835b.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (25 of 42)
+[2022-07-08 15:15:35] Scanning ntiologc.h.8610835b.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (26 of 42)
+[2022-07-08 15:15:35] Scanning mce.h.a0d03769.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (27 of 42)
+[2022-07-08 15:15:35] Scanning pshpack4.h.70e61405.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (28 of 42)
+[2022-07-08 15:15:35] Scanning poppack.h.70e61405.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (29 of 42)
+[2022-07-08 15:15:35] Scanning pshpack1.h.70e61405.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (30 of 42)
+[2022-07-08 15:15:35] Scanning guiddef.h.14afcd24.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (31 of 42)
+[2022-07-08 15:15:35] Scanning dpfilter.h.b67644c0.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (32 of 42)
+[2022-07-08 15:15:35] Scanning apiset.h.4eae940c.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (33 of 42)
+[2022-07-08 15:15:35] Scanning ktmtypes.h.afecde69.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (34 of 42)
+[2022-07-08 15:15:35] Scanning evntprov.h.f5781383.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (35 of 42)
+[2022-07-08 15:15:35] Scanning devpropdef.h.2151f9ae.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (36 of 42)
+[2022-07-08 15:15:35] Scanning wdm.h.e8e8e3e5.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (37 of 42)
+[2022-07-08 15:15:35] Scanning fail_driver1.h.c9991086.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (38 of 42)
+[2022-07-08 15:15:35] Scanning fail_driver1.c.8481d4ec.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) (39 of 42)
+[2022-07-08 15:15:35] Scanning 45678856_0.trap.br (40 of 42)
+[2022-07-08 15:15:35] Scanning fail_driver1.sys.trap.br (41 of 42)
+[2022-07-08 15:15:35] Scanning sourceLocationPrefix.trap.gz (42 of 42)
+[2022-07-08 15:15:35] Assembling fail_driver1.sys.link with 40 files (1 of 2)
+[2022-07-08 15:15:35] Assembling no link target with 2 files (2 of 2)
+[2022-07-08 15:15:35] Importing cpp_predefined.1aee4fb1.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for no link target (1 of 42)
+[2022-07-08 15:15:36] Importing suppress.h.c0ebe05d.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (2 of 42)
+[2022-07-08 15:15:36] Importing warning.h.c23ed0db.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (3 of 42)
+[2022-07-08 15:15:36] Importing concurrencysal.h.ebc35fda.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (4 of 42)
+[2022-07-08 15:15:36] Importing sal.h.4a3c7929.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (5 of 42)
+[2022-07-08 15:15:36] Importing specstrings_undef.h.167b6294.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (6 of 42)
+[2022-07-08 15:15:36] Importing specstrings_strict.h.06fd7578.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (7 of 42)
+[2022-07-08 15:15:36] Importing sdv_driverspecs.h.8610835b.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (8 of 42)
+[2022-07-08 15:15:36] Importing driverspecs.h.40b1a18c.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (9 of 42)
+[2022-07-08 15:15:36] Importing specstrings.h.4a33f18e.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (10 of 42)
+[2022-07-08 15:15:36] Importing vadefs.h.9a85289f.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (11 of 42)
+[2022-07-08 15:15:36] Importing crtdefs.h.b9f9030e.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (12 of 42)
+[2022-07-08 15:15:36] Importing excpt.h.d2356cba.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (13 of 42)
+[2022-07-08 15:15:36] Importing crtdefs.h.3cfdf262.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (14 of 42)
+[2022-07-08 15:15:36] Importing ctype.h.b5a1a318.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (15 of 42)
+[2022-07-08 15:15:36] Importing winpackagefamily.h.164d5f6e.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (16 of 42)
+[2022-07-08 15:15:36] Importing winapifamily.h.b7918b70.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (17 of 42)
+[2022-07-08 15:15:36] Importing kernelspecs.h.3e9b2e73.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (18 of 42)
+[2022-07-08 15:15:36] Importing basetsd.h.32c77334.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (19 of 42)
+[2022-07-08 15:15:36] Importing string.h.3c019998.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (20 of 42)
+[2022-07-08 15:15:36] Importing guiddef.h.e8d69ce6.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (21 of 42)
+[2022-07-08 15:15:36] Importing sdkddkver.h.15b67886.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (22 of 42)
+[2022-07-08 15:15:36] Importing ntdef.h.af586058.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (23 of 42)
+[2022-07-08 15:15:36] Importing ntstatus.h.ca355108.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (24 of 42)
+[2022-07-08 15:15:37] Importing bugcodes.h.8610835b.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (25 of 42)
+[2022-07-08 15:15:37] Importing ntiologc.h.8610835b.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (26 of 42)
+[2022-07-08 15:15:37] Importing mce.h.a0d03769.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (27 of 42)
+[2022-07-08 15:15:37] Importing pshpack4.h.70e61405.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (28 of 42)
+[2022-07-08 15:15:37] Importing poppack.h.70e61405.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (29 of 42)
+[2022-07-08 15:15:37] Importing pshpack1.h.70e61405.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (30 of 42)
+[2022-07-08 15:15:37] Importing guiddef.h.14afcd24.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (31 of 42)
+[2022-07-08 15:15:37] Importing dpfilter.h.b67644c0.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (32 of 42)
+[2022-07-08 15:15:37] Importing apiset.h.4eae940c.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (33 of 42)
+[2022-07-08 15:15:37] Importing ktmtypes.h.afecde69.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (34 of 42)
+[2022-07-08 15:15:37] Importing evntprov.h.f5781383.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (35 of 42)
+[2022-07-08 15:15:37] Importing devpropdef.h.2151f9ae.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (36 of 42)
+[2022-07-08 15:15:37] Importing wdm.h.e8e8e3e5.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (37 of 42)
+[2022-07-08 15:15:38] Importing fail_driver1.h.c9991086.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (38 of 42)
+[2022-07-08 15:15:38] Importing fail_driver1.c.8481d4ec.trap (fail_driver1.c.8481d4ec_0.trap.tar.br) for fail_driver1.sys.link (39 of 42)
+[2022-07-08 15:15:38] Importing 45678856_0.trap.br for fail_driver1.sys.link (40 of 42)
+[2022-07-08 15:15:38] Importing fail_driver1.sys.trap.br for fail_driver1.sys.link (41 of 42)
+[2022-07-08 15:15:38] Importing sourceLocationPrefix.trap.gz for no link target (42 of 42)
+[2022-07-08 15:15:38] Merging 1 fragment for builtintypes.
+[2022-07-08 15:15:38] Merging 1 fragment for unspecifiedtype.
+[2022-07-08 15:15:38] Merging 1 fragment for files.
+[2022-07-08 15:15:38] Merging 2 fragments for locations_default.
+[2022-07-08 15:15:38] Merging 1 fragment for link_targets.
+[2022-07-08 15:15:38] Merging 1 fragment for locations_stmt.
+[2022-07-08 15:15:38] Merging 1 fragment for locations_expr.
+[2022-07-08 15:15:38] Merging 1 fragment for usertypes.
+[2022-07-08 15:15:38] Merging 1 fragment for namespaces.
+[2022-07-08 15:15:38] Merging 1 fragment for specialnamequalifyingelements.
+[2022-07-08 15:15:38] Merging 1 fragment for mangled_name.
+[2022-07-08 15:15:38] Merging 1 fragment for specifiers.
+[2022-07-08 15:15:38] Merging 1 fragment for numlines.
+[2022-07-08 15:15:39] Merging 1 fragment for preprocdirects.
+[2022-07-08 15:15:39] Merging 1 fragment for preproctext.
+[2022-07-08 15:15:39] Merging 1 fragment for preprocfalse.
+[2022-07-08 15:15:39] Merging 1 fragment for macroinvocations.
+[2022-07-08 15:15:39] Merging 1 fragment for comments.
+[2022-07-08 15:15:39] Merging 1 fragment for commentbinding.
+[2022-07-08 15:15:39] Merging 1 fragment for containerparent.
+[2022-07-08 15:15:39] Merging 1 fragment for folders.
+[2022-07-08 15:15:39] Merging 1 fragment for preprocpair.
+[2022-07-08 15:15:39] Merging 1 fragment for includes.
+[2022-07-08 15:15:39] Merging 1 fragment for preproctrue.
+[2022-07-08 15:15:39] Merging 1 fragment for macro_argument_unexpanded.
+[2022-07-08 15:15:39] Merging 1 fragment for macro_argument_expanded.
+[2022-07-08 15:15:39] Merging 1 fragment for type_mentions.
+[2022-07-08 15:15:39] Merging 1 fragment for functions.
+[2022-07-08 15:15:39] Merging 1 fragment for link_parent.
+[2022-07-08 15:15:39] Merging 1 fragment for function_return_type.
+[2022-07-08 15:15:39] Merging 1 fragment for derivedtypes.
+[2022-07-08 15:15:39] Merging 1 fragment for pointerishsize.
+[2022-07-08 15:15:39] Merging 1 fragment for params.
+[2022-07-08 15:15:39] Merging 1 fragment for typedefbase.
+[2022-07-08 15:15:39] Merging 1 fragment for type_decls.
+[2022-07-08 15:15:39] Merging 1 fragment for type_decl_top.
+[2022-07-08 15:15:39] Merging 1 fragment for fun_decls.
+[2022-07-08 15:15:39] Merging 1 fragment for fun_decl_specifiers.
+[2022-07-08 15:15:39] Merging 1 fragment for param_decl_bind.
+[2022-07-08 15:15:39] Merging 1 fragment for macroparent.
+[2022-07-08 15:15:39] Merging 1 fragment for funspecifiers.
+[2022-07-08 15:15:39] Merging 1 fragment for var_decls.
+[2022-07-08 15:15:39] Merging 1 fragment for usertypesize.
+[2022-07-08 15:15:39] Merging 1 fragment for is_pod_class.
+[2022-07-08 15:15:39] Merging 1 fragment for is_standard_layout_class.
+[2022-07-08 15:15:39] Merging 1 fragment for is_complete.
+[2022-07-08 15:15:39] Merging 1 fragment for member.
+[2022-07-08 15:15:39] Merging 1 fragment for type_def.
+[2022-07-08 15:15:39] Merging 1 fragment for membervariables.
+[2022-07-08 15:15:39] Merging 1 fragment for fieldoffsets.
+[2022-07-08 15:15:39] Merging 1 fragment for var_def.
+[2022-07-08 15:15:39] Merging 1 fragment for arraysizes.
+[2022-07-08 15:15:39] Merging 1 fragment for values.
+[2022-07-08 15:15:39] Merging 1 fragment for valuetext.
+[2022-07-08 15:15:39] Merging 1 fragment for exprs.
+[2022-07-08 15:15:39] Merging 1 fragment for expr_types.
+[2022-07-08 15:15:39] Merging 1 fragment for valuebind.
+[2022-07-08 15:15:39] Merging 1 fragment for varspecifiers.
+[2022-07-08 15:15:39] Merging 1 fragment for typespecifiers.
+[2022-07-08 15:15:39] Merging 1 fragment for enumconstants.
+[2022-07-08 15:15:39] Merging 1 fragment for initialisers.
+[2022-07-08 15:15:39] Merging 1 fragment for exprparents.
+[2022-07-08 15:15:39] Merging 1 fragment for attributes.
+[2022-07-08 15:15:39] Merging 1 fragment for attribute_arg_value.
+[2022-07-08 15:15:39] Merging 1 fragment for attribute_args.
+[2022-07-08 15:15:39] Merging 1 fragment for funcattributes.
+[2022-07-08 15:15:39] Merging 1 fragment for fun_def.
+[2022-07-08 15:15:39] Merging 1 fragment for affectedbymacroexpansion.
+[2022-07-08 15:15:39] Merging 1 fragment for stmts.
+[2022-07-08 15:15:39] Merging 1 fragment for expr_isload.
+[2022-07-08 15:15:39] Merging 1 fragment for stmtparents.
+[2022-07-08 15:15:40] Merging 1 fragment for blockscope.
+[2022-07-08 15:15:40] Merging 1 fragment for function_entry_point.
+[2022-07-08 15:15:40] Merging 1 fragment for varbind.
+[2022-07-08 15:15:40] Merging 1 fragment for exprconv.
+[2022-07-08 15:15:40] Merging 1 fragment for conversionkinds.
+[2022-07-08 15:15:40] Merging 1 fragment for inmacroexpansion.
+[2022-07-08 15:15:40] Merging 1 fragment for macrolocationbind.
+[2022-07-08 15:15:40] Merging 1 fragment for compgenerated.
+[2022-07-08 15:15:40] Merging 1 fragment for routinetypes.
+[2022-07-08 15:15:40] Merging 1 fragment for routinetypeargs.
+[2022-07-08 15:15:40] Merging 1 fragment for funbind.
+[2022-07-08 15:15:40] Merging 1 fragment for expr_cond_guard.
+[2022-07-08 15:15:40] Merging 1 fragment for expr_cond_true.
+[2022-07-08 15:15:40] Merging 1 fragment for iscall.
+[2022-07-08 15:15:40] Merging 1 fragment for expr_cond_false.
+[2022-07-08 15:15:40] Merging 1 fragment for bitfield.
+[2022-07-08 15:15:40] Merging 1 fragment for sizeof_bind.
+[2022-07-08 15:15:40] Merging 1 fragment for enclosingfunction.
+[2022-07-08 15:15:40] Merging 1 fragment for localvariables.
+[2022-07-08 15:15:40] Merging 1 fragment for stmt_decl_bind.
+[2022-07-08 15:15:40] Merging 1 fragment for stmt_decl_entry_bind.
+[2022-07-08 15:15:40] Merging 1 fragment for aggregate_array_init.
+[2022-07-08 15:15:40] Merging 1 fragment for if_then.
+[2022-07-08 15:15:40] Merging 1 fragment for if_else.
+[2022-07-08 15:15:40] Merging 1 fragment for expr_ancestor.
+[2022-07-08 15:15:40] Merging 1 fragment for for_condition.
+[2022-07-08 15:15:40] Merging 1 fragment for for_body.
+[2022-07-08 15:15:40] Merging 1 fragment for for_update.
+[2022-07-08 15:15:40] Merging 1 fragment for typeattributes.
+[2022-07-08 15:15:40] Merging 1 fragment for varattributes.
+[2022-07-08 15:15:40] Merging 1 fragment for globalvariables.
+[2022-07-08 15:15:40] Merging 1 fragment for var_decl_specifiers.
+[2022-07-08 15:15:40] Merging 1 fragment for fun_decl_typedef_type.
+[2022-07-08 15:15:40] Merging 1 fragment for fileannotations.
+[2022-07-08 15:15:40] Merging 1 fragment for compilations.
+[2022-07-08 15:15:40] Merging 1 fragment for compilation_args.
+[2022-07-08 15:15:40] Merging 1 fragment for compilation_compiling_files.
+[2022-07-08 15:15:40] Merging 1 fragment for compilation_time.
+[2022-07-08 15:15:40] Merging 1 fragment for compilation_finished.
+[2022-07-08 15:15:40] Merging 1 fragment for sourceLocationPrefix.
+[2022-07-08 15:15:40] Saving string and id pools to disk.
+[2022-07-08 15:15:40] Finished importing trap files.
+[2022-07-08 15:15:40] Pausing evaluation to close the cache at sequence stamp o+3
+[2022-07-08 15:15:40] The disk cache is freshly trimmed; leave it be.
+[2022-07-08 15:15:40] Unpausing evaluation
+[2022-07-08 15:15:40] Plumbing command codeql dataset import completed.
+[2022-07-08 15:15:40] [PROGRESS] database finalize> TRAP import complete (5.7s).
+[2022-07-08 15:15:40] Running plumbing command: codeql database cleanup --mode=normal --keep-temporary -- C:\Users\t-abtamene\Desktop\randomDatabases\C28168
+[2022-07-08 15:15:40] [PROGRESS] database cleanup> Cleaning up existing TRAP files after import...
+[2022-07-08 15:15:40] [PROGRESS] database cleanup> TRAP files cleaned up (11ms).
+[2022-07-08 15:15:40] [PROGRESS] database cleanup> Cleaning up scratch directory...
+[2022-07-08 15:15:40] [PROGRESS] database cleanup> Scratch directory cleaned up (5ms).
+[2022-07-08 15:15:40] Running plumbing command: codeql dataset cleanup --mode=normal -- C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp
+[2022-07-08 15:15:40] [PROGRESS] dataset cleanup> Cleaning up dataset in C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp.
+[2022-07-08 15:15:40] Trimming disk cache at C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp\default\cache in mode normal.
+[2022-07-08 15:15:40] Sequence stamp origin is -6435757062133331900
+[2022-07-08 15:15:40] Pausing evaluation to zealously trim disk at sequence stamp o+0
+[2022-07-08 15:15:40] Unpausing evaluation
+[2022-07-08 15:15:40] Trimming completed (3ms): Trimmed disposable data from cache.
+[2022-07-08 15:15:40] Pausing evaluation to close the cache at sequence stamp o+1
+[2022-07-08 15:15:40] The disk cache is freshly trimmed; leave it be.
+[2022-07-08 15:15:40] Unpausing evaluation
+[2022-07-08 15:15:40] [PROGRESS] dataset cleanup> Trimmed disposable data from cache.
+[2022-07-08 15:15:40] [PROGRESS] dataset cleanup> Finalizing dataset in C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp
+[2022-07-08 15:15:40] [DETAILS] dataset cleanup> Finished deleting ID pool from C:\Users\t-abtamene\Desktop\randomDatabases\C28168\db-cpp (11ms).
+[2022-07-08 15:15:40] Plumbing command codeql dataset cleanup completed.
+[2022-07-08 15:15:40] Plumbing command codeql database cleanup completed with status 0.
+[2022-07-08 15:15:40] Plumbing command codeql database finalize completed.
+[2022-07-08 15:15:40] [PROGRESS] database create> Successfully created database at C:\Users\t-abtamene\Desktop\randomDatabases\C28168.
+[2022-07-08 15:15:40] Terminating normally.
