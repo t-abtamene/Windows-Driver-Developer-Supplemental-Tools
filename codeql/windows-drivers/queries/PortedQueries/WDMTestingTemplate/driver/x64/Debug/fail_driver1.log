@@ -1,0 +1,8 @@
+﻿  Building 'fail_driver1' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  fail_driver1.c
+C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\WDMTestingTemplate\driver\fail_driver1.c(35,9): error C2157: 'DispatchCreate': must be declared before use in pragma list
+C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\WDMTestingTemplate\driver\fail_driver1.c(39,9): error C2157: 'DispatchPnp': must be declared before use in pragma list
+C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\WDMTestingTemplate\driver\fail_driver1.c(51,72): error C2065: 'DispatchCreate': undeclared identifier
+C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\WDMTestingTemplate\driver\fail_driver1.c(51,72): warning C4047: '=': 'PDRIVER_DISPATCH' differs in levels of indirection from 'int'
+C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\WDMTestingTemplate\driver\fail_driver1.c(55,69): error C2065: 'DispatchPnp': undeclared identifier
+C:\CQL\codeql_home\Windows-Driver-Developer-Supplemental-Tools\codeql\windows-drivers\queries\PortedQueries\WDMTestingTemplate\driver\fail_driver1.c(55,69): warning C4047: '=': 'PDRIVER_DISPATCH' differs in levels of indirection from 'int'

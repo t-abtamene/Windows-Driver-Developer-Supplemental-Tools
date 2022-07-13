@@ -2,6 +2,6 @@
 
 */codeql/**/*.cache
 codeql/**/*.cache
+.vs
+.vscode
 out
-/out/*
-*/databases/*

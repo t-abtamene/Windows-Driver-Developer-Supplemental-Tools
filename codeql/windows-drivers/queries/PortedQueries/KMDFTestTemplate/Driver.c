@@ -23,7 +23,7 @@ Environment:
 #pragma alloc_text (PAGE, KMDFTestTemplateEvtDriverContextCleanup)
 #endif
 
-#include "driver_snippet.c"
+#include "driver/driver_snippet.c"
 
 NTSTATUS
 DriverEntry(

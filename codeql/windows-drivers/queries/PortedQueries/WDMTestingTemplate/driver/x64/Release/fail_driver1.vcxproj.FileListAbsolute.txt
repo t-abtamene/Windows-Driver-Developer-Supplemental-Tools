@@ -1,0 +1,1 @@
+C:\CQL\Windows-driver-samples\tools\sdv\samples\SDV-FailDriver-WDM\driver\x64\Release\fail_driver1.sys
