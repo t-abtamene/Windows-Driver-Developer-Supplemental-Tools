@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+c78284f469f61e18fa049a58b0dc366fc196b25e",
+        "semanticVersion" : "0.9.6+fe17922fc06350ac2c49a889782361f8dde0f5c8",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -577,7 +577,42 @@
         } ]
       } ]
     },
-    "results" : [ ],
+    "artifacts" : [ {
+      "location" : {
+        "uri" : "driver/fail_driver1.c",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 0
+      }
+    } ],
+    "results" : [ {
+      "ruleId" : "cpp/portedqueries/pending-status-error",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/portedqueries/pending-status-error",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "driver/fail_driver1.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 120,
+            "startColumn" : 5,
+            "endColumn" : 21
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "6373c9b6675e8b2a:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      }
+    } ],
     "columnKind" : "utf16CodeUnits",
     "properties" : {
       "semmle.formatSpecifier" : "sarifv2.1.0"

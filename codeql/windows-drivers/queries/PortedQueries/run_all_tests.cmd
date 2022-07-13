@@ -1,7 +1,7 @@
 @echo off
 
 call :test KeWaitLocal KMDFTestTemplate
-call :test PendingStatusError KMDFTestTemplate
+call :test PendingStatusError WDMTestingTemplate
 call :test DispatchMismatch WDMTestingTemplate
 call :test DispatchAnnotationMissing WDMTestingTemplate
 
@@ -12,7 +12,7 @@ exit /b 0
 echo %0 %1 {
 rd /s /q out\%1 >NUL 2>&1
 robocopy /e %2 out\%1\
-robocopy /e queries\%1\ out\%1\driver
+robocopy /e queries\%1\ out\%1\driver\
 
 cd out\%1
 echo building

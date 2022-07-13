@@ -34,6 +34,6 @@ where
   fa.getTarget() = wdm and not fa.getTarget() instanceof NonAnnotatedDispatchs
   or
   fa.getTarget() instanceof AnnotatedDispatchs
-select fa,
+select fa.getTarget(),
   fa.getTarget() +
     " : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."

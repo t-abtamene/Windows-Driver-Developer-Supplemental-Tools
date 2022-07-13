@@ -23,9 +23,7 @@ Environment:
 
 #include "driver_snippet.c"
 
-// DRIVER_DISPATCH DispatchPnp;
-// _Dispatch_type_(IRP_MJ_READ)
-// DRIVER_DISPATCH DispatchCreate;
+
 
 #define _DRIVER_NAME_ "fail_driver1"
 
@@ -119,11 +117,13 @@ DispatchCreate (
 {   
     KAFFINITY ProcessorMask;
     PDRIVER_DEVICE_EXTENSION extension ;
+    IoMarkIrpPending(Irp);
     
+
     PVOID *badPointer = NULL;
 
     UNREFERENCED_PARAMETER(DeviceObject);
-    UNREFERENCED_PARAMETER(Irp);
+    //UNREFERENCED_PARAMETER(Irp);
 
     PAGED_CODE();
     
@@ -161,9 +161,11 @@ DispatchRead (
     */
     KSPIN_LOCK  queueLock;
     KIRQL oldIrql;
+    IoMarkIrpPending(Irp);
+
 
     UNREFERENCED_PARAMETER(DeviceObject);
-    UNREFERENCED_PARAMETER(Irp);
+    //UNREFERENCED_PARAMETER(Irp);
     PAGED_CODE();
 
     KeInitializeSpinLock(&queueLock);
@@ -171,7 +173,7 @@ DispatchRead (
 
     KeAcquireSpinLock(&queueLock, &oldIrql);
 	
-    return STATUS_SUCCESS;
+    return STATUS_PENDING;
 }
 
 NTSTATUS
