@@ -23,8 +23,6 @@ Environment:
 
 #include "driver_snippet.c"
 
-
-
 #define _DRIVER_NAME_ "fail_driver1"
 
 #ifndef __cplusplus

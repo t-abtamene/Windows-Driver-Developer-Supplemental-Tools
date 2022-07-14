@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+fe17922fc06350ac2c49a889782361f8dde0f5c8",
+        "semanticVersion" : "0.9.6+57bf9d817c868a52eab509a67430f598f652c1e4",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -592,33 +592,6 @@
         "index" : 0
       },
       "message" : {
-        "text" : "DispatchCreate"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
-          },
-          "region" : {
-            "startLine" : 113,
-            "endColumn" : 15
-          }
-        }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "d9f91e4a1ece5d64:1",
-        "primaryLocationStartColumnFingerprint" : "0"
-      }
-    }, {
-      "ruleId" : "cpp/portedqueries/dispatch-annotation-missing",
-      "ruleIndex" : 0,
-      "rule" : {
-        "id" : "cpp/portedqueries/dispatch-annotation-missing",
-        "index" : 0
-      },
-      "message" : {
         "text" : "DispatchPnp"
       },
       "locations" : [ {
@@ -629,7 +602,7 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 216,
+            "startLine" : 214,
             "endColumn" : 12
           }
         }

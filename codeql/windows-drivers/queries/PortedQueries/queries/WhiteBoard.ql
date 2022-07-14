@@ -12,4 +12,7 @@ import Windows.wdk.wdm.SAL
 
 
 
-select "hello world"
+
+from Function f
+where f.getName() = "DriverEntry"
+select f, "driver"

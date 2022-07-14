@@ -60,8 +60,6 @@ Return Value:
     NTSTATUS status;
     WDF_OBJECT_ATTRIBUTES attributes;
 
-    top_level_call();
-
     //
     // Initialize WPP Tracing
     //
@@ -123,6 +121,9 @@ Return Value:
 --*/
 {
     NTSTATUS status;
+
+    
+    top_level_call();
 
     UNREFERENCED_PARAMETER(Driver);
 
