@@ -4,7 +4,7 @@ This repository contains a set of CodeQL queries that are used to perform static
 
 ## Repo structure
 
-- 
+- PortedQueries
     - Analysis Files
         - DispatchAnnotationMissing.sarif
         - ...
@@ -19,31 +19,33 @@ This repository contains a set of CodeQL queries that are used to perform static
             - DispatchAnnotationMissing.ql
             - DispatchAnnotationMissing.qhelp
             - driver_snippet.c
+        - query2 
+        - ...
     - clean.cmd
     - run_all_tests.cmd
     - run_only_analysis.cmd
 
 #### Analysis Files
 
-* AnalysisFiles folder contains .sarif files. They are outputs of running Code Analysis on databases. The JSON property we look for in this files is the 'results' property. The value will be array of results of running a query. Each result object willl contain useful key-value pairs like line number and filename where an a result has occured.
+* AnalysisFiles folder contains .sarif files. They are outputs of running CodeQL Analysis on databases. The JSON property we look for in this files is the 'results' property. The value will be array of results of running a query. Each result object willl contain useful key-value pairs like line number and filename where an a result has occured.
 
 #### KMDFTestTemplate and WDFTestingTemplate
 
-* These files are basic KMDF and WDF driver templates used for testing purposes. Each folder has an empty driver_snippet.c file which will be replaced by the appropriate test snippet at build time. Not all of the tests work this way, though. For convienience reason, some code snippets are added to the template file itself, like the case of PendingStatusError query, forexample. In such cases, the introduction of the buggy piece of code won't affect results of other queries. 
+* These files are basic KMDF and WDF driver templates used for testing purposes. Each folder has an empty driver_snippet.c file which will be replaced by the appropriate test snippet at build time. Not all of the tests work this way, though. For convienience reason, some code snippets are added to the template file itself, like the case of PendingStatusError query's snippet, forexample. In such cases, the introduction of the buggy piece of code won't affect results of other queries. 
 
 #### queries
 
 Each query directory contains 3 files. 
 
-* a .qhelp files, which contains documentation for the query,
+* a .qhelp files, which contains documentation for the query (use vscode for a nicer view),
 * a .ql file which contains the query and 
-* a .c driver_snippet file which will replace the driver_snippet.c file in the templates at build time. If it is not convinient to copy this snippet to the templates, the buggy code will be added to the template file if it won't interfere with other tests.
+* a .c driver_snippet file which will replace the driver_snippet.c file in the templates at build time. If it is not convinient to copy this snippet to the templates, the buggy code will be added to the template file, given that it won't interfere with other tests.
 
 #### scripts
 
 * clean.cmd is used for cleaning the build directory 
-* run_all_tests.cmd is used for building the template with the snippet code (when copying is easier), creating databases, and running codeql analysis
-* run_only_analysis.cmd is used to perform only analysis
+* run_all_tests.cmd is used for building the template with the snippet code, creating databases, and running codeql analysis
+* run_only_analysis.cmd is used to perform analysis only
 
 
 ## Getting Started
@@ -75,7 +77,7 @@ CodeQL CLI can be downloaded from here:
 
 CodeQL language documentation for C/C++ can be found here: 
 
-* [CodeQL CLI](https://codeql.github.com/docs/ql-language-reference/)
+* [CodeQL doc](https://codeql.github.com/docs/ql-language-reference/)
 
 When developing querires in VSCode, the CodeQL extension should be installed from VSCode marketplace. A SarifViewer extension will also be useful tabulate results of CodeQL analysis. 
 
@@ -84,7 +86,7 @@ When developing querires in VSCode, the CodeQL extension should be installed fro
 
 * How to run the program
 
-If msbuild is not in the env path, the run_all_tests.cmd script should be run in Developer Command Prompt Window of visual studio. One must also have to add the the codeql.exe path to environment variables to avoid going back to the codeql directory to run codeql commands. The run_all_tests and run_only_analysis scripts assume that, but anyone can update the script to way they want. 
+If msbuild is not in the env path, the run_all_tests.cmd script should be run in Developer Command Prompt Window of visual studio. One must also have to add the the codeql.exe path to environment variables to avoid going back and forth to the codeql directory to run codeql commands. The run_all_tests and run_only_analysis scripts assume that, but anyone can update the script to way they want. 
 
 The two main codeql commands used in this project are create and analyse. A basic use of this commands is shown below:
 
@@ -93,8 +95,8 @@ The two main codeql commands used in this project are create and analyse. A basi
 ```
 codeql database create                          //database creation command
 -l=cpp                                          //language used
--c "msbuild /p:Platform=x64 /t:rebuild"         // build platform and target environment
-"D:\TestDB\MyDB"                                // a destination for the database
+-c "msbuild /p:Platform=x64 /t:rebuild"         //build platform and target environment
+"D:\TestDB\MyDB"                                //a destination for the database
 
 ```
 
