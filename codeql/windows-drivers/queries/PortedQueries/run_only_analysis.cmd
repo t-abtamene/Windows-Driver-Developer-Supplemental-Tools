@@ -4,6 +4,7 @@ call :test KeWaitLocal KMDFTestTemplate
 call :test PendingStatusError WDMTestingTemplate
 call :test DispatchMismatch WDMTestingTemplate
 call :test DispatchAnnotationMissing WDMTestingTemplate
+call :test NoPagedCode WDMTestingTemplate
 
 
 exit /b 0

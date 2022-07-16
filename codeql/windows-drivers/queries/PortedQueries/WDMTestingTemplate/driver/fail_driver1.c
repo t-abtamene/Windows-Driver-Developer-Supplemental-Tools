@@ -69,10 +69,7 @@ DriverAddDevice(
     UNREFERENCED_PARAMETER(DriverObject);
     UNREFERENCED_PARAMETER(PhysicalDeviceObject);
     
-    PAGED_CODE();
-    
-    // Injected CA defect for C28171
-    PAGED_CODE();
+
 
     status = IoCreateDevice(DriverObject,                 
                             sizeof(DRIVER_DEVICE_EXTENSION), 
@@ -95,6 +92,10 @@ DriverAddDevice(
            IoDeleteDevice(device);
            return STATUS_DEVICE_REMOVED;
        }
+
+        PAGED_CODE();
+    
+   
 
 
        IoInitializeDpcRequest(device,DpcForIsrRoutine);
@@ -121,10 +122,10 @@ DispatchCreate (
     PVOID *badPointer = NULL;
 
     UNREFERENCED_PARAMETER(DeviceObject);
-    //UNREFERENCED_PARAMETER(Irp);
+    UNREFERENCED_PARAMETER(Irp);
 
     PAGED_CODE();
-    
+    PAGED_CODE();
 
     ExFreePool(badPointer);
 
@@ -163,8 +164,7 @@ DispatchRead (
 
 
     UNREFERENCED_PARAMETER(DeviceObject);
-    //UNREFERENCED_PARAMETER(Irp);
-    PAGED_CODE();
+    UNREFERENCED_PARAMETER(Irp);
 
     KeInitializeSpinLock(&queueLock);
      
