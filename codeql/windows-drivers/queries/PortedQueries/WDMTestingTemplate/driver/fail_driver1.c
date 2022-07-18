@@ -30,7 +30,6 @@ Environment:
 #pragma alloc_text (PAGE, DriverAddDevice)
 #pragma alloc_text (PAGE, DispatchCreate)
 #pragma alloc_text (PAGE, DispatchRead)
-#pragma alloc_text (PAGE, DispatchPower)
 #pragma alloc_text (PAGE, DispatchSystemControl)
 #pragma alloc_text (PAGE, DispatchPnp)
 #pragma alloc_text (PAGE, DriverUnload)

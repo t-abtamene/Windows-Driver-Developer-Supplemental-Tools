@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/pending-status-error",
-          "name" : "cpp/portedqueries/pending-status-error",
+          "id" : "cpp/portedqueries/multiple-paged-code",
+          "name" : "cpp/portedqueries/multiple-paged-code",
           "shortDescription" : {
-            "text" : "PendingStatusError"
+            "text" : "MultiplePagedCode"
           },
           "fullDescription" : {
-            "text" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING."
+            "text" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING.",
-            "id" : "cpp/portedqueries/pending-status-error",
+            "description" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED.",
+            "id" : "cpp/portedqueries/multiple-paged-code",
             "kind" : "problem",
-            "name" : "PendingStatusError",
+            "name" : "MultiplePagedCode",
             "problem.severity" : "warning"
           }
         } ]
@@ -585,14 +585,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/pending-status-error",
+      "ruleId" : "cpp/portedqueries/multiple-paged-code",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/pending-status-error",
+        "id" : "cpp/portedqueries/multiple-paged-code",
         "index" : 0
       },
       "message" : {
-        "text" : "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
+        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,14 +602,42 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 118,
+            "startLine" : 126,
             "startColumn" : 5,
-            "endColumn" : 21
+            "endColumn" : 17
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "3f56178a343247bb:1",
+        "primaryLocationLineHash" : "6caf8f2c6d4e7cec:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      }
+    }, {
+      "ruleId" : "cpp/portedqueries/multiple-paged-code",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/portedqueries/multiple-paged-code",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "driver/fail_driver1.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 127,
+            "startColumn" : 5,
+            "endColumn" : 17
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "8d69881b61f399bf:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

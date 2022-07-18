@@ -1,9 +1,9 @@
-//Both failing and passing tests added to the WDMTestingTemplate
+//Both failing and passing tests cases are added to the WDMTestingTemplate
 
 
 /** Failing cases:
- * DriverAddDevice and DispatchRead rouines will raise warning as they were put in a PAGED section but 
- * they don't have PAGED_CODE or PAGED_CODE_LOCKED macros, or they call the macro after conditional statements. Read C28170 on MSDN for details. 
+ * DispatchPower should show failure as it has PAGED_CODE macro invocation but wasn't placed in a PAGE secion 
+ * using pragmas #pragma alloc_text or #pragma code_seg.
  * 
  */
 
@@ -13,8 +13,6 @@
  * 
  * 
  */
-
-
 
 
 /**

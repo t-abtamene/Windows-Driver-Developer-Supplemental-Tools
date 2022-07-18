@@ -5,6 +5,9 @@ call :test PendingStatusError WDMTestingTemplate
 call :test DispatchMismatch WDMTestingTemplate
 call :test DispatchAnnotationMissing WDMTestingTemplate
 call :test NoPagedCode WDMTestingTemplate
+call :test MultiplePagedCode WDMTestingTemplate
+call :test NoPagingSegment WDMTestingTemplate
+
 
 
 exit /b 0

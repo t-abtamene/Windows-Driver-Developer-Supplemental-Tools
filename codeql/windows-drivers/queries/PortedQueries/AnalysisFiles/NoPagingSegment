@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/pending-status-error",
-          "name" : "cpp/portedqueries/pending-status-error",
+          "id" : "cpp/portedqueries/no-paging-segment",
+          "name" : "cpp/portedqueries/no-paging-segment",
           "shortDescription" : {
-            "text" : "PendingStatusError"
+            "text" : "NoPagingSegment"
           },
           "fullDescription" : {
-            "text" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING."
+            "text" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING.",
-            "id" : "cpp/portedqueries/pending-status-error",
+            "description" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment",
+            "id" : "cpp/portedqueries/no-paging-segment",
             "kind" : "problem",
-            "name" : "PendingStatusError",
+            "name" : "NoPagingSegment",
             "problem.severity" : "warning"
           }
         } ]
@@ -585,14 +585,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/pending-status-error",
+      "ruleId" : "cpp/portedqueries/no-paging-segment",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/pending-status-error",
+        "id" : "cpp/portedqueries/no-paging-segment",
         "index" : 0
       },
       "message" : {
-        "text" : "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
+        "text" : "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,14 +602,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 118,
-            "startColumn" : 5,
-            "endColumn" : 21
+            "startLine" : 177,
+            "endColumn" : 14
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "3f56178a343247bb:1",
+        "primaryLocationLineHash" : "be199482cd2fa6fa:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

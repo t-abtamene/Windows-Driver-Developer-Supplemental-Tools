@@ -14,14 +14,14 @@
             "text" : "NoPagedCode"
           },
           "fullDescription" : {
-            "text" : "template"
+            "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "template",
+            "description" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found.",
             "id" : "cpp/portedqueries/no-paged-code",
             "kind" : "problem",
             "name" : "NoPagedCode",
@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+7f3f2396eae67e57f37ee626cec619a4734172a0",
+        "semanticVersion" : "0.9.6+5f1bd291c025620fc2a264466a9d638553354cd2",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -602,7 +602,7 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 153,
+            "startLine" : 152,
             "endColumn" : 13
           }
         }
@@ -629,7 +629,7 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 59,
+            "startLine" : 58,
             "endColumn" : 16
           }
         }

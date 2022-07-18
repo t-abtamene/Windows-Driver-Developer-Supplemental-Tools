@@ -1,32 +1,14 @@
 /**
  * @name NoPagedCode
  * @kind problem
- * @description template
+ * @description The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found.
  * @problem.severity warning
  * @id cpp/portedqueries/no-paged-code
  */
 
 import cpp
-import Windows.wdk.wdm.WdmDrivers
-import Windows.wdk.wdm.SAL
+import PortedQueries.PortLibrary.Page
 
-//Represents cases where a function has either PAGED_CODE OR PAGED_CODE_LOCKED invocations.
-class PagedFunc extends Function {
-  PagedFunc() {
-    exists(MacroInvocation mi |
-      mi.getEnclosingFunction() = this and
-      mi.getMacroName() = ["PAGED_CODE", "PAGED_CODE_LOCKED"]
-    )
-  }
-}
-
-//evaluates to true if a function is placed in a PAGED section
-predicate isInPagedCodeSection(Function f) {
-  exists(PreprocessorPragma ppp |
-    ppp.getHead().matches(["alloc_text%(%PAGE%", "code_seg%(%PAGE%"]) and
-    ppp.getHead().suffix(ppp.getHead().indexOf(",")).matches("%" + f.getName() + "%")
-  )
-}
 
 //evaluates true for functions that call PAGED_CODE() and are put in PAGED section
 //but have conditional statements before PAGED_CODE() call.
