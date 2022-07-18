@@ -9,6 +9,7 @@
 import cpp
 import PortedQueries.PortLibrary.Page
 
+//Selects functions/routines with two at least two PAGE_CODE invocations inside one function
 from Function f, MacroInvocation mi, MacroInvocation mi2
 where
   isInPagedCodeSection(f) and

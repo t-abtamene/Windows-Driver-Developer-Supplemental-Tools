@@ -1,5 +1,5 @@
 import cpp
-//Represents cases where a function has either PAGED_CODE OR PAGED_CODE_LOCKED invocations.
+//Represents functions where a function has either PAGED_CODE OR PAGED_CODE_LOCKED invocations.
 class PagedFunc extends Function {
     PagedFunc() {
       exists(MacroInvocation mi |

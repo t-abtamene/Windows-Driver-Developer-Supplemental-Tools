@@ -10,22 +10,25 @@ import cpp
 import Windows.wdk.wdm.WdmDrivers
 import Windows.wdk.wdm.SAL
 
+//Represents elements with DRIVER_DISPATCH type.
 class DriverDispatchDRoutineTypedef extends TypedefType {
   DriverDispatchDRoutineTypedef() { this.getName().matches("DRIVER_DISPATCH") }
 }
 
+//Evaluates to true for Routines with DRIVER_DISPATCH annotation
 predicate isDriverDispatchRoutine(Function f) {
   exists(FunctionDeclarationEntry fde |
     fde.getFunction() = f and
     fde.getTypedefType() instanceof DriverDispatchDRoutineTypedef
-    //   and fde.getFile().getAnIncludedFile().getBaseName().matches("%wdm.h")
   )
 }
 
+//Represents elements with _Dispatch_type_ and _drv_dispatchType annotation
 class DispatchAnnotations extends SALAnnotation {
   DispatchAnnotations() { this.getMacroName() = ["_Dispatch_type_", "__drv_dispatchType"] }
 }
 
+//Represents functions that with DRIVER_DISPATCH function type and DispatchAnnotation
 class SALAnnotatedDispatchRoutines extends Function {
   SALAnnotatedDispatchRoutines() {
     exists(DispatchAnnotations da |
@@ -35,6 +38,7 @@ class SALAnnotatedDispatchRoutines extends Function {
   }
 }
 
+//Evaluates to true if the assignment is to the MajorFunction table of a DRIVER_OBJECT
 predicate isMajorFunctionTableAssignments(Function f) {
   exists(AssignExpr ae, Expr exp |
     ae.getRValue() = exp and exp.(FunctionAccess).getTarget().getName() = f.getName()

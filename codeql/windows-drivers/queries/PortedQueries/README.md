@@ -32,9 +32,16 @@ This repository contains a set of CodeQL queries that are used to perform static
 
 * AnalysisFiles folder contains .sarif files. They are outputs of running CodeQL Analysis on test databases. The JSON property we look for in this files is the 'results' property. The value will be array of results of running a query. Each result object willl contain useful key-value pairs like line number and filename where an a result has occured.
 
+* Analysis files for inbox drivers and WDS will be added if they have "results".
+
 #### KMDFTestTemplate and WDFTestingTemplate
 
 * These files are basic KMDF and WDF driver templates used for testing purposes. Each folder has an empty driver_snippet.c file which will be replaced by the appropriate test snippet at build time. Not all of the tests work this way, though. For convienience reason, some code snippets are added to the template file itself, like the case of PendingStatusError query's snippet, forexample. In such cases, the introduction of the buggy piece of code won't affect results of other queries. 
+
+#### PortLibrary
+
+* Contais .qll files for frequently used functions. 
+
 
 #### queries
 
@@ -50,9 +57,11 @@ Each query directory contains 3 files.
 
 #### scripts
 
-* clean.cmd is used for cleaning the build directory 
-* run_all_tests.cmd is used for building the template with the snippet code, creating databases, and running codeql analysis
-* run_only_analysis.cmd is used to perform analysis only
+* build_create_analyze.cmd is used for building the template with the snippet code, creating databases, and running codeql analysis. For test samples only. 
+* analyze_test.cmd is used to perform analysis only on test samples. 
+* analyze_wds.cmd is used to perform analysis only on WDS. 
+* analyze_inbox.cmd is used to perform analysis only on inbox drivers. 
+
 
 
 ## Getting Started

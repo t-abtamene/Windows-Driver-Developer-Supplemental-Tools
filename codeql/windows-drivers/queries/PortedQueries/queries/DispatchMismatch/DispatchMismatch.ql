@@ -9,8 +9,9 @@
 import cpp
 import Windows.wdk.wdm.WdmDrivers
 
-class AnnotatedDispatchs extends Function {
-  AnnotatedDispatchs() {
+//Represents functions whose declaration annotations don't match their expected annotation type
+class MismatchedDispatches extends Function {
+  MismatchedDispatches() {
     exists(DispatchTypeDefinition dmi, WdmDispatchRoutine wdr, FunctionDeclarationEntry fde |
       this = fde.getFunction() and
       fde = wdr.getADeclarationEntry() and
@@ -20,6 +21,7 @@ class AnnotatedDispatchs extends Function {
   }
 }
 
+//Represents function with missing annotation in their declaration. 
 class NonAnnotatedDispatchs extends Function {
   NonAnnotatedDispatchs() {
     exists(DispatchTypeDefinition dmi, WdmDispatchRoutine wdr |
@@ -33,7 +35,7 @@ from FunctionAccess fa, WdmDispatchRoutine wdm
 where
   fa.getTarget() = wdm and not fa.getTarget() instanceof NonAnnotatedDispatchs
   or
-  fa.getTarget() instanceof AnnotatedDispatchs
+  fa.getTarget() instanceof MismatchedDispatches
 select fa.getTarget(),
   fa.getTarget() +
     " : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."

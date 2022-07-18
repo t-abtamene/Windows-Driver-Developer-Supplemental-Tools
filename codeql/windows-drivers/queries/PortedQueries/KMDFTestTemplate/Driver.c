@@ -122,7 +122,7 @@ Return Value:
 {
     NTSTATUS status;
 
-    
+    //For KeWaitLocal test
     top_level_call();
 
     UNREFERENCED_PARAMETER(Driver);

@@ -5,3 +5,4 @@ codeql/**/*.cache
 .vs
 .vscode
 out
+clean.cmd

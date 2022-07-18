@@ -1,5 +1,5 @@
 /*
-//Bad use
+//Bad use example 1
 DRIVER_DISPATCH SampleCreate;
 pDo->MajorFunction[IRP_MJ_CREATE] = SampleCreate;
 

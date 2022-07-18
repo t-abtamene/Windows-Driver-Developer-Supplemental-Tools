@@ -23,7 +23,6 @@ class KeWaitForSingleObjectCall extends FunctionCall {
     MLocalVariable() { this instanceof LocalVariable }
   }
   
-//   //Gets local variable accesses inside KeWaitForSingleObject call
   from VariableAccess va, MLocalVariable mlv, KeWaitForSingleObjectCall kwso
   where
     va.getTarget() = mlv and 

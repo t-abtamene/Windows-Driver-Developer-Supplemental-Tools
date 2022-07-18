@@ -1,9 +1,9 @@
 /*
-//Bad use
+//Bad use example
 DRIVER_DISPATCH SampleCreate;
 pDo->MajorFunction[IRP_MJ_CREATE] = SampleCreate;
 
-//Good use
+//Good use example 
 _Dispatch_type_(IRP_MJ_CREATE) DRIVER_DISPATCH SampleCreate;
 pDo->MajorFunction[IRP_MJ_CREATE] = SampleCreate;
 
@@ -20,6 +20,6 @@ extern "C" {
 //passes
 _Dispatch_type_(IRP_MJ_PNP)
 DRIVER_DISPATCH DispatchPnp; 
-//raises warning
+//raises warning: the SAL annotation in the declaration doesn't match the expected type in MajorFunction table. 
 _Dispatch_type_(IRP_MJ_CLOSE) 
 DRIVER_DISPATCH DispatchCreate;

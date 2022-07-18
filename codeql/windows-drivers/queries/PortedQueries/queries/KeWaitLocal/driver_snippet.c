@@ -7,7 +7,7 @@ void good_use(){
 }
 
 void bad_use(){
-    //Avoids warning
+    //Avoids warning as it's AccessMode is KernelMode for a local first argument, kevent2.
     KEVENT kevent2;
     KeWaitForSingleObject(&kevent2, UserRequest, KernelMode, FALSE, NULL);
 }

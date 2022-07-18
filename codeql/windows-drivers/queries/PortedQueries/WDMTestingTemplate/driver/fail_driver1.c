@@ -54,6 +54,7 @@ DriverEntry(
     return STATUS_SUCCESS;
 }
 
+//This routine represents a failing case for NoPagedCode
 NTSTATUS
 DriverAddDevice(
     _In_ PDRIVER_OBJECT DriverObject,
@@ -107,6 +108,7 @@ DriverAddDevice(
    return status;
 }
 
+//This Routine represents a failing case for PendingStatusError as no path returns STATUS_PENDING
 NTSTATUS
 DispatchCreate (
     _In_ PDEVICE_OBJECT DeviceObject,
@@ -124,6 +126,7 @@ DispatchCreate (
     UNREFERENCED_PARAMETER(Irp);
 
     PAGED_CODE();
+    //The check will mark the second occurance of PAGE_CODE as an error.
     PAGED_CODE();
 
     ExFreePool(badPointer);
@@ -148,6 +151,7 @@ DispatchCreate (
     return STATUS_SUCCESS;
 }
 
+//This routine represents a failing case for NoPagedCode
 NTSTATUS
 DispatchRead (
     _In_ PDEVICE_OBJECT DeviceObject,
@@ -173,6 +177,7 @@ DispatchRead (
     return STATUS_PENDING;
 }
 
+//This routine represents a failing case for NoPagingSegment.
 NTSTATUS
 DispatchPower (
     _In_ PDEVICE_OBJECT DeviceObject,
