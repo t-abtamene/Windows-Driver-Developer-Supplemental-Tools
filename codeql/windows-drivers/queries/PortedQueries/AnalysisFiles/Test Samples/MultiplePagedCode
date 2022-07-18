@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/no-paged-code",
-          "name" : "cpp/portedqueries/no-paged-code",
+          "id" : "cpp/portedqueries/multiple-paged-code",
+          "name" : "cpp/portedqueries/multiple-paged-code",
           "shortDescription" : {
-            "text" : "NoPagedCode"
+            "text" : "MultiplePagedCode"
           },
           "fullDescription" : {
-            "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
+            "text" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found.",
-            "id" : "cpp/portedqueries/no-paged-code",
+            "description" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED.",
+            "id" : "cpp/portedqueries/multiple-paged-code",
             "kind" : "problem",
-            "name" : "NoPagedCode",
+            "name" : "MultiplePagedCode",
             "problem.severity" : "warning"
           }
         } ]
@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+5f1bd291c025620fc2a264466a9d638553354cd2",
+        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -585,14 +585,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/no-paged-code",
+      "ruleId" : "cpp/portedqueries/multiple-paged-code",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/no-paged-code",
+        "id" : "cpp/portedqueries/multiple-paged-code",
         "index" : 0
       },
       "message" : {
-        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found. Go to https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/28170-pageable-code-macro-not-found for more info."
+        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,24 +602,25 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 152,
-            "endColumn" : 13
+            "startLine" : 126,
+            "startColumn" : 5,
+            "endColumn" : 17
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "abbdea56f4b49657:1",
+        "primaryLocationLineHash" : "6caf8f2c6d4e7cec:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     }, {
-      "ruleId" : "cpp/portedqueries/no-paged-code",
+      "ruleId" : "cpp/portedqueries/multiple-paged-code",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/no-paged-code",
+        "id" : "cpp/portedqueries/multiple-paged-code",
         "index" : 0
       },
       "message" : {
-        "text" : "The functions in pageable code must contain a PAGED_CODE or PAGED_CODE_LOCKED macro at the beginning of the function between the first brace ({{ ) and the first conditional statement. Go to https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/28170-pageable-code-macro-not-found for more info."
+        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -629,13 +630,14 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 58,
-            "endColumn" : 16
+            "startLine" : 127,
+            "startColumn" : 5,
+            "endColumn" : 17
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "154e7a8d6843d8bb:1",
+        "primaryLocationLineHash" : "8d69881b61f399bf:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

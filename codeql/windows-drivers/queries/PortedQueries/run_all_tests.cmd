@@ -24,7 +24,7 @@ msbuild /t:rebuild /p:platform=x64
 echo creating_database
 codeql database create -l=cpp -c "msbuild /p:Platform=x64 /t:rebuild" "C:\Users\t-abtamene\Desktop\TestDB\%1"
 echo analysing_database
-codeql database analyze "C:\Users\t-abtamene\Desktop\TestDB\%1" --format=sarifv2.1.0 --output="..\..\AnalysisFiles\%1" "..\..\queries\%1\%1.ql" 
+codeql database analyze "C:\Users\t-abtamene\Desktop\TestDB\%1" --format=sarifv2.1.0 --output="..\..\AnalysisFiles\Test Samples\%1" "..\..\queries\%1\%1.ql" 
 
 cd ..\..
 echo %0 %1 }

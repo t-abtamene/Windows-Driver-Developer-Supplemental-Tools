@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/multiple-paged-code",
-          "name" : "cpp/portedqueries/multiple-paged-code",
+          "id" : "cpp/portedqueries/pending-status-error",
+          "name" : "cpp/portedqueries/pending-status-error",
           "shortDescription" : {
-            "text" : "MultiplePagedCode"
+            "text" : "PendingStatusError"
           },
           "fullDescription" : {
-            "text" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED."
+            "text" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED.",
-            "id" : "cpp/portedqueries/multiple-paged-code",
+            "description" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING.",
+            "id" : "cpp/portedqueries/pending-status-error",
             "kind" : "problem",
-            "name" : "MultiplePagedCode",
+            "name" : "PendingStatusError",
             "problem.severity" : "warning"
           }
         } ]
@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+5f1bd291c025620fc2a264466a9d638553354cd2",
+        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -585,14 +585,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/multiple-paged-code",
+      "ruleId" : "cpp/portedqueries/pending-status-error",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/multiple-paged-code",
+        "id" : "cpp/portedqueries/pending-status-error",
         "index" : 0
       },
       "message" : {
-        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
+        "text" : "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,42 +602,14 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 126,
+            "startLine" : 118,
             "startColumn" : 5,
-            "endColumn" : 17
+            "endColumn" : 21
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "6caf8f2c6d4e7cec:1",
-        "primaryLocationStartColumnFingerprint" : "0"
-      }
-    }, {
-      "ruleId" : "cpp/portedqueries/multiple-paged-code",
-      "ruleIndex" : 0,
-      "rule" : {
-        "id" : "cpp/portedqueries/multiple-paged-code",
-        "index" : 0
-      },
-      "message" : {
-        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
-          },
-          "region" : {
-            "startLine" : 127,
-            "startColumn" : 5,
-            "endColumn" : 17
-          }
-        }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "8d69881b61f399bf:1",
+        "primaryLocationLineHash" : "3f56178a343247bb:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],
