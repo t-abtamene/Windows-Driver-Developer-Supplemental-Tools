@@ -10,6 +10,9 @@ import cpp
 import PortedQueries.PortLibrary.Page
 
 from Function f
-where not isInPagedCodeSection(f) and f instanceof PagedFunc
-select f,
-  "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
+where not isInPagedCodeSection(f) and f instanceof PagedFunc and not f.getAnAttribute().getName() = ["code_seg", "alloc_text"]
+select f, ""
+// "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
+// from MacroInvocation mi, TypedefType td
+// where mi.getMacroName() = "PAGED_CODE_SEG"
+// select mi, mi.

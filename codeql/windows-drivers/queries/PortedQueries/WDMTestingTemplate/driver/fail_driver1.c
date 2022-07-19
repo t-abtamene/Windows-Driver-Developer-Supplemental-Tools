@@ -25,14 +25,15 @@ Environment:
 
 #define _DRIVER_NAME_ "fail_driver1"
 
+#define PAGED_CODE_SEG __declspec(code_seg("PAGE"))
+
+
 #ifndef __cplusplus
 #pragma alloc_text (INIT, DriverEntry)
 #pragma alloc_text (PAGE, DriverAddDevice)
 #pragma alloc_text (PAGE, DispatchCreate)
 #pragma alloc_text (PAGE, DispatchRead)
-#pragma alloc_text (PAGE, DispatchSystemControl)
 #pragma alloc_text (PAGE, DispatchPnp)
-#pragma alloc_text (PAGE, DriverUnload)
 #endif
 
 NTSTATUS
@@ -195,6 +196,7 @@ DispatchPower (
     return status;
 }
 
+PAGED_CODE_SEG
 NTSTATUS
 DispatchSystemControl (
     _In_  PDEVICE_OBJECT  DeviceObject,
@@ -286,6 +288,7 @@ DpcForIsrRoutine(
     IoGetInitialStack();
 }
 
+#pragma code_seg("PAGE")
 VOID
 DriverUnload(
     _In_ PDRIVER_OBJECT DriverObject

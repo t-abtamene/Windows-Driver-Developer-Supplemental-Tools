@@ -381,7 +381,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
+        "semanticVersion" : "0.9.6+54845a38763c4f6fa1b27cb8c6b2071dbd8b75d8",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -602,7 +602,34 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 177,
+            "startLine" : 201,
+            "endColumn" : 22
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "23bd1c02614045d4:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      }
+    }, {
+      "ruleId" : "cpp/portedqueries/no-paging-segment",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/portedqueries/no-paging-segment",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "driver/fail_driver1.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 183,
             "endColumn" : 14
           }
         }
