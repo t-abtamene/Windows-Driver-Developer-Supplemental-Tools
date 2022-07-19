@@ -4,6 +4,7 @@
  * @description The dispatch function does not have any _Dispatch_type_ annotations
  * @problem.severity warning
  * @id cpp/portedqueries/dispatch-annotation-missing
+ * @version 1.0
  */
 
 import cpp

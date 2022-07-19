@@ -4,6 +4,7 @@
  * @description A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING.
  * @problem.severity warning
  * @id cpp/portedqueries/pending-status-error
+ * @version 1.0
  */
 
 import cpp

@@ -10,17 +10,29 @@ class PagedFunc extends Function {
   }
 }
 
-//evaluates to true if a function is placed in a PAGED section
-predicate isInPagedCodeSection(Function f) {
-  exists(PreprocessorPragma ppp, MacroInvocation mi |
-    ppp.getHead().matches(["alloc_text%(%PAGE%", "code_seg%(%PAGE%"]) and
-    ppp.getHead().suffix(ppp.getHead().indexOf(",")).matches("%" + f.getName() + "%")
-    or
-    ppp.getHead().matches(["alloc_text%(%PAGE%", "code_seg%(%PAGE%"]) and
-    ppp.getLocation().getStartLine() + 1 = f.getLocation().getStartLine()
-    or
-    ppp.getHead().matches(["alloc_text%(%PAGE%", "code_seg%(%PAGE%"]) and
-    ppp.getLocation().getStartLine() + 2 = f.getLocation().getStartLine()
-   
+//Represents elements in paged segment
+class PSection extends Function {
+  PSection() {
+    exists(PreprocessorPragma ppp |
+      ppp.getHead().matches("code\\_seg%") and
+      ppp.getLocation().getStartLine() < this.getLocation().getStartLine()
+      or
+      this.getAnAttribute().getName().matches("code\\_seg%")
+      or
+      ppp.getHead().matches("%" + this.getName() + "%")
+    )
+  }
+}
+
+
+//evaluates true for functions that call PAGED_CODE() and are put in PAGED section
+//but have conditional statements before PAGED_CODE() call.
+predicate isPageCodeAfterIf(Function f) {
+  exists(ConditionalStmt cs, MacroInvocation mi |
+    f instanceof PagedFunc and
+    cs.getEnclosingFunction() = f and
+    mi.getEnclosingFunction() = f and
+    mi.getMacroName() = ["PAGED_CODE", "PAGED_CODE_LOCKED"] and
+    cs.getLocation().getStartLine() < mi.getStmt().getLocation().getStartLine()
   )
 }

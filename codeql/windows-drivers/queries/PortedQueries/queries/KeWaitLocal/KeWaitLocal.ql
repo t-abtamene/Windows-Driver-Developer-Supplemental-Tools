@@ -4,6 +4,7 @@
  * @description If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode
  * @problem.severity warning
  * @id cpp/portedqueries/ke-wait-local
+ * @version 1.0
  */
 
 import cpp
