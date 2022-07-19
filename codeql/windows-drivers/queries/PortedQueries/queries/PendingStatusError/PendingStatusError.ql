@@ -15,7 +15,7 @@ class IORoutineTypedef extends TypedefType {
   IORoutineTypedef() { this.getName().matches("IO_COMPLETION_ROUTINE") }
 }
 
-//Evaluates to type for IO_COMPLETION_ROUTINE type routines.
+//Evaluates to true for IO_COMPLETION_ROUTINE type routines.
 predicate isIOCompletionRoutine(Function f) {
   exists(FunctionDeclarationEntry fde |
     fde.getFunction() = f and
@@ -26,11 +26,9 @@ predicate isIOCompletionRoutine(Function f) {
 from FunctionCall call, ReturnStmt rs
 where
   call.getTarget().getName() = "IoMarkIrpPending" and
-  (
-    rs.getExpr().getValueText() != "STATUS_PENDING" or
-    rs.getExpr().(Literal).getValue().toInt() != 259
-  ) and
+  call.getEnclosingFunction() instanceof WdmDispatchRoutine and
+  not rs.getExpr().(Literal).getValue().toInt() = 259 and
   call.getEnclosingBlock().getLastStmt() = rs and
-  not isIOCompletionRoutine(call.getEnclosingFunction()) and
-  call.getEnclosingFunction() instanceof WdmDispatchRoutine
-select call, "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
+  not isIOCompletionRoutine(call.getEnclosingFunction())
+select call.getEnclosingFunction(),
+  "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"

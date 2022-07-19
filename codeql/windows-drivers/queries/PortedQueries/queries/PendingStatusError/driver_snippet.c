@@ -9,6 +9,16 @@
 The two function declarations below are unrelated to this test. The reason they are here is because including them in the WDMTestingTemplate will interfer with DispatchAnnotationMissing and DispatchMismatch tests.
  * 
  */
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include <wdm.h>
+#ifdef __cplusplus
+}
+#endif
+
 _Dispatch_type_(IRP_MJ_PNP)
 DRIVER_DISPATCH DispatchPnp; 
 

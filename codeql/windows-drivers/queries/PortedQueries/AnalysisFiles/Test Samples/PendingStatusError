@@ -25,7 +25,8 @@
             "id" : "cpp/portedqueries/pending-status-error",
             "kind" : "problem",
             "name" : "PendingStatusError",
-            "problem.severity" : "warning"
+            "problem.severity" : "warning",
+            "version" : "1.0"
           }
         } ]
       },
@@ -381,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
+        "semanticVersion" : "0.9.6+1bed485b814bd01ae508c2ba14826beaac476cf4",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -602,7 +603,7 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 118,
+            "startLine" : 121,
             "startColumn" : 5,
             "endColumn" : 21
           }
