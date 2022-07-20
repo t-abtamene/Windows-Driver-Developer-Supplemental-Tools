@@ -25,8 +25,10 @@ This repository contains a set of CodeQL queries that are used to perform static
         - query2 
         - ...
     - clean.cmd
-    - run_all_tests.cmd
-    - run_only_analysis.cmd
+    - analyze_inbox.cmd
+    - analyze_wds.cmd
+    - analyze_test.cmd
+    - build_create_analyze_test.cmd
 
 #### Analysis Files
 
