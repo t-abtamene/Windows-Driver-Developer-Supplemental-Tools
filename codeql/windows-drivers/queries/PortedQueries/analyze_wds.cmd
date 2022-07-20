@@ -1,12 +1,12 @@
 @echo off
 
-call :test KeWaitLocal KMDFTestTemplate
-call :test PendingStatusError WDMTestingTemplate
-call :test DispatchMismatch WDMTestingTemplate
-call :test DispatchAnnotationMissing WDMTestingTemplate
-call :test NoPagedCode WDMTestingTemplate
-call :test MultiplePagedCode WDMTestingTemplate
-call :test NoPagingSegment WDMTestingTemplate
+@REM call :test KeWaitLocal 
+@REM call :test PendingStatusError 
+@REM call :test DispatchMismatch 
+@REM call :test DispatchAnnotationMissing 
+call :test NoPagedCode 
+@REM call :test MultiplePagedCode 
+@REM call :test NoPagingSegment 
 
 
 
@@ -14,16 +14,11 @@ exit /b 0
 
 :test
 echo %0 %1 {
-rd /s /q out\%1 >NUL 2>&1
-robocopy /e %2 out\%1\
-robocopy /e queries\%1\ out\%1\driver\
-
-cd out\%1
 
 echo analysing_database
-codeql database analyze "D:\windowsdriversample" --format=sarifv2.1.0 --output="..\..\AnalysisFiles\WDS\%1" "..\..\queries\%1\%1.ql" 
+codeql database analyze "D:\windowsdriversample" --format=sarifv2.1.0 --output="AnalysisFiles\WDS\%1" "queries\%1\%1.ql" 
 
-cd ..\..
+
 echo %0 %1 }
 echo.
 exit /b 0

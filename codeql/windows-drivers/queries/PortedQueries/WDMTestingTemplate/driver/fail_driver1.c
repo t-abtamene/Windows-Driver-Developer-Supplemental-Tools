@@ -70,7 +70,7 @@ DriverAddDevice(
     UNREFERENCED_PARAMETER(DriverObject);
     UNREFERENCED_PARAMETER(PhysicalDeviceObject);
     
-
+    PAGED_CODE();
 
     status = IoCreateDevice(DriverObject,                 
                             sizeof(DRIVER_DEVICE_EXTENSION), 
@@ -93,10 +93,6 @@ DriverAddDevice(
            IoDeleteDevice(device);
            return STATUS_DEVICE_REMOVED;
        }
-
-        PAGED_CODE();
-    
-   
 
 
        IoInitializeDpcRequest(device,DpcForIsrRoutine);
@@ -246,6 +242,7 @@ DispatchPnp (
     return status;
 }
 
+
 NTSTATUS
 CompletionRoutine(
     _In_ PDEVICE_OBJECT DeviceObject,
@@ -268,6 +265,7 @@ CompletionRoutine(
     return STATUS_SUCCESS;
 }
 
+#pragma code_seg()
 BOOLEAN
 InterruptServiceRoutine (
     _In_      PKINTERRUPT Interrupt,

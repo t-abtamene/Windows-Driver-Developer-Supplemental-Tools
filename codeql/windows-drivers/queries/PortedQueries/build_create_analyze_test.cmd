@@ -1,12 +1,12 @@
 @echo off
 
-call :test KeWaitLocal KMDFTestTemplate
-call :test PendingStatusError WDMTestingTemplate
-call :test DispatchMismatch WDMTestingTemplate
-call :test DispatchAnnotationMissing WDMTestingTemplate
+@REM call :test KeWaitLocal KMDFTestTemplate
+@REM call :test PendingStatusError WDMTestingTemplate
+@REM call :test DispatchMismatch WDMTestingTemplate
+@REM call :test DispatchAnnotationMissing WDMTestingTemplate
 call :test NoPagedCode WDMTestingTemplate
-call :test MultiplePagedCode WDMTestingTemplate
-call :test NoPagingSegment WDMTestingTemplate
+@REM call :test MultiplePagedCode WDMTestingTemplate
+@REM call :test NoPagingSegment WDMTestingTemplate
 
 
 

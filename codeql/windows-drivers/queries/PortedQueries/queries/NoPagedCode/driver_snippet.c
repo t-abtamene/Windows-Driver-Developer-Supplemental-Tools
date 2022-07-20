@@ -2,8 +2,8 @@
 
 
 /** Failing cases:
- * DriverAddDevice and DispatchRead rouines will raise warning as they were put in a PAGED section but 
- * they don't have PAGED_CODE or PAGED_CODE_LOCKED macros, or they call the macro after conditional statements. Read C28170 on MSDN for details. 
+ * CompletionRoutine and DispatchRead rouines will raise warning as they were put in a PAGED section but 
+ * they don't have PAGED_CODE or PAGED_CODE_LOCKED macros
  * 
  */
 

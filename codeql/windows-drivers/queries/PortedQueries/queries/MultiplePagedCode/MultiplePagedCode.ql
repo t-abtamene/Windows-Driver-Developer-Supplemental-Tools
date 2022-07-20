@@ -13,7 +13,7 @@ import PortedQueries.PortLibrary.Page
 //Selects functions/routines with two at least two PAGE_CODE invocations inside one function
 from Function f, MacroInvocation mi, MacroInvocation mi2
 where
-  f instanceof PSection and
+  f instanceof PagedFunctionDeclaration and
   f instanceof PagedFunc and
   mi.getEnclosingFunction() = f and
   mi2.getEnclosingFunction() = f and

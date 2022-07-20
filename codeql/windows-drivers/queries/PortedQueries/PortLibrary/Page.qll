@@ -1,7 +1,9 @@
 import cpp
 
-//Represents functions where a function has either PAGED_CODE OR PAGED_CODE_LOCKED invocations.
+//Represents functions where a function has either PAGED_CODE or PAGED_CODE_LOCKED macro invocations
+cached
 class PagedFunc extends Function {
+  cached
   PagedFunc() {
     exists(MacroInvocation mi |
       mi.getEnclosingFunction() = this and
@@ -10,23 +12,12 @@ class PagedFunc extends Function {
   }
 }
 
-//evaluates true for functions that call PAGED_CODE() and are put in PAGED section
-//but have conditional statements before PAGED_CODE() call.
-predicate isPageCodeAfterIf(Function f) {
-  exists(ConditionalStmt cs, MacroInvocation mi |
-    f instanceof PagedFunc and
-    cs.getEnclosingFunction() = f and
-    mi.getEnclosingFunction() = f and
-    mi.getMacroName() = ["PAGED_CODE", "PAGED_CODE_LOCKED"] and
-    cs.getLocation().getStartLine() < mi.getStmt().getLocation().getStartLine()
-  )
-}
-
-//Represents code_seg pragma
+//Represents code_seg("PAGE") pragma
 class CodeSegPragma extends PreprocessorPragma {
   CodeSegPragma() { this.getHead().matches("code\\_seg(\"PAGE\")") }
 }
 
+//Represents a code_seg() pragma
 class DefaultCodeSegPragma extends PreprocessorPragma {
   DefaultCodeSegPragma() { this.getHead().matches("code\\_seg()") }
 }
@@ -38,35 +29,54 @@ class AllocSegPragma extends PreprocessorPragma {
 
 //Evaluates to true if a PagedFunc was placed in a PAGE section using alloc_text pragma
 predicate isAllocUsedToLocatePagedFunc(Function pf) {
-  exists(AllocSegPragma ca | ca.getHead().matches("%" + pf.getName() + "%"))
-}
-
-//Evaluates to true if there is a code_seg("PAGE") pragma above the given PagedFunc
-predicate isPageCodeSectionSetAbove(Function pf) {
-  exists(CodeSegPragma csp | csp.getLocation().getStartLine() < pf.getLocation().getStartLine())
+  exists(AllocSegPragma asp |
+    asp.getHead().matches("%" + pf.getName() + "%") and
+    asp.getFile().getBaseName() = pf.getFile().getBaseName()
+  )
 }
 
 //Evaluates to true if there is Macro Invocation above PagedFunc which expands to code_seg("PAGE")
 predicate isPagedSegSetWithMacroAbove(Function pf) {
   exists(MacroInvocation ma |
     ma.getMacro().getBody().matches("%code\\_seg(\"PAGE\")%") and
-    ma.getLocation().getStartLine() <= pf.getLocation().getStartLine()
+    ma.getLocation().getStartLine() <= pf.getLocation().getStartLine() and
+    pf.getAnAttribute().getName() = "code_seg"
   )
 }
 
-//Filters out empty code_seg() as they default to .text section. So functions with code_seg() pragma above them won't raise NoPagedCode, aka C28170, warning.
-predicate isPragmaTheDefault(Function f) {
-  exists(CodeSegPragma csp, DefaultCodeSegPragma dcsp |
-    csp.getLocation().getStartLine() < f.getLocation().getStartLine() and
-    dcsp.getLocation().getStartLine() > csp.getLocation().getStartLine()
+//A way to filter out page resets. There isn't a simple way to figure out
+//whether it's code_seg("PAGE%" OR code_seg() pragma is closer to the definition of the function.
+predicate isThereAPageReset(Function f) {
+  exists(DefaultCodeSegPragma dcsp |
+    dcsp.getFile().getBaseName() = f.getFile().getBaseName() and
+    (
+      dcsp.getLocation().getStartLine() + 1 = f.getLocation().getStartLine()
+      or
+      dcsp.getLocation().getStartLine() + 2 = f.getLocation().getStartLine()
+      or
+      dcsp.getLocation().getStartLine() + 3 = f.getLocation().getStartLine()
+    )
   )
+}
+
+//Evaluates to true if there is a code_seg("PAGE") pragma above the given PagedFunc
+predicate isPageCodeSectionSetAbove(Function f) {
+  exists(CodeSegPragma csp |
+    csp.getLocation().getStartLine() < f.getLocation().getStartLine() and
+    csp.getFile().getBaseName() = f.getFile().getBaseName()
+  ) and
+  not isThereAPageReset(f)
 }
 
 //Represents a paged section
-class FunctionDeclaredInPageSection extends Function {
-  FunctionDeclaredInPageSection() {
-    isPagedSegSetWithMacroAbove(this) or
-    isPageCodeSectionSetAbove(this) or
+cached
+class PagedFunctionDeclaration extends Function {
+  cached
+  PagedFunctionDeclaration() {
+    isPagedSegSetWithMacroAbove(this)
+    or
+    isPageCodeSectionSetAbove(this)
+    or
     isAllocUsedToLocatePagedFunc(this)
   }
 }
