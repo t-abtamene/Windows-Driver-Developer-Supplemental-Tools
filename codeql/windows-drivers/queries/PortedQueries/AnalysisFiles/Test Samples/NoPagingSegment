@@ -25,7 +25,8 @@
             "id" : "cpp/portedqueries/no-paging-segment",
             "kind" : "problem",
             "name" : "NoPagingSegment",
-            "problem.severity" : "warning"
+            "problem.severity" : "warning",
+            "version" : "1.0"
           }
         } ]
       },
@@ -381,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+54845a38763c4f6fa1b27cb8c6b2071dbd8b75d8",
+        "semanticVersion" : "0.9.6+41a132a9e27691ebd82ca366acd1e671996ea8bd",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -592,7 +593,7 @@
         "index" : 0
       },
       "message" : {
-        "text" : "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
+        "text" : "DriverUnload"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,13 +603,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 201,
-            "endColumn" : 22
+            "startLine" : 221,
+            "endColumn" : 13
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "23bd1c02614045d4:1",
+        "primaryLocationLineHash" : "afb8b824485d31df:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     }, {
@@ -619,7 +620,7 @@
         "index" : 0
       },
       "message" : {
-        "text" : "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
+        "text" : "DispatchPnp"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -629,13 +630,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 183,
-            "endColumn" : 14
+            "startLine" : 233,
+            "endColumn" : 12
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "be199482cd2fa6fa:1",
+        "primaryLocationLineHash" : "4d0822c81377d3a8:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

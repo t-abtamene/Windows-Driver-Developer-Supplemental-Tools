@@ -7,12 +7,13 @@
  * @version 1.0
  */
 
+
 import cpp
 import PortedQueries.PortLibrary.Page
 
-from Function f
-where
-  f instanceof PagedFunc and
-  not f instanceof PSection
-select f,
-  "A function that contains a PAGED_CODE or PAGED_CODE_LOCKED macro has not been placed in paged memory by using #pragma alloc_text or #pragma code_seg."
+from PagedFunc pf
+where 
+  not isPageCodeSectionSetAbove(pf) and
+  not isPagedSegSetWithMacroAbove(pf) and
+  not isAllocUsedToLocatePagedFunc(pf)
+select pf, pf.getName()

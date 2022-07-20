@@ -216,6 +216,19 @@ DispatchSystemControl (
     return STATUS_SUCCESS;
 }
 
+#pragma code_seg("PAGE")
+VOID
+DriverUnload(
+    _In_ PDRIVER_OBJECT DriverObject
+    )
+{
+    UNREFERENCED_PARAMETER(DriverObject);
+    PAGED_CODE();
+     
+    return;
+}
+
+
 NTSTATUS
 DispatchPnp (
     _In_ PDEVICE_OBJECT DeviceObject,
@@ -288,14 +301,3 @@ DpcForIsrRoutine(
     IoGetInitialStack();
 }
 
-#pragma code_seg("PAGE")
-VOID
-DriverUnload(
-    _In_ PDRIVER_OBJECT DriverObject
-    )
-{
-    UNREFERENCED_PARAMETER(DriverObject);
-    PAGED_CODE();
-     
-    return;
-}
