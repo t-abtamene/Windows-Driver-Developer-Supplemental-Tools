@@ -34,7 +34,7 @@ This repository contains a set of CodeQL queries that are used to perform static
 
 * AnalysisFiles folder contains .sarif files. They are outputs of running CodeQL Analysis on test databases. The JSON property we look for in this files is the 'results' property. The value will be array of results of running a query. Each result object willl contain useful key-value pairs like line number and filename where an a result has occured.
 
-* Analysis files for inbox drivers and WDS will be added if they have "results".
+* Analysis files WDS and Test Samples are added. Same is true for output of CA checks on WDS.
 
 #### KMDFTestTemplate and WDFTestingTemplate
 
@@ -57,12 +57,16 @@ Each query directory contains 3 files.
 * a .ql file which contains the query and 
 * a .c driver_snippet file which will replace the driver_snippet.c file in the templates at build time. If it is not convinient to copy this snippet to the templates, the buggy code will be added to the template file, given that it won't interfere with other tests.
 
+
+#### suites
+
+* Contains a query suite for ported CA checks. 
+
 #### scripts
 
-* build_create_analyze.cmd is used for building the template with the snippet code, creating databases, and running codeql analysis. For test samples only. 
+* build_create_analyze_test.cmd is used for building the template with the snippet code, creating databases, and running codeql analysis. For test samples only. 
 * analyze_test.cmd is used to perform analysis only on test samples. 
-* analyze_wds.cmd is used to perform analysis only on WDS. 
-* analyze_inbox.cmd is used to perform analysis only on inbox drivers. 
+* analyze_for_inbox_and_wds.cmd has commented out command for running the ported query suite on WDS or inbox drivers database. 
 
 
 
