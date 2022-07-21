@@ -25,7 +25,8 @@
             "id" : "cpp/portedqueries/multiple-paged-code",
             "kind" : "problem",
             "name" : "MultiplePagedCode",
-            "problem.severity" : "warning"
+            "problem.severity" : "warning",
+            "version" : "1.0"
           }
         } ]
       },
@@ -381,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
+        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -585,34 +586,6 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/multiple-paged-code",
-      "ruleIndex" : 0,
-      "rule" : {
-        "id" : "cpp/portedqueries/multiple-paged-code",
-        "index" : 0
-      },
-      "message" : {
-        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
-          },
-          "region" : {
-            "startLine" : 126,
-            "startColumn" : 5,
-            "endColumn" : 17
-          }
-        }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "6caf8f2c6d4e7cec:1",
-        "primaryLocationStartColumnFingerprint" : "0"
-      }
-    }, {
       "ruleId" : "cpp/portedqueries/multiple-paged-code",
       "ruleIndex" : 0,
       "rule" : {

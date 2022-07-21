@@ -25,7 +25,8 @@
             "id" : "cpp/portedqueries/ke-wait-local",
             "kind" : "problem",
             "name" : "KeWaitLocal",
-            "problem.severity" : "warning"
+            "problem.severity" : "warning",
+            "version" : "1.0"
           }
         } ]
       },
@@ -381,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
+        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -609,7 +610,7 @@
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "61bc3c707934766c:1",
+        "primaryLocationLineHash" : "61bc3c7079348327:1",
         "primaryLocationStartColumnFingerprint" : "23"
       }
     } ],

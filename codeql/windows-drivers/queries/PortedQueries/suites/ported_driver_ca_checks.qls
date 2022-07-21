@@ -1,0 +1,14 @@
+# Query Suite for ported CA checks
+
+- description: Ported CA checks
+- queries: .
+  from: windows-drivers
+- include:
+    query path: 
+      - PortedQueries/queries/DispatchAnnotationMissing/DispatchAnnotationMissing.ql
+      - PortedQueries/queries/DispatchMismatch/DispatchMismatch.ql
+      - PortedQueries/queries/KeWaitLocal/KeWaitLocal.ql
+      - PortedQueries/queries/MultiplePagedCode/MultiplePagedCode.ql
+      - PortedQueries/queries/NoPagedCode/NoPagedCode.ql
+      - PortedQueries/queries/NoPagingSegment/NoPagingSegment.ql
+      - PortedQueries/queries/PendingStatusError/PendingStatusError.ql

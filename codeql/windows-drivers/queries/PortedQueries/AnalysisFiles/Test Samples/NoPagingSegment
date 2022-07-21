@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+41a132a9e27691ebd82ca366acd1e671996ea8bd",
+        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -593,7 +593,7 @@
         "index" : 0
       },
       "message" : {
-        "text" : "DriverUnload"
+        "text" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -603,40 +603,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 221,
-            "endColumn" : 13
+            "startLine" : 179,
+            "endColumn" : 14
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "afb8b824485d31df:1",
-        "primaryLocationStartColumnFingerprint" : "0"
-      }
-    }, {
-      "ruleId" : "cpp/portedqueries/no-paging-segment",
-      "ruleIndex" : 0,
-      "rule" : {
-        "id" : "cpp/portedqueries/no-paging-segment",
-        "index" : 0
-      },
-      "message" : {
-        "text" : "DispatchPnp"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
-          },
-          "region" : {
-            "startLine" : 233,
-            "endColumn" : 12
-          }
-        }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "4d0822c81377d3a8:1",
+        "primaryLocationLineHash" : "be199482cd2fa6fa:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

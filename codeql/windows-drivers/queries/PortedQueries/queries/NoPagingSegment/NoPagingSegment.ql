@@ -14,6 +14,7 @@ from PagedFunc pf
 where
   not isPageCodeSectionSetAbove(pf) and
   not isPagedSegSetWithMacroAbove(pf) and
-  not isAllocUsedToLocatePagedFunc(pf)
+  not isAllocUsedToLocatePagedFunc(pf) and 
+  pf.getFile().getExtension() != "tmh"
 select pf,
   "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"

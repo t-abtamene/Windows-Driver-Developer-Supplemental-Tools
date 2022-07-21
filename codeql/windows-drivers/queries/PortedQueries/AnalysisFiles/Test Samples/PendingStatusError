@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+1bed485b814bd01ae508c2ba14826beaac476cf4",
+        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -603,14 +603,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 121,
-            "startColumn" : 5,
-            "endColumn" : 21
+            "startLine" : 110,
+            "endColumn" : 15
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "3f56178a343247bb:1",
+        "primaryLocationLineHash" : "d9f91e4a1ece5d64:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

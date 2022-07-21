@@ -25,7 +25,8 @@
             "id" : "cpp/portedqueries/no-paged-code",
             "kind" : "problem",
             "name" : "NoPagedCode",
-            "problem.severity" : "warning"
+            "problem.severity" : "warning",
+            "version" : "1.0"
           }
         } ]
       },
@@ -381,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+c6943fc061e0402215f77dfb98d84f85c3b50f14",
+        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -592,7 +593,7 @@
         "index" : 0
       },
       "message" : {
-        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found. Go to https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/28170-pageable-code-macro-not-found for more info."
+        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -602,13 +603,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 152,
-            "endColumn" : 13
+            "startLine" : 285,
+            "endColumn" : 17
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "abbdea56f4b49657:1",
+        "primaryLocationLineHash" : "1ceb9aae73b088d1:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     }, {
@@ -619,7 +620,7 @@
         "index" : 0
       },
       "message" : {
-        "text" : "The functions in pageable code must contain a PAGED_CODE or PAGED_CODE_LOCKED macro at the beginning of the function between the first brace ({{ ) and the first conditional statement. Go to https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/28170-pageable-code-macro-not-found for more info."
+        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -629,13 +630,40 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 58,
-            "endColumn" : 16
+            "startLine" : 247,
+            "endColumn" : 18
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "154e7a8d6843d8bb:1",
+        "primaryLocationLineHash" : "2cc34c83d7c31dbb:1",
+        "primaryLocationStartColumnFingerprint" : "0"
+      }
+    }, {
+      "ruleId" : "cpp/portedqueries/no-paged-code",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/portedqueries/no-paged-code",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "driver/fail_driver1.c",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 153,
+            "endColumn" : 13
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "abbdea56f4b49657:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],
