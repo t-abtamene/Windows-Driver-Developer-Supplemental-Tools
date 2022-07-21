@@ -6,7 +6,12 @@ This repository contains a set of CodeQL queries that are used to perform static
 
 - PortedQueries
     - Analysis Files
-        - DispatchAnnotationMissing.sarif
+        - Test Samples
+            - DispatchAnnotationMissing.sarif
+        - WDS
+            - wds_result.json
+        - CA on WDS
+            - build_result.log
         - ...
     - KMDFTestTemplate
         - KMDFTestTemplate.vcproj
@@ -17,6 +22,9 @@ This repository contains a set of CodeQL queries that are used to perform static
     - PortLibrary
         - Page.qll
         - ...
+    - suites
+        - ported_driver_ca_checks.qls
+        - ...
     - queries
         - DispatchAnnotationMissing
             - DispatchAnnotationMissing.ql
@@ -25,10 +33,10 @@ This repository contains a set of CodeQL queries that are used to perform static
         - query2 
         - ...
     - clean.cmd
-    - analyze_inbox.cmd
-    - analyze_wds.cmd
+    - analyze_for_inbox_and_wds.cmd
     - analyze_test.cmd
     - build_create_analyze_test.cmd
+    - README.md
 
 #### Analysis Files
 
