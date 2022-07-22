@@ -4,7 +4,7 @@
 
 
 @REM echo analysing WDS
-@REM codeql database analyze "D:\windowsdriversample" --format=sarifv2.1.0 --output="AnalysisFiles\WDS\wds_result" "suites\ported_driver_ca_checks.qls" 
+@REM codeql database analyze "D:\WDS" --format=sarifv2.1.0 --output="AnalysisFiles\WDS\wds_result" "suites\ported_driver_ca_checks.qls" 
 @REM echo analysis for WDS finished
 
 

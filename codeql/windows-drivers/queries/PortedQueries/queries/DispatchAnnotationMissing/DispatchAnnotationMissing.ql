@@ -53,4 +53,4 @@ where
   isDriverDispatchRoutine(f) and
   not f instanceof SALAnnotatedDispatchRoutines and
   isMajorFunctionTableAssignments(f)
-select f, f.getName()
+select f, "The dispatch function does not have any _Dispatch_type_ annotations"

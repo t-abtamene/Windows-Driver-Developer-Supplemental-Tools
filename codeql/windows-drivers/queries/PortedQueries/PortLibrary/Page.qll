@@ -24,7 +24,11 @@ class DefaultCodeSegPragma extends PreprocessorPragma {
 
 //Represents alloc_text pragma
 class AllocSegPragma extends PreprocessorPragma {
-  AllocSegPragma() { this.getHead().matches("alloc\\_text%(PAGE,%") }
+  AllocSegPragma() {
+    this.getHead().matches("alloc\\_text%(PAGE,%") or
+    this.getHead().matches("NDIS\\_PAGEABLE\\_FUNCTION%") or
+    this.getHead().matches("NDIS\\_PAGABLE\\_FUNCTION%")
+  }
 }
 
 //Evaluates to true if a PagedFunc was placed in a PAGE section using alloc_text pragma
@@ -44,28 +48,27 @@ predicate isPagedSegSetWithMacroAbove(Function pf) {
   )
 }
 
-//A way to filter out page resets. There isn't a simple way to figure out
-//whether it's code_seg("PAGE%" OR code_seg() pragma is closer to the definition of the function.
-predicate isThereAPageReset(Function f) {
-  exists(DefaultCodeSegPragma dcsp |
-    dcsp.getFile().getBaseName() = f.getFile().getBaseName() and
-    (
-      dcsp.getLocation().getStartLine() + 1 = f.getLocation().getStartLine()
-      or
-      dcsp.getLocation().getStartLine() + 2 = f.getLocation().getStartLine()
-      or
-      dcsp.getLocation().getStartLine() + 3 = f.getLocation().getStartLine()
-    )
-  )
-}
-
 //Evaluates to true if there is a code_seg("PAGE") pragma above the given PagedFunc
 predicate isPageCodeSectionSetAbove(Function f) {
-  exists(CodeSegPragma csp |
-    csp.getLocation().getStartLine() < f.getLocation().getStartLine() and
+  exists(CodeSegPragma csp, int diff |
+    (f.getLocation().getStartLine() - csp.getLocation().getStartLine()) = diff and
+    diff < 4 and
+    diff > 0 and
     csp.getFile().getBaseName() = f.getFile().getBaseName()
   ) and
   not isThereAPageReset(f)
+}
+
+//Evaluates to true if there's a change to default code segment, with pragma code_seg().
+predicate isThereAPageReset(Function f) {
+  exists(DefaultCodeSegPragma dcsp, int diff |
+    dcsp.getFile().getBaseName() = f.getFile().getBaseName() and
+    (
+      (f.getLocation().getStartLine() - dcsp.getLocation().getStartLine()) = diff and
+      diff < 4 and
+      diff > 0
+    )
+  )
 }
 
 //Represents a paged section

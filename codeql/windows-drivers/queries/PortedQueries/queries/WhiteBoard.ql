@@ -7,12 +7,8 @@
  */
 
 import cpp
-import Windows.wdk.wdm.WdmDrivers
-import Windows.wdk.wdm.SAL
+import semmle.code.cpp.commons.Exclusions
+import PortedQueries.PortLibrary.Page
 
-
-
-
-from Function f
-where f.getName() = "DriverEntry"
-select f, "driver"
+from AllocSegPragma ap
+select ap, ap.getHead()
