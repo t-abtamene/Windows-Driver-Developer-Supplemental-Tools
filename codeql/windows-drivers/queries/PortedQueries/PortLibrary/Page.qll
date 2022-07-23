@@ -25,7 +25,7 @@ class DefaultCodeSegPragma extends PreprocessorPragma {
 //Represents alloc_text pragma
 class AllocSegPragma extends PreprocessorPragma {
   AllocSegPragma() {
-    this.getHead().matches("alloc\\_text%(PAGE,%") or
+    this.getHead().matches("alloc\\_text%PAGE%") or
     this.getHead().matches("NDIS\\_PAGEABLE\\_FUNCTION%") or
     this.getHead().matches("NDIS\\_PAGABLE\\_FUNCTION%")
   }
@@ -35,7 +35,7 @@ class AllocSegPragma extends PreprocessorPragma {
 predicate isAllocUsedToLocatePagedFunc(Function pf) {
   exists(AllocSegPragma asp |
     asp.getHead().matches("%" + pf.getName() + "%") and
-    asp.getFile().getBaseName() = pf.getFile().getBaseName()
+    asp.getFile() = pf.getFile()
   )
 }
 
@@ -54,20 +54,25 @@ predicate isPageCodeSectionSetAbove(Function f) {
     (f.getLocation().getStartLine() - csp.getLocation().getStartLine()) = diff and
     diff < 4 and
     diff > 0 and
-    csp.getFile().getBaseName() = f.getFile().getBaseName()
-  ) and
-  not isThereAPageReset(f)
+    csp.getFile() = f.getFile() and
+    not isThereAPageReset(f, csp)
+  )
+}
+
+//Evaluates to true if there is a code_seg("PAGE") pragma above the given PagedFunc
+//Similar to the above, but tweaked a litttle bit as to handle for code_seg usage inconsistencies in codebases.
+predicate isPageCodeSectionSetAbove2(Function f) {
+  exists(CodeSegPragma csp |
+    f.getLocation().getStartLine() > csp.getLocation().getStartLine() and
+    f.getFile() = csp.getFile()
+  )
 }
 
 //Evaluates to true if there's a change to default code segment, with pragma code_seg().
-predicate isThereAPageReset(Function f) {
-  exists(DefaultCodeSegPragma dcsp, int diff |
-    dcsp.getFile().getBaseName() = f.getFile().getBaseName() and
-    (
-      (f.getLocation().getStartLine() - dcsp.getLocation().getStartLine()) = diff and
-      diff < 4 and
-      diff > 0
-    )
+predicate isThereAPageReset(Function f, CodeSegPragma csp) {
+  exists(DefaultCodeSegPragma dcsp |
+    dcsp.getFile() = f.getFile() and
+    dcsp.getLocation().getStartLine() > csp.getLocation().getStartLine()
   )
 }
 

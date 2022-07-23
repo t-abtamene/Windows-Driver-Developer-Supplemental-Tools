@@ -42,7 +42,7 @@ This repository contains a set of CodeQL queries that are used to perform static
 
 * AnalysisFiles folder contains .sarif files. They are outputs of running CodeQL Analysis on test databases. The JSON property we look for in this files is the 'results' property. The value will be array of results of running a query. Each result object willl contain useful key-value pairs like line number and filename where an a result has occured.
 
-* Analysis files WDS and Test Samples are added. Same is true for output of CA checks on WDS.
+* Analysis files WDS and Test Samples are added.
 
 #### KMDFTestTemplate and WDFTestingTemplate
 
