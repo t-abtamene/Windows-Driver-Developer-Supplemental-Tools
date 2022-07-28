@@ -224,6 +224,18 @@ DriverUnload(
     return;
 }
 
+_IRQL_requires_(PASSIVE_LEVEL) 
+NTSTATUS
+IrqlLowTestFunction(){
+
+    return STATUS_SUCCESS;
+}
+
+_IRQL_requires_(DISPATCH_LEVEL) 
+NTSTATUS
+IrqlHighTestFunction(){
+    return STATUS_SUCCESS;
+}
 
 NTSTATUS
 DispatchPnp (
@@ -231,7 +243,8 @@ DispatchPnp (
     _Inout_ PIRP Irp
     )
 {   
-	
+	KIRQL oldIrql;
+    KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
     /*
        This defect is injected for "LowerDriverReturn" rule.
     */
@@ -258,6 +271,9 @@ CompletionRoutine(
     _Analysis_assume_(EventIn != NULL);
     KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
 
+    IrqlLowTestFunction();
+
+    KeLowerIrql(oldIrql);
     /*
        This defect is injected for IrqlKeSetEvent rule
     */ 
@@ -296,6 +312,12 @@ DpcForIsrRoutine(
        This defect is injected for IrqlIoApcLte rule
 
     */
+
+    KIRQL oldIrql;
+    KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
+    KeLowerIrql(oldIrql);
+    IrqlLowTestFunction();
+
     IoGetInitialStack();
 }
 
