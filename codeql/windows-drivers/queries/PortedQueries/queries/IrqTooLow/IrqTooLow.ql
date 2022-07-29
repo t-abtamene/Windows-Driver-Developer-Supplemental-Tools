@@ -10,12 +10,14 @@
 import cpp
 import PortedQueries.PortLibrary.Irql
 
+//
 from IrqlAnnotatedFunction iaf, CallsToIrqlAnnotatedFunction ciaf, int curr, int called
 where
   ciaf.getEnclosingFunction() = iaf and
   iaf.getIrqlLevel() = curr and
   getActualIrqlFunc(ciaf).(IrqlAnnotatedFunction).getIrqlLevel() = called and
-  curr < called
+  curr < called and
+  not iaf.getFuncIrqlName().matches("%min%")
 select ciaf,
-  "Irql was set to " + curr + " in " + iaf.getName() +
-    " but this function in its call hierarchy requires " + called + " Irql level."
+  "Irql was set to " + curr + " in " + iaf.getName() + " but " + ciaf.getTarget().getName() +
+    " in its call hierarchy requires " + called + " Irql level."

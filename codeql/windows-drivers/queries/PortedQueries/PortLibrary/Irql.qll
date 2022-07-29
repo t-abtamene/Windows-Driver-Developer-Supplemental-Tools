@@ -3,31 +3,41 @@ import Windows.wdk.wdm.SAL
 
 class IrqlTypeDefinition extends SALAnnotation {
   string irqlType;
+  string irqlMacroName;
 
+  //Types
   IrqlTypeDefinition() {
     //Needs to include other Irql annotations too.
     this.getMacroName().matches(["_IRQL_requires_max_", "_IRQL_requires_min_", "_IRQL_requires_"]) and
+    irqlMacroName = this.getMacroName() and
     exists(MacroInvocation mi |
       mi.getParentInvocation() = this and
       irqlType = mi.getMacro().getHead()
     )
   }
 
-  string getIrqlType() { result = irqlType }
+  string getIrqlLevelFull() { result = irqlType }
+
+  string getIrqlMacroName() { result = irqlMacroName }
 }
 
+//Represents Irql annotationed functions. 
 class IrqlAnnotatedFunction extends Function {
-  string funcLevel;
+  string funcIrql;
+  string funcIrqlName;
 
   IrqlAnnotatedFunction() {
     exists(IrqlTypeDefinition itd, FunctionDeclarationEntry fde |
       fde = this.getADeclarationEntry() and
       itd.getDeclarationEntry() = fde and
-      funcLevel = itd.getIrqlType()
+      funcIrql = itd.getIrqlLevelFull() and 
+      funcIrqlName = itd.getIrqlMacroName()
     )
   }
 
-  private string getLevel() { result = funcLevel }
+  string getLevel() { result = funcIrql }
+  string getFuncIrqlName() { result = funcIrqlName }
+
 
   int getIrqlLevel() {
     if getLevel().matches("%PASSIVE_LEVEL%")
@@ -41,13 +51,14 @@ class IrqlAnnotatedFunction extends Function {
 }
 
 //Evaluates to true if a FunctionCall at some points calls Irql annotated Function.
-predicate isIrqlCall(FunctionCall fc) {
+predicate containsIrqlCall(FunctionCall fc) {
   exists(Function fc2 |
     fc.getTarget().calls*(fc2) and
     fc2 instanceof IrqlAnnotatedFunction
   )
 }
 
+//Returns functions in the ControlFlow path that are instance of IrqlAnnotatedFunction
 Function getActualIrqlFunc(FunctionCall fc) {
   exists(Function fc2 |
     fc.getTarget().calls*(fc2) and
@@ -57,7 +68,7 @@ Function getActualIrqlFunc(FunctionCall fc) {
 }
 
 class CallsToIrqlAnnotatedFunction extends FunctionCall {
-  CallsToIrqlAnnotatedFunction() { isIrqlCall(this) }
+  CallsToIrqlAnnotatedFunction() { containsIrqlCall(this) }
 }
 
 class PassiveLevelFunction extends IrqlAnnotatedFunction {

@@ -245,7 +245,6 @@ NTSTATUS TestInner1(){
 }
 
 
-
 NTSTATUS
 IrqlLowTestFunction(){
     return TestInner1();
