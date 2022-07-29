@@ -7,47 +7,36 @@
  */
 
 import cpp
-import semmle.code.cpp.dataflow.DataFlow
-import DataFlow::PathGraph
+// import semmle.code.cpp.dataflow.DataFlow
+// import DataFlow::PathGraph
+import PortedQueries.PortLibrary.Irql
 
+predicate containsIrqlLevelCall(FunctionCall fc) {
+  fc.getTarget() instanceof IrqlAnnotatedFunction
+  or
+  exists(FunctionCall fc2 |
+    fc2.getControlFlowScope() = fc.getASuccessor() and
+    containsIrqlLevelCall(fc2)
+  )
+}
 
+// from FunctionCall fc, Function fc2
+// where
+//   fc.getTarget().getName() = "IrqlLowTestFunction" and
+//   fc.getTarget().calls*(fc2)
+//   and
+//   // containsIrqlLevelCall(fc2) and
+//   fc2 instanceof IrqlAnnotatedFunction
+// select fc2, "this"
 
+predicate x(FunctionCall fc){
+  exists(FunctionCall fc2 | 
+    fc.getASuccessor*() = fc2
+    and
+    fc2.getTarget().getName() = "KeLowerIrql")
+}
 
-
-// predicate usingKeRaiseIrql(Expr e) {
-//   exists(MacroInvocation mi |
-//     mi.getExpr() = e and
-//     mi.getMacroName().matches("KeRaiseIrql")
-//     // and
-//     // mi.getExpandedArgument(0).toInt() >= 1
-//   )
-// }
-
-// class Irql extends DataFlow::Configuration {
-//   Irql() { this = "Irql" }
-
-//   override predicate isSource(DataFlow::Node source) {
-    /* 
-     * source.asExpr() instanceof VariableAccess and
-     *    exists(AssignExpr ae |
-     *      ae.getLValue().(PointerDereferenceExpr).getOperand().(AddressOfExpr).getOperand() =
-     *        source.asExpr() and
-     *      ae.getRValue().(FunctionCall).getTarget().getName() = "KfRaiseIrql"
-     *    )
-     */
-
-//     usingKeRaiseIrql(source.asExpr())
-//   }
-
-//   override predicate isSink(DataFlow::Node sink) {
-//     exists(FunctionCall call |
-//       call.getTarget().hasGlobalOrStdName("KeLowerIrql") and
-//       call.getArgument(0) = sink.asExpr()
-//     )
-//   }
-// }
-
-// from Irql irq, DataFlow::PathNode source, DataFlow::PathNode sink
-// where irq.hasFlowPath(source, sink)
-// select sink, source, sink, "Irql raised $@ and lowered $@", source, " here", sink, " here"
- 
+from FunctionCall fc
+where fc.getTarget().getName() = "IrqlLowTestFunction"
+and not x(fc)
+select fc, "this"

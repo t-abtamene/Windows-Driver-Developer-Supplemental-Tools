@@ -10,20 +10,23 @@
 import cpp
 import PortedQueries.PortLibrary.Irql
 
-predicate isIrqlCall(FunctionCall fc) {
-  fc.getTarget() instanceof IrqlAnnotatedFunction
-  or
-  exists(FunctionCall fc2 |
-    fc2.getControlFlowScope() = fc.getASuccessor() and
-    isIrqlCall(fc2)
+predicate preceedingKeLowerIrqlCall(CallsToIrqlAnnotatedFunction iafc) {
+  exists(FunctionCall fc2, Function fc3 |
+    iafc.getAPredecessor*() = fc2 and
+    (
+      fc2.getTarget().getName() = "KeLowerIrql"
+      or
+      fc2.getTarget().calls*(fc3) and fc3.getName() = "KeLowerIrql"
+    )
   )
 }
 
-
-from IrqlAnnotatedFunctionCall nx, FunctionCall kr, FunctionCall kl
+from FunctionCall fc, FunctionCall kr
 where
   kr.getTarget().getName().matches("KfRaiseIrql") and
-  kr.getASuccessor*() = nx and
-  nx.getTarget().(IrqlAnnotatedFunction).getIrqlLevel() < kr.getArgument(0).getValue().toInt()
-//and kl.getTarget().getName().matches("KeLowerIrql")
-select kr, "Current Irql level too high for the function being called."
+  kr.getASuccessor*() = fc and
+  isIrqlCall(fc) and
+  getActualIrqlFunc(fc).(IrqlAnnotatedFunction).getIrqlLevel() <
+    kr.getArgument(0).getValue().toInt() and
+  not preceedingKeLowerIrqlCall(fc)
+select fc, "Current Irql level too high for the function being called." + fc.getTarget().getName()

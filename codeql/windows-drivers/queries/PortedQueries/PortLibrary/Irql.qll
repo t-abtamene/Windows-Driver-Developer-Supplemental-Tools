@@ -36,14 +36,28 @@ class IrqlAnnotatedFunction extends Function {
       if getLevel().matches("%APC_LEVEL%")
       then result = 1
       else result = 2
+    //Needs to include other levels too
   }
 }
 
-class IrqlAnnotatedFunctionCall extends FunctionCall {
-  IrqlAnnotatedFunctionCall() {
-    this.getTarget() instanceof IrqlAnnotatedFunction and
-    this.getTarget().getName() = ["IrqlLowTestFunction", "IrqlHighTestFunction"] //to be deleted
-  }
+//Evaluates to true if a FunctionCall at some points calls Irql annotated Function.
+predicate isIrqlCall(FunctionCall fc) {
+  exists(Function fc2 |
+    fc.getTarget().calls*(fc2) and
+    fc2 instanceof IrqlAnnotatedFunction
+  )
+}
+
+Function getActualIrqlFunc(FunctionCall fc) {
+  exists(Function fc2 |
+    fc.getTarget().calls*(fc2) and
+    fc2 instanceof IrqlAnnotatedFunction and
+    result = fc2
+  )
+}
+
+class CallsToIrqlAnnotatedFunction extends FunctionCall {
+  CallsToIrqlAnnotatedFunction() { isIrqlCall(this) }
 }
 
 class PassiveLevelFunction extends IrqlAnnotatedFunction {
@@ -51,9 +65,9 @@ class PassiveLevelFunction extends IrqlAnnotatedFunction {
 }
 
 class APCLevelFunction extends IrqlAnnotatedFunction {
-  APCLevelFunction() { this.getIrqlLevel() = 0 }
+  APCLevelFunction() { this.getIrqlLevel() = 1 }
 }
 
 class DispatchLevelFunction extends IrqlAnnotatedFunction {
-  DispatchLevelFunction() { this.getIrqlLevel() = 0 }
+  DispatchLevelFunction() { this.getIrqlLevel() = 2 }
 }

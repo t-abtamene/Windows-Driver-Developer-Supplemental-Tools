@@ -224,11 +224,31 @@ DriverUnload(
     return;
 }
 
+_IRQL_requires_(APC_LEVEL) 
+NTSTATUS TestInner3(){
+    return STATUS_SUCCESS;
+}
+
+NTSTATUS someFunc(){
+    return TestInner3();
+}
+
 _IRQL_requires_(PASSIVE_LEVEL) 
+NTSTATUS TestInner2(){
+    NTSTATUS notUsed;
+    notUsed = someFunc();
+    return STATUS_SUCCESS;
+}
+
+NTSTATUS TestInner1(){
+    return TestInner2();
+}
+
+
+
 NTSTATUS
 IrqlLowTestFunction(){
-
-    return STATUS_SUCCESS;
+    return TestInner1();
 }
 
 _IRQL_requires_(DISPATCH_LEVEL) 
@@ -236,6 +256,7 @@ NTSTATUS
 IrqlHighTestFunction(){
     return STATUS_SUCCESS;
 }
+
 
 NTSTATUS
 DispatchPnp (

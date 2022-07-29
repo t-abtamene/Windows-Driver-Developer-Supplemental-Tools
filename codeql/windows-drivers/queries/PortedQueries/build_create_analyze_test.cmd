@@ -8,7 +8,7 @@
 @REM call :test MultiplePagedCode WDMTestingTemplate
 @REM call :test NoPagingSegment WDMTestingTemplate
 call :test IrqTooHigh WDMTestingTemplate
-call :test IrqTooLow WDMTestingTemplate
+@REM call :test IrqTooLow WDMTestingTemplate
 
 
 

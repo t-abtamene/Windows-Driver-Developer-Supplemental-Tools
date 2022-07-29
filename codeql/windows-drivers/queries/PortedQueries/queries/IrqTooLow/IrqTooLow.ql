@@ -10,11 +10,12 @@
 import cpp
 import PortedQueries.PortLibrary.Irql
 
-
-from IrqlAnnotatedFunctionCall nx, FunctionCall kr, FunctionCall kl
+from IrqlAnnotatedFunction iaf, CallsToIrqlAnnotatedFunction ciaf, int curr, int called
 where
-  kr.getTarget().getName().matches("KfRaiseIrql") and
-  kr.getASuccessor*() = nx and
-  nx.getTarget().(IrqlAnnotatedFunction).getIrqlLevel() > kr.getArgument(0).getValue().toInt()
-//and kl.getTarget().getName().matches("KeLowerIrql")
-select kr, "Current Irql level too low for the function being called."
+  ciaf.getEnclosingFunction() = iaf and
+  iaf.getIrqlLevel() = curr and
+  getActualIrqlFunc(ciaf).(IrqlAnnotatedFunction).getIrqlLevel() = called and
+  curr < called
+select ciaf,
+  "Irql was set to " + curr + " in " + iaf.getName() +
+    " but this function in its call hierarchy requires " + called + " Irql level."
