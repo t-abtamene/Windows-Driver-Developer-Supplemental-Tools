@@ -276,6 +276,22 @@ DispatchPnp (
 }
 
 
+VOID
+PlatformAcquireMutex(
+    IN PPlatformMutex	Mutex
+)
+{
+    LARGE_INTEGER lTimeout;
+
+    if (KeGetCurrentIrql() == DISPATCH_LEVEL)
+    {
+        lTimeout.QuadPart = 0;
+        KeWaitForMutexObject(Mutex, Executive, KernelMode, FALSE, &lTimeout);
+    }
+    else
+        KeWaitForMutexObject(Mutex, Executive, KernelMode, FALSE, NULL);
+}
+
 NTSTATUS
 CompletionRoutine(
     _In_ PDEVICE_OBJECT DeviceObject,

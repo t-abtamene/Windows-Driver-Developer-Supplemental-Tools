@@ -20,24 +20,30 @@ predicate preceedingKeLowerIrqlCall(CallsToIrqlAnnotatedFunction iafc) {
     )
   )
 }
+
 //
 predicate irqlAnnotationViolatingCall(CallsToIrqlAnnotatedFunction ciaf) {
   exists(IrqlAnnotatedFunction iaf, int curr, int called |
     ciaf.getEnclosingFunction() = iaf and
     iaf.getIrqlLevel() = curr and
     getActualIrqlFunc(ciaf).(IrqlAnnotatedFunction).getIrqlLevel() = called and
-    curr > called and 
+    curr > called and
     not iaf.getFuncIrqlName().matches("%max%")
   )
 }
 
-//Evaluates to true if there is a call from KeRaiseIrql to a IrqlAnnotatedFunction before any KeLowerIrql call in between. 
+//Evaluates to true if there is a call from KeRaiseIrql to a IrqlAnnotatedFunction before any KeLowerIrql call in between.
 predicate irqlNotLoweredCall(CallsToIrqlAnnotatedFunction fc) {
   exists(FunctionCall kr, int called, int curr |
-    kr.getTarget().getName().matches("KfRaiseIrql") and
     kr.getASuccessor*() = fc and
     getActualIrqlFunc(fc).(IrqlAnnotatedFunction).getIrqlLevel() = called and
-    kr.getArgument(0).getValue().toInt() = curr and
+    (
+      kr.getTarget().getName().matches("KfRaiseIrql") and
+      kr.getArgument(0).getValue().toInt() = curr
+      or
+      kr.getTarget().getName().matches("KeRaiseIrqlToDpcLevel") and
+      2 = curr
+    ) and
     called < curr and
     not preceedingKeLowerIrqlCall(fc)
   )
