@@ -51,4 +51,4 @@ predicate irqlNotLoweredCall(CallsToIrqlAnnotatedFunction fc) {
 
 from CallsToIrqlAnnotatedFunction ciaf
 where irqlNotLoweredCall(ciaf) or irqlAnnotationViolatingCall(ciaf)
-select ciaf, " Current Irql level too high for " + ciaf.getTarget().getName()
+select getActualIrqlFunc(ciaf), " Current Irql level too high for " + ciaf.getTarget().getName()
