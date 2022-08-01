@@ -2,43 +2,48 @@ import cpp
 import Windows.wdk.wdm.SAL
 
 class IrqlTypeDefinition extends SALAnnotation {
-  string irqlType;
-  string irqlMacroName;
+  string irqlLevel;
+  string irqlAnnotationName;
 
-  //Types
+  //IRQL Annotation Types
   IrqlTypeDefinition() {
-    //Needs to include other Irql annotations too.
+    //Needs to include other Irql annotations too like parameter annotations.
     this.getMacroName().matches(["_IRQL_requires_max_", "_IRQL_requires_min_", "_IRQL_requires_"]) and
-    irqlMacroName = this.getMacroName() and
+    irqlAnnotationName = this.getMacroName() and
     exists(MacroInvocation mi |
       mi.getParentInvocation() = this and
-      irqlType = mi.getMacro().getHead()
+      irqlLevel = mi.getMacro().getHead()
     )
   }
 
-  string getIrqlLevelFull() { result = irqlType }
+  string getIrqlLevelFull() { result = irqlLevel }
 
-  string getIrqlMacroName() { result = irqlMacroName }
+  string getIrqlMacroName() { result = irqlAnnotationName }
 }
 
-//Represents Irql annotationed functions. 
+//Represents Irql annotationed functions.
 class IrqlAnnotatedFunction extends Function {
-  string funcIrql;
-  string funcIrqlName;
+  string funcIrqlLevel;
+  string funcIrqlAnnotationName;
 
   IrqlAnnotatedFunction() {
     exists(IrqlTypeDefinition itd, FunctionDeclarationEntry fde |
       fde = this.getADeclarationEntry() and
       itd.getDeclarationEntry() = fde and
-      funcIrql = itd.getIrqlLevelFull() and 
-      funcIrqlName = itd.getIrqlMacroName()
+      funcIrqlLevel = itd.getIrqlLevelFull() and
+      funcIrqlAnnotationName = itd.getIrqlMacroName()
     )
   }
 
-  string getLevel() { result = funcIrql }
-  string getFuncIrqlName() { result = funcIrqlName }
+  private string getLevel() { result = funcIrqlLevel }
 
+  string getFuncIrqlName() { result = funcIrqlAnnotationName }
 
+  /**
+   * Needs to include other levels too. From MSDN doc: Very few functions have both an upper bound other than DISPATCH_LEVEL and a lower bound other than PASSIVE_LEVEL.
+   *
+   * The other IRQL levels are Processor-specific
+   */
   int getIrqlLevel() {
     if getLevel().matches("%PASSIVE_LEVEL%")
     then result = 0
@@ -46,11 +51,10 @@ class IrqlAnnotatedFunction extends Function {
       if getLevel().matches("%APC_LEVEL%")
       then result = 1
       else result = 2
-    //Needs to include other levels too
   }
 }
 
-//Evaluates to true if a FunctionCall at some points calls Irql annotated Function.
+//Evaluates to true if a FunctionCall at some points calls Irql annotated Function in its call hierarchy
 predicate containsIrqlCall(FunctionCall fc) {
   exists(Function fc2 |
     fc.getTarget().calls*(fc2) and
@@ -59,7 +63,7 @@ predicate containsIrqlCall(FunctionCall fc) {
 }
 
 //Returns functions in the ControlFlow path that are instance of IrqlAnnotatedFunction
-Function getActualIrqlFunc(FunctionCall fc) {
+IrqlAnnotatedFunction getActualIrqlFunc(FunctionCall fc) {
   exists(Function fc2 |
     fc.getTarget().calls*(fc2) and
     fc2 instanceof IrqlAnnotatedFunction and

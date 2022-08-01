@@ -236,6 +236,10 @@ NTSTATUS someFunc(){
 _IRQL_requires_(PASSIVE_LEVEL) 
 NTSTATUS TestInner2(){
     NTSTATUS notUsed;
+
+    /*
+    The call below, someFunc() represents a failing case for IrqlTooLow function as it is in a call is made in a PASSIVE_LEVEL to a function that requres APC_LEVEL, aka TestInner3()
+    */
     notUsed = someFunc();
     return STATUS_SUCCESS;
 }
@@ -292,6 +296,9 @@ CompletionRoutine(
     _Analysis_assume_(EventIn != NULL);
     KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
 
+    /*
+    The call below, IrqlLowTestFunction() represents a failing case for IrqlTooHigh function as it is in a call is made in a DISPATCH_LEVEL to a call that contains two subsequent child calls in it with lower IRQL level. 
+    */
     IrqlLowTestFunction();
 
     KeLowerIrql(oldIrql);
