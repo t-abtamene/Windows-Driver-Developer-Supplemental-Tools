@@ -11,24 +11,22 @@ import semmle.code.cpp.commons.Exclusions
 import PortedQueries.PortLibrary.Page
 import Windows.wdk.wdm.WdmDrivers
 
-//Represents functions whose declaration annotations don't match their expected annotation type
-class RetMustBeCheckedFunc extends Function {
-  SALCheckReturn scr;
-
-  RetMustBeCheckedFunc() { this.getADeclarationEntry() = scr.getDeclarationEntry() }
-
-  string getCheckRetName() { result = scr.getMacroName() }
+class ReturnMustBeCheckedFunctionCall extends FunctionCall {
+  ReturnMustBeCheckedFunctionCall() { shouldResultBeChecked(this) }
 }
 
-// from SALCheckReturn scr, FunctionCall fc
-// where fc.getTarget().getADeclarationEntry() = scr.getDeclarationEntry()
-// select scr, fc.getTarget().getName()
+predicate shouldResultBeChecked(FunctionCall fc) {
+  exists(Function fc2, SALCheckReturn scr |
+    fc.getTarget().calls*(fc2) and
+    fc2.getADeclarationEntry() = scr.getDeclarationEntry()
+  )
+}
+
 predicate unused(Expr e) { e instanceof ExprInVoidContext }
 
 predicate important(Function f, string message) {
   message = "the result of this function must always be checked." and
-  getOptions().alwaysCheckReturnValue(f) and
-  f instanceof RetMustBeCheckedFunc
+  getOptions().alwaysCheckReturnValue(f)
 }
 
 // statistically dubious ignored return values
@@ -47,10 +45,10 @@ predicate dubious(Function f, string message) {
   )
 }
 
-from FunctionCall unused, string message
+from ReturnMustBeCheckedFunctionCall unused, string message
 where
   unused(unused) and
   not exists(Options opts | opts.okToIgnoreReturnValue(unused)) and
   (important(unused.getTarget(), message) or dubious(unused.getTarget(), message)) and
   not unused.getTarget().getName().matches("operator%") // exclude user defined operators
-select unused, "Result of call to " + unused.getTarget().getName() + " is ignored; " + message
+select (unused), "Result of call to " + unused.getTarget().getName() + " is ignored; " + message

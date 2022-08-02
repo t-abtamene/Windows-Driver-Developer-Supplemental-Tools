@@ -1,42 +1,48 @@
 /**
  * @name template
- * @kind problem
+ * @kind path-problem
  * @description template
  * @problem.severity warning
  * @id cpp/portedqueries/template
  */
 
 import cpp
-// import semmle.code.cpp.dataflow.DataFlow
-// import DataFlow::PathGraph
-import PortedQueries.PortLibrary.Irql
+import Windows.wdk.wdm.SAL
+import semmle.code.cpp.dataflow.DataFlow
+import DataFlow::PathGraph
 
-predicate containsIrqlLevelCall(FunctionCall fc) {
-  fc.getTarget() instanceof IrqlAnnotatedFunction
-  or
-  exists(FunctionCall fc2 |
-    fc2.getControlFlowScope() = fc.getASuccessor() and
-    containsIrqlLevelCall(fc2)
+class ReturnMustBeCheckedFunctionCall extends FunctionCall {
+
+  ReturnMustBeCheckedFunctionCall() { shouldResultBeChecked(this) }
+}
+
+predicate shouldResultBeChecked(FunctionCall fc) {
+  exists(Function fc2, SALCheckReturn scr |
+    fc.getTarget().calls*(fc2) and
+    fc2.getADeclarationEntry() = scr.getDeclarationEntry()
   )
 }
 
-// from FunctionCall fc, Function fc2
-// where
-//   fc.getTarget().getName() = "IrqlLowTestFunction" and
-//   fc.getTarget().calls*(fc2)
-//   and
-//   // containsIrqlLevelCall(fc2) and
-//   fc2 instanceof IrqlAnnotatedFunction
-// select fc2, "this"
+class ReturnCheck extends DataFlow::Configuration {
+  ReturnCheck() { this = "ReturnCheck" }
 
-predicate x(FunctionCall fc){
-  exists(FunctionCall fc2 | 
-    fc.getASuccessor*() = fc2
-    and
-    fc2.getTarget().getName() = "KeLowerIrql")
+  override predicate isSource(DataFlow::Node source) {
+    exists(AssignExpr ae, VariableAccess va |
+      ae.getLValue() = source.asExpr() and
+      source.asExpr() = va and
+      shouldResultBeChecked(ae.getRValue().(FunctionCall))
+    )
+  }
+
+  override predicate isSink(DataFlow::Node sink) {
+    exists(IfStmt ifs, VariableAccess va, ComparisonOperation co |
+      ifs.getCondition() = co and
+      co.getAnOperand() = va and
+      sink.asExpr() = va
+    )
+  }
 }
 
-from FunctionCall fc
-where fc.getTarget().getName() = "IrqlLowTestFunction"
-and not x(fc)
-select fc, "this"
+from ReturnCheck rc, DataFlow::Node source, DataFlow::Node sink
+where rc.hasFlow(source, sink)
+select sink, source, sink, "Call to a function made $@", source, " here", sink, " here"

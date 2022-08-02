@@ -225,6 +225,7 @@ NTSTATUS TestInner3(){
     return STATUS_SUCCESS;
 }
 
+
 NTSTATUS someFunc(){
     return TestInner3();
 }
@@ -240,6 +241,7 @@ NTSTATUS TestInner2(){
     return STATUS_SUCCESS;
 }
 
+_Check_return_
 NTSTATUS TestInner1(){
     return TestInner2();
 }
@@ -247,9 +249,13 @@ NTSTATUS TestInner1(){
 
 NTSTATUS
 IrqlLowTestFunction(){
+    /*
+    The call below represents a failing case for ExaminedValue check as the return value of the call is not checke.
+    */
     return TestInner1();
 }
 
+_Must_inspect_result_
 _IRQL_requires_(DISPATCH_LEVEL) 
 NTSTATUS
 IrqlHighTestFunction(){
@@ -327,14 +333,21 @@ DpcForIsrRoutine(
     UNREFERENCED_PARAMETER(Irp);
     UNREFERENCED_PARAMETER(Context);
     UNREFERENCED_PARAMETER(Dpc);
-    
+    NTSTATUS status;
     KIRQL oldIrql;
     /*
     The call below, IrqlHighTestFunction() represents a passing case for both IrqlTooLow and IrqlTooHigh checks as the functio is called at the right IRQL level.
     */
     KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
-    IrqlHighTestFunction();
+    status = IrqlHighTestFunction();
     KeLowerIrql(oldIrql);
+
+    /*
+    The check below represents a passing test for ExaminedValue check as the result of IrqlHighTestFunction(), which was annotated with _Must_inspect_result_ is checked
+    */
+    if(status != 0){
+        //do something.
+    }
 
     IoGetInitialStack();
 }
