@@ -23,4 +23,4 @@ where
   )
 select ciaf,
   "Irql was set to " + curr + " in " + iaf.getName() + " but " + ciaf.getTarget().getName() +
-    " in its call hierarchy requires " + called + " Irql level."
+    "() in its call hierarchy requires " + called + " Irql level."

@@ -155,9 +155,7 @@ DispatchRead (
     _Inout_ PIRP Irp
     )
 {  
-    /*
-       This defect is injected for the "SpinLock" rule.
-    */
+
     KSPIN_LOCK  queueLock;
     KIRQL oldIrql;
     IoMarkIrpPending(Irp);
@@ -199,9 +197,7 @@ DispatchSystemControl (
     _Inout_  PIRP            Irp
     )
 {   
-    /*
-       This defect is injected for the "CancelSpinLock" rule.
-    */
+
     KIRQL oldIrql;
 
     UNREFERENCED_PARAMETER(DeviceObject);
@@ -269,9 +265,7 @@ DispatchPnp (
 {   
 	KIRQL oldIrql;
     KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
-    /*
-       This defect is injected for "LowerDriverReturn" rule.
-    */
+
     NTSTATUS status = IoCallDriver(DeviceObject,Irp);
     PAGED_CODE();
 
@@ -300,11 +294,8 @@ CompletionRoutine(
     The call below, IrqlLowTestFunction() represents a failing case for IrqlTooHigh function as it is in a call is made in a DISPATCH_LEVEL to a call that contains two subsequent child calls in it with lower IRQL level. 
     */
     IrqlLowTestFunction();
-
     KeLowerIrql(oldIrql);
-    /*
-       This defect is injected for IrqlKeSetEvent rule
-    */ 
+
     KeSetEvent(Event, extension->Increment, TRUE);
     return STATUS_SUCCESS;
 }
@@ -336,15 +327,14 @@ DpcForIsrRoutine(
     UNREFERENCED_PARAMETER(Irp);
     UNREFERENCED_PARAMETER(Context);
     UNREFERENCED_PARAMETER(Dpc);
-    /*
-       This defect is injected for IrqlIoApcLte rule
-
-    */
-
+    
     KIRQL oldIrql;
+    /*
+    The call below, IrqlHighTestFunction() represents a passing case for both IrqlTooLow and IrqlTooHigh checks as the functio is called at the right IRQL level.
+    */
     KeRaiseIrql(DISPATCH_LEVEL, &oldIrql);
+    IrqlHighTestFunction();
     KeLowerIrql(oldIrql);
-    IrqlLowTestFunction();
 
     IoGetInitialStack();
 }
