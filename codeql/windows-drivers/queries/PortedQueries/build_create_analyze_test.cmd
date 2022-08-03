@@ -9,7 +9,8 @@
 @REM call :test NoPagingSegment WDMTestingTemplate
 @REM call :test IrqTooHigh WDMTestingTemplate
 @REM call :test IrqTooLow WDMTestingTemplate
-call :test ExaminedValue WDMTestingTemplate
+@REM call :test ExaminedValue WDMTestingTemplate
+call :test StrSafe KMDFTestTemplate
 
 
 
@@ -27,6 +28,7 @@ echo building
 msbuild /t:rebuild /p:platform=x64
 echo creating_database
 codeql database create -l=cpp -c "msbuild /p:Platform=x64 /t:rebuild" "C:\Users\t-abtamene\Desktop\TestDB\%1"
+
 @REM echo analysing_database
 @REM codeql database analyze "C:\Users\t-abtamene\Desktop\TestDB\%1" --format=sarifv2.1.0 --output="..\..\AnalysisFiles\Test Samples\%1" "..\..\queries\%1\%1.ql" 
 
