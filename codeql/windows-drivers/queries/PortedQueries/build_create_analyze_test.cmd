@@ -9,8 +9,8 @@
 @REM call :test NoPagingSegment WDMTestingTemplate
 @REM call :test IrqTooHigh WDMTestingTemplate
 @REM call :test IrqTooLow WDMTestingTemplate
-@REM call :test ExaminedValue WDMTestingTemplate
-call :test StrSafe KMDFTestTemplate
+call :test ExaminedValue WDMTestingTemplate
+@REM call :test StrSafe KMDFTestTemplate
 
 
 

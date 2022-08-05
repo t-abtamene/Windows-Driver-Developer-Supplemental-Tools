@@ -6,20 +6,21 @@
  * @id cpp/portedqueries/examined-value
  */
 
+
 import cpp
-import semmle.code.cpp.commons.Exclusions
-import PortedQueries.PortLibrary.Page
+import Windows.wdk.wdm.SAL
 import Windows.wdk.wdm.WdmDrivers
 
-class ReturnMustBeCheckedFunctionCall extends FunctionCall {
-  ReturnMustBeCheckedFunctionCall() { shouldResultBeChecked(this) }
+class ReturnMustBeCheckedFunction extends Function {
+  SALCheckReturn scr;
+
+  ReturnMustBeCheckedFunction() { this.getADeclarationEntry() = scr.getDeclarationEntry() }
 }
 
-predicate shouldResultBeChecked(FunctionCall fc) {
-  exists(Function fc2, SALCheckReturn scr |
-    fc.getTarget().calls*(fc2) and
-    fc2.getADeclarationEntry() = scr.getDeclarationEntry()
-  )
+class ReturnMustBeCheckedFunctionCall extends FunctionCall {
+  SALCheckReturn scr;
+
+  ReturnMustBeCheckedFunctionCall() { this.getTarget() instanceof ReturnMustBeCheckedFunction }
 }
 
 predicate unused(Expr e) { e instanceof ExprInVoidContext }
@@ -34,13 +35,14 @@ predicate dubious(Function f, string message) {
   not important(f, _) and
   exists(Options opts, int used, int total, int percentage |
     used =
-      count(FunctionCall fc |
+      count(ReturnMustBeCheckedFunctionCall fc |
+       
         fc.getTarget() = f and not opts.okToIgnoreReturnValue(fc) and not unused(fc)
       ) and
-    total = count(FunctionCall fc | fc.getTarget() = f and not opts.okToIgnoreReturnValue(fc)) and
-    used != total and
+    total = count(ReturnMustBeCheckedFunctionCall fc |  fc.getTarget() = f and not opts.okToIgnoreReturnValue(fc)) and
+    // used != total and
     percentage = used * 100 / total and
-    percentage >= 90 and
+    percentage >= 0 and
     message = percentage.toString() + "% of calls to this function have their result used."
   )
 }
@@ -51,4 +53,4 @@ where
   not exists(Options opts | opts.okToIgnoreReturnValue(unused)) and
   (important(unused.getTarget(), message) or dubious(unused.getTarget(), message)) and
   not unused.getTarget().getName().matches("operator%") // exclude user defined operators
-select (unused), "Result of call to " + unused.getTarget().getName() + " is ignored; " + message
+select unused, "Result of call to " + unused.getTarget().getName() + " is ignored; " + message

@@ -199,10 +199,18 @@ DispatchSystemControl (
 {   
 
     KIRQL oldIrql;
+    // PFCB Fcb;
 
     UNREFERENCED_PARAMETER(DeviceObject);
     UNREFERENCED_PARAMETER(Irp);
     PAGED_CODE();
+
+    // FsRtlCheckOplockEx( FatGetFcbOplock(Fcb),
+    //                             Irp,
+    //                             0,
+    //                             NULL,
+    //                             NULL,
+    //                             NULL );
    
     IoAcquireCancelSpinLock(&oldIrql);
     return STATUS_SUCCESS;
@@ -217,6 +225,7 @@ DriverUnload(
     UNREFERENCED_PARAMETER(DriverObject);
     PAGED_CODE();
      
+    
     return;
 }
 
@@ -227,6 +236,8 @@ NTSTATUS TestInner3(){
 
 
 NTSTATUS someFunc(){
+    // CHAR *tempStr = NULL;
+    // tempStr = new (std::nothrow) CHAR[256];
     return TestInner3();
 }
 
@@ -348,6 +359,8 @@ DpcForIsrRoutine(
     if(status != 0){
         //do something.
     }
+
+    top_level_call();
 
     IoGetInitialStack();
 }
