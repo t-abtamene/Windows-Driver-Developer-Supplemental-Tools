@@ -158,6 +158,7 @@ DispatchRead (
 
     KSPIN_LOCK  queueLock;
     KIRQL oldIrql;
+    //The call below represents a passing case for PendingStatusError.
     IoMarkIrpPending(Irp);
 
 
