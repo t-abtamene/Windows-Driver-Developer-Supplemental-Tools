@@ -23,3 +23,8 @@ DRIVER_DISPATCH DispatchPnp;
 //raises warning: the SAL annotation in the declaration doesn't match the expected type in MajorFunction table. 
 _Dispatch_type_(IRP_MJ_CLOSE) 
 DRIVER_DISPATCH DispatchCreate;
+
+
+void top_level_call(){
+    
+}

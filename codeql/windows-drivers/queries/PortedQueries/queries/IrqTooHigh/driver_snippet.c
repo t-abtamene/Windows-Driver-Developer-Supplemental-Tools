@@ -8,3 +8,6 @@ DRIVER_DISPATCH DispatchPnp;
 
 _Dispatch_type_(IRP_MJ_CREATE) 
 DRIVER_DISPATCH DispatchCreate;
+void top_level_call(){
+    
+}

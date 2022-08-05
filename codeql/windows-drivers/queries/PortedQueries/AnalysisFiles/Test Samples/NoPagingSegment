@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
+        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -603,7 +603,7 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 179,
+            "startLine" : 178,
             "endColumn" : 14
           }
         }

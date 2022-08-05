@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/ke-wait-local",
-          "name" : "cpp/portedqueries/ke-wait-local",
+          "id" : "cpp/portedqueries/str-safe",
+          "name" : "cpp/portedqueries/str-safe",
           "shortDescription" : {
-            "text" : "KeWaitLocal"
+            "text" : "StrSafe"
           },
           "fullDescription" : {
-            "text" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode"
+            "text" : "Kernel Mode drivers should use ntstrsafe.h, not strsafe.h. Found in source file"
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode",
-            "id" : "cpp/portedqueries/ke-wait-local",
+            "description" : "Kernel Mode drivers should use ntstrsafe.h, not strsafe.h. Found in source file",
+            "id" : "cpp/portedqueries/str-safe",
             "kind" : "problem",
-            "name" : "KeWaitLocal",
+            "name" : "StrSafe",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -580,38 +580,37 @@
     },
     "artifacts" : [ {
       "location" : {
-        "uri" : "driver/driver_snippet.c",
+        "uri" : "Driver.h",
         "uriBaseId" : "%SRCROOT%",
         "index" : 0
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/ke-wait-local",
+      "ruleId" : "cpp/portedqueries/str-safe",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/ke-wait-local",
+        "id" : "cpp/portedqueries/str-safe",
         "index" : 0
       },
       "message" : {
-        "text" : "KeWaitForSingleObject should have a KernelMode AccessMode when the first argument is local"
+        "text" : "Kernel Mode drivers should use ntstrsafe.h, not strsafe.h. Found in source file"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "driver/driver_snippet.c",
+            "uri" : "Driver.h",
             "uriBaseId" : "%SRCROOT%",
             "index" : 0
           },
           "region" : {
-            "startLine" : 6,
-            "startColumn" : 28,
-            "endColumn" : 35
+            "startLine" : 25,
+            "endColumn" : 21
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "61bc3c7079348327:1",
-        "primaryLocationStartColumnFingerprint" : "23"
+        "primaryLocationLineHash" : "44f7bdc8eccddbac:1",
+        "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],
     "columnKind" : "utf16CodeUnits",

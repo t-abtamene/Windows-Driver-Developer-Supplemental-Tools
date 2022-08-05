@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/ke-wait-local",
-          "name" : "cpp/portedqueries/ke-wait-local",
+          "id" : "cpp/portedqueries/irq-too-low",
+          "name" : "cpp/portedqueries/irq-too-low",
           "shortDescription" : {
-            "text" : "KeWaitLocal"
+            "text" : "IrqTooLow"
           },
           "fullDescription" : {
-            "text" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode"
+            "text" : "The function is not permitted to be called at the current IRQ level. The current level is too low."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode",
-            "id" : "cpp/portedqueries/ke-wait-local",
+            "description" : "The function is not permitted to be called at the current IRQ level. The current level is too low.",
+            "id" : "cpp/portedqueries/irq-too-low",
             "kind" : "problem",
-            "name" : "KeWaitLocal",
+            "name" : "IrqTooLow",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -580,38 +580,38 @@
     },
     "artifacts" : [ {
       "location" : {
-        "uri" : "driver/driver_snippet.c",
+        "uri" : "driver/fail_driver1.c",
         "uriBaseId" : "%SRCROOT%",
         "index" : 0
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/ke-wait-local",
+      "ruleId" : "cpp/portedqueries/irq-too-low",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/ke-wait-local",
+        "id" : "cpp/portedqueries/irq-too-low",
         "index" : 0
       },
       "message" : {
-        "text" : "KeWaitForSingleObject should have a KernelMode AccessMode when the first argument is local"
+        "text" : "Irql was set to 0 in TestInner2 but someFunc() in its call hierarchy requires 1 Irql level."
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "driver/driver_snippet.c",
+            "uri" : "driver/fail_driver1.c",
             "uriBaseId" : "%SRCROOT%",
             "index" : 0
           },
           "region" : {
-            "startLine" : 6,
-            "startColumn" : 28,
-            "endColumn" : 35
+            "startLine" : 252,
+            "startColumn" : 15,
+            "endColumn" : 23
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "61bc3c7079348327:1",
-        "primaryLocationStartColumnFingerprint" : "23"
+        "primaryLocationLineHash" : "119d2291fb0473c8:1",
+        "primaryLocationStartColumnFingerprint" : "10"
       }
     } ],
     "columnKind" : "utf16CodeUnits",

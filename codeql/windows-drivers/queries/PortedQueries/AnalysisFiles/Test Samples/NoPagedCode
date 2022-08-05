@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+9bc5b034796475492c9ef7be1574bd88af7ad163",
+        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -603,67 +603,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 285,
-            "endColumn" : 17
-          }
-        }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "1ceb9aae73b088d1:1",
-        "primaryLocationStartColumnFingerprint" : "0"
-      }
-    }, {
-      "ruleId" : "cpp/portedqueries/no-paged-code",
-      "ruleIndex" : 0,
-      "rule" : {
-        "id" : "cpp/portedqueries/no-paged-code",
-        "index" : 0
-      },
-      "message" : {
-        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
-          },
-          "region" : {
-            "startLine" : 247,
-            "endColumn" : 18
-          }
-        }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "2cc34c83d7c31dbb:1",
-        "primaryLocationStartColumnFingerprint" : "0"
-      }
-    }, {
-      "ruleId" : "cpp/portedqueries/no-paged-code",
-      "ruleIndex" : 0,
-      "rule" : {
-        "id" : "cpp/portedqueries/no-paged-code",
-        "index" : 0
-      },
-      "message" : {
-        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
-          },
-          "region" : {
             "startLine" : 153,
             "endColumn" : 13
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "abbdea56f4b49657:1",
+        "primaryLocationLineHash" : "2ad5c7b3075baee6:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

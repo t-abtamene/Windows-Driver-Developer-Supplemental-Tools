@@ -22,7 +22,7 @@ class MismatchedDispatches extends Function {
   }
 }
 
-//Represents function with missing annotation in their declaration. 
+//Represents function with missing annotation in their declaration.
 class NonAnnotatedDispatchs extends Function {
   NonAnnotatedDispatchs() {
     exists(DispatchTypeDefinition dmi, WdmDispatchRoutine wdr |
@@ -37,6 +37,6 @@ where
   fa.getTarget() = wdm and not fa.getTarget() instanceof NonAnnotatedDispatchs
   or
   fa.getTarget() instanceof MismatchedDispatches
-select fa.getTarget(),
+select fa,
   fa.getTarget() +
     " : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."

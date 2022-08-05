@@ -8,25 +8,24 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/ke-wait-local",
-          "name" : "cpp/portedqueries/ke-wait-local",
+          "id" : "cpp/portedqueries/examined-value",
+          "name" : "cpp/portedqueries/examined-value",
           "shortDescription" : {
-            "text" : "KeWaitLocal"
+            "text" : "ExaminedValue"
           },
           "fullDescription" : {
-            "text" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode"
+            "text" : "The returned value is annotated with the _Check_return_ annotation, but the calling function is either not using the value or is overwriting the value without examining it."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode",
-            "id" : "cpp/portedqueries/ke-wait-local",
+            "description" : "The returned value is annotated with the _Check_return_ annotation, but the calling function is either not using the value or is overwriting the value without examining it.",
+            "id" : "cpp/portedqueries/examined-value",
             "kind" : "problem",
-            "name" : "KeWaitLocal",
-            "problem.severity" : "warning",
-            "version" : "1.0"
+            "name" : "ExaminedValue",
+            "problem.severity" : "warning"
           }
         } ]
       },
@@ -586,14 +585,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/ke-wait-local",
+      "ruleId" : "cpp/portedqueries/examined-value",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/ke-wait-local",
+        "id" : "cpp/portedqueries/examined-value",
         "index" : 0
       },
       "message" : {
-        "text" : "KeWaitForSingleObject should have a KernelMode AccessMode when the first argument is local"
+        "text" : "Result of call to func4 is ignored; 50% of calls to this function have their result used."
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -603,15 +602,15 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 6,
-            "startColumn" : 28,
-            "endColumn" : 35
+            "startLine" : 59,
+            "startColumn" : 5,
+            "endColumn" : 10
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "61bc3c7079348327:1",
-        "primaryLocationStartColumnFingerprint" : "23"
+        "primaryLocationLineHash" : "7a80c393410aca90:1",
+        "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],
     "columnKind" : "utf16CodeUnits",
