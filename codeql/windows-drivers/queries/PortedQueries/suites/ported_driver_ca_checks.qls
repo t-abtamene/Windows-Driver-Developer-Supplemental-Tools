@@ -11,4 +11,4 @@
       - PortedQueries/queries/MultiplePagedCode/MultiplePagedCode.ql
       - PortedQueries/queries/NoPagedCode/NoPagedCode.ql
       - PortedQueries/queries/NoPagingSegment/NoPagingSegment.ql
-      - PortedQueries/queries/PendingStatusError/PendingStatusError.ql
+      - PortedQueries/queries/StrSafe/StrSafe.ql

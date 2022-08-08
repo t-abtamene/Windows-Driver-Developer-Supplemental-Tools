@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/irq-too-low",
-          "name" : "cpp/portedqueries/irq-too-low",
+          "id" : "cpp/portedqueries/irq-too-high",
+          "name" : "cpp/portedqueries/irq-too-high",
           "shortDescription" : {
-            "text" : "IrqTooLow"
+            "text" : "IrqTooHigh"
           },
           "fullDescription" : {
-            "text" : "The function is not permitted to be called at the current IRQ level. The current level is too low."
+            "text" : "The function is not permitted to be called at the current IRQ level. The current level is too high."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The function is not permitted to be called at the current IRQ level. The current level is too low.",
-            "id" : "cpp/portedqueries/irq-too-low",
+            "description" : "The function is not permitted to be called at the current IRQ level. The current level is too high.",
+            "id" : "cpp/portedqueries/irq-too-high",
             "kind" : "problem",
-            "name" : "IrqTooLow",
+            "name" : "IrqTooHigh",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
+        "semanticVersion" : "0.9.6+370d879c954aeb100324e3ab8af8043285a2ead6",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -586,14 +586,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/irq-too-low",
+      "ruleId" : "cpp/portedqueries/irq-too-high",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/irq-too-low",
+        "id" : "cpp/portedqueries/irq-too-high",
         "index" : 0
       },
       "message" : {
-        "text" : "Irql was set to 0 in TestInner2 but someFunc() in its call hierarchy requires 1 Irql level."
+        "text" : " Current function CompletionRoutine has a higer IRQL level than the called function which requires 0\n Current function CompletionRoutine has a higer IRQL level than the called function which requires 1"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -603,15 +603,15 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 252,
-            "startColumn" : 15,
-            "endColumn" : 23
+            "startLine" : 314,
+            "startColumn" : 5,
+            "endColumn" : 24
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "119d2291fb0473c8:1",
-        "primaryLocationStartColumnFingerprint" : "10"
+        "primaryLocationLineHash" : "6fe20294e5cedef1:1",
+        "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],
     "columnKind" : "utf16CodeUnits",

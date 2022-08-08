@@ -47,13 +47,19 @@ DRIVER_DEVICE_EXTENSION,*PDRIVER_DEVICE_EXTENSION;
 #ifdef __cplusplus
 extern "C"
 #endif
+
 DRIVER_INITIALIZE DriverEntry;
+
+NTSTATUS
+DriverEntry(
+    _In_ PDRIVER_OBJECT DriverObject,
+    _In_ PUNICODE_STRING RegistryPath
+    );
 
 DRIVER_ADD_DEVICE DriverAddDevice;
 
 
-_Dispatch_type_(IRP_MJ_READ)
-DRIVER_DISPATCH DispatchRead;
+
 
 _Dispatch_type_(IRP_MJ_POWER)
 DRIVER_DISPATCH DispatchPower;

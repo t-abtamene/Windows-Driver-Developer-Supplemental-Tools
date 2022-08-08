@@ -1,6 +1,7 @@
 /**
  * @name DispatchMismatch
  * @kind problem
+ * @platform Desktop
  * @description The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry
  * @problem.severity warning
  * @id cpp/portedqueries/dispatch-mismatch
@@ -22,7 +23,7 @@ class MismatchedDispatches extends Function {
   }
 }
 
-//Represents function with missing annotation in their declaration.
+//Represents functions with  annotation in their declaration.
 class NonAnnotatedDispatchs extends Function {
   NonAnnotatedDispatchs() {
     exists(DispatchTypeDefinition dmi, WdmDispatchRoutine wdr |
@@ -32,11 +33,28 @@ class NonAnnotatedDispatchs extends Function {
   }
 }
 
-from FunctionAccess fa, WdmDispatchRoutine wdm
+//Evaluates to true for functions that are not dispatch routine assignments
+predicate notWdmDispatchAssignment(AssignExpr ae) {
+  exists(FunctionAccess fa |
+    ae.getRValue() = fa and
+    fa.getEnclosingFunction() instanceof WdmDriverEntry and
+    not fa.getTarget() instanceof WdmDispatchRoutine and
+    not ae instanceof DispatchRoutineAssignment and
+    ae.getLValue().(ArrayExpr).getArrayBase().toString() = "MajorFunction"
+  )
+}
+
+from FunctionAccess fa, WdmDispatchRoutine wdm, ExprStmt es
 where
-  fa.getTarget() = wdm and not fa.getTarget() instanceof NonAnnotatedDispatchs
-  or
-  fa.getTarget() instanceof MismatchedDispatches
+  fa.getEnclosingFunction() instanceof WdmDriverEntry and
+  es.getExpr().(AssignExpr).getRValue() = fa and
+  (
+    fa.getTarget() = wdm and not fa.getTarget() instanceof NonAnnotatedDispatchs
+    or
+    fa.getTarget() instanceof MismatchedDispatches
+    or
+    notWdmDispatchAssignment(es.getExpr())
+  )
 select fa,
   fa.getTarget() +
     " : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."

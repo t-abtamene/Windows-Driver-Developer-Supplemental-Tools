@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/dispatch-mismatch",
-          "name" : "cpp/portedqueries/dispatch-mismatch",
+          "id" : "cpp/portedqueries/multiple-paged-code",
+          "name" : "cpp/portedqueries/multiple-paged-code",
           "shortDescription" : {
-            "text" : "DispatchMismatch"
+            "text" : "MultiplePagedCode"
           },
           "fullDescription" : {
-            "text" : "The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry"
+            "text" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry",
-            "id" : "cpp/portedqueries/dispatch-mismatch",
+            "description" : "The function has more than one instance of PAGED_CODE or PAGED_CODE_LOCKED.",
+            "id" : "cpp/portedqueries/multiple-paged-code",
             "kind" : "problem",
-            "name" : "DispatchMismatch",
+            "name" : "MultiplePagedCode",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
+        "semanticVersion" : "0.9.6+370d879c954aeb100324e3ab8af8043285a2ead6",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -586,14 +586,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/dispatch-mismatch",
+      "ruleId" : "cpp/portedqueries/multiple-paged-code",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/dispatch-mismatch",
+        "id" : "cpp/portedqueries/multiple-paged-code",
         "index" : 0
       },
       "message" : {
-        "text" : "DispatchCreate : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry."
+        "text" : "Functions in a paged section must have exactly one instance of the PAGED_CODE or PAGED_CODE_LOCKED macro"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -603,13 +603,14 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 110,
-            "endColumn" : 15
+            "startLine" : 127,
+            "startColumn" : 5,
+            "endColumn" : 17
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "d9f91e4a1ece5d64:1",
+        "primaryLocationLineHash" : "8d69881b61f399bf:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

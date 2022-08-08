@@ -1,0 +1,32 @@
+{
+    "all": {
+        "+": 2,
+        "-": 0
+    },
+    "error": {
+        "+": 0,
+        "-": 0,
+        "codes": []
+    },
+    "warning": {
+        "+": 2,
+        "-": 0,
+        "codes": [
+            [
+                "cpp/portedqueries/dispatch-mismatch DispatchCreate : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry.",
+                0,
+                1
+            ],
+            [
+                "cpp/portedqueries/dispatch-mismatchf DispatchRead : The dispatch function does not have a _Dispatch_type_ annotation matching this dispatch table entry.",
+                0,
+                1
+            ]
+        ]
+    },
+    "note": {
+        "+": 0,
+        "-": 0,
+        "codes": []
+    }
+}

@@ -44,11 +44,11 @@ DriverEntry(
 {
 
     UNREFERENCED_PARAMETER(RegistryPath);
-    DriverObject->MajorFunction[IRP_MJ_CREATE]         = DispatchCreate;
-    DriverObject->MajorFunction[IRP_MJ_READ]           = DispatchRead;
-    DriverObject->MajorFunction[IRP_MJ_POWER]          = DispatchPower;
+    DriverObject->MajorFunction[IRP_MJ_CREATE]         = (PDRIVER_DISPATCH)DispatchCreate;
+    DriverObject->MajorFunction[IRP_MJ_READ]           = (PDRIVER_DISPATCH)DispatchRead;
+    DriverObject->MajorFunction[IRP_MJ_POWER]          = (PDRIVER_DISPATCH)DispatchPower;
     DriverObject->MajorFunction[IRP_MJ_SYSTEM_CONTROL] = DispatchSystemControl;
-    DriverObject->MajorFunction[IRP_MJ_PNP]            = DispatchPnp;
+    DriverObject->MajorFunction[IRP_MJ_PNP]            = (PDRIVER_DISPATCH)DispatchPnp;
     DriverObject->DriverExtension->AddDevice           = DriverAddDevice;
     DriverObject->DriverUnload                         = DriverUnload;
 

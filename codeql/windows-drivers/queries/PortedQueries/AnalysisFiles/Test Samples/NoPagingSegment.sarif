@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/pending-status-error",
-          "name" : "cpp/portedqueries/pending-status-error",
+          "id" : "cpp/portedqueries/no-paging-segment",
+          "name" : "cpp/portedqueries/no-paging-segment",
           "shortDescription" : {
-            "text" : "PendingStatusError"
+            "text" : "NoPagingSegment"
           },
           "fullDescription" : {
-            "text" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING."
+            "text" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "A dispatch routine that calls IoMarkIrpPending includes at least one path in which the driver returns a value other than STATUS_PENDING.",
-            "id" : "cpp/portedqueries/pending-status-error",
+            "description" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment",
+            "id" : "cpp/portedqueries/no-paging-segment",
             "kind" : "problem",
-            "name" : "PendingStatusError",
+            "name" : "NoPagingSegment",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
+        "semanticVersion" : "0.9.6+370d879c954aeb100324e3ab8af8043285a2ead6",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -586,14 +586,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/pending-status-error",
+      "ruleId" : "cpp/portedqueries/no-paging-segment",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/pending-status-error",
+        "id" : "cpp/portedqueries/no-paging-segment",
         "index" : 0
       },
       "message" : {
-        "text" : "The return type should be STATUS_PENDING when making IoMarkIrpPending calls"
+        "text" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -603,13 +603,13 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 110,
-            "endColumn" : 15
+            "startLine" : 178,
+            "endColumn" : 14
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "d9f91e4a1ece5d64:1",
+        "primaryLocationLineHash" : "be199482cd2fa6fa:1",
         "primaryLocationStartColumnFingerprint" : "0"
       }
     } ],

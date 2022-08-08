@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/no-paged-code",
-          "name" : "cpp/portedqueries/no-paged-code",
+          "id" : "cpp/portedqueries/ke-wait-local",
+          "name" : "cpp/portedqueries/ke-wait-local",
           "shortDescription" : {
-            "text" : "NoPagedCode"
+            "text" : "KeWaitLocal"
           },
           "fullDescription" : {
-            "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
+            "text" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode"
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found.",
-            "id" : "cpp/portedqueries/no-paged-code",
+            "description" : "If the first argument to KeWaitForSingleObject is a local variable, the Mode parameter must be KernelMode",
+            "id" : "cpp/portedqueries/ke-wait-local",
             "kind" : "problem",
-            "name" : "NoPagedCode",
+            "name" : "KeWaitLocal",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
+        "semanticVersion" : "0.9.6+370d879c954aeb100324e3ab8af8043285a2ead6",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -580,37 +580,38 @@
     },
     "artifacts" : [ {
       "location" : {
-        "uri" : "driver/fail_driver1.c",
+        "uri" : "driver/driver_snippet.c",
         "uriBaseId" : "%SRCROOT%",
         "index" : 0
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/no-paged-code",
+      "ruleId" : "cpp/portedqueries/ke-wait-local",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/no-paged-code",
+        "id" : "cpp/portedqueries/ke-wait-local",
         "index" : 0
       },
       "message" : {
-        "text" : "The function has been declared to be in a paged segment, but neither PAGED_CODE nor PAGED_CODE_LOCKED was found."
+        "text" : "KeWaitForSingleObject should have a KernelMode AccessMode when the first argument is local"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "driver/fail_driver1.c",
+            "uri" : "driver/driver_snippet.c",
             "uriBaseId" : "%SRCROOT%",
             "index" : 0
           },
           "region" : {
-            "startLine" : 153,
-            "endColumn" : 13
+            "startLine" : 6,
+            "startColumn" : 28,
+            "endColumn" : 35
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "2ad5c7b3075baee6:1",
-        "primaryLocationStartColumnFingerprint" : "0"
+        "primaryLocationLineHash" : "61bc3c7079348327:1",
+        "primaryLocationStartColumnFingerprint" : "23"
       }
     } ],
     "columnKind" : "utf16CodeUnits",

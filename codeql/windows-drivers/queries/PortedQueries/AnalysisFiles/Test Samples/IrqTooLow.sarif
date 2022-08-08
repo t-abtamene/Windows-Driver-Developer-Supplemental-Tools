@@ -8,23 +8,23 @@
         "organization" : "GitHub",
         "semanticVersion" : "2.6.3",
         "rules" : [ {
-          "id" : "cpp/portedqueries/no-paging-segment",
-          "name" : "cpp/portedqueries/no-paging-segment",
+          "id" : "cpp/portedqueries/irq-too-low",
+          "name" : "cpp/portedqueries/irq-too-low",
           "shortDescription" : {
-            "text" : "NoPagingSegment"
+            "text" : "IrqTooLow"
           },
           "fullDescription" : {
-            "text" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"
+            "text" : "The function is not permitted to be called at the current IRQ level. The current level is too low."
           },
           "defaultConfiguration" : {
             "enabled" : true,
             "level" : "warning"
           },
           "properties" : {
-            "description" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment",
-            "id" : "cpp/portedqueries/no-paging-segment",
+            "description" : "The function is not permitted to be called at the current IRQ level. The current level is too low.",
+            "id" : "cpp/portedqueries/irq-too-low",
             "kind" : "problem",
-            "name" : "NoPagingSegment",
+            "name" : "IrqTooLow",
             "problem.severity" : "warning",
             "version" : "1.0"
           }
@@ -382,7 +382,7 @@
         } ]
       }, {
         "name" : "windows-drivers",
-        "semanticVersion" : "0.9.6+4faec80b7d0e335db48748e953c2fd39b458544a",
+        "semanticVersion" : "0.9.6+370d879c954aeb100324e3ab8af8043285a2ead6",
         "locations" : [ {
           "uri" : "file:///C:/CQL/codeql_home/Windows-Driver-Developer-Supplemental-Tools/codeql/windows-drivers/queries/",
           "description" : {
@@ -586,14 +586,14 @@
       }
     } ],
     "results" : [ {
-      "ruleId" : "cpp/portedqueries/no-paging-segment",
+      "ruleId" : "cpp/portedqueries/irq-too-low",
       "ruleIndex" : 0,
       "rule" : {
-        "id" : "cpp/portedqueries/no-paging-segment",
+        "id" : "cpp/portedqueries/irq-too-low",
         "index" : 0
       },
       "message" : {
-        "text" : "The function has PAGED_CODE or PAGED_CODE_LOCKED but is not declared to be in a paged segment"
+        "text" : "Irql was set to 0 in TestInner2 but someFunc() in its call hierarchy requires 1 Irql level."
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -603,14 +603,15 @@
             "index" : 0
           },
           "region" : {
-            "startLine" : 178,
-            "endColumn" : 14
+            "startLine" : 252,
+            "startColumn" : 15,
+            "endColumn" : 23
           }
         }
       } ],
       "partialFingerprints" : {
-        "primaryLocationLineHash" : "be199482cd2fa6fa:1",
-        "primaryLocationStartColumnFingerprint" : "0"
+        "primaryLocationLineHash" : "119d2291fb0473c8:1",
+        "primaryLocationStartColumnFingerprint" : "10"
       }
     } ],
     "columnKind" : "utf16CodeUnits",
